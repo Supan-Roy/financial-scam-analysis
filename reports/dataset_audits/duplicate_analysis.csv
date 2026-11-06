@@ -1,0 +1,21 @@
+analysis_scope,source_dataset,target_dataset,comparison_method,pair_count,notes
+Intra-Dataset,real_fin_scam,real_fin_scam,Exact Match (Raw Text),0,Exact verbatim string identity
+Intra-Dataset,real_fin_scam,real_fin_scam,Normalized Match (Case & Whitespace),0,Identity after lowercasing and whitespace collapse
+Intra-Dataset,real_fin_scam,real_fin_scam,Near-Duplicate LSH (3-gram Jaccard >= 0.85),3452,High textual similarity / campaign templates or email threads
+Intra-Dataset,synthetic_financial_scams,synthetic_financial_scams,Exact Match (Raw Text),0,Exact verbatim string identity
+Intra-Dataset,synthetic_financial_scams,synthetic_financial_scams,Normalized Match (Case & Whitespace),0,Identity after lowercasing and whitespace collapse
+Intra-Dataset,synthetic_financial_scams,synthetic_financial_scams,Near-Duplicate LSH (3-gram Jaccard >= 0.85),320,High textual similarity / campaign templates or email threads
+Intra-Dataset,real_fin_legit,real_fin_legit,Exact Match (Raw Text),0,Exact verbatim string identity
+Intra-Dataset,real_fin_legit,real_fin_legit,Normalized Match (Case & Whitespace),0,Identity after lowercasing and whitespace collapse
+Intra-Dataset,real_fin_legit,real_fin_legit,Near-Duplicate LSH (3-gram Jaccard >= 0.85),2138,High textual similarity / campaign templates or email threads
+Cross-Dataset,real_fin_scam,synthetic_financial_scams,Exact Match (Raw Text),0,Direct cross-corpus record duplication
+Cross-Dataset,real_fin_scam,real_fin_legit,Exact Match (Raw Text),0,Direct cross-corpus record duplication
+Cross-Dataset,synthetic_financial_scams,real_fin_legit,Exact Match (Raw Text),0,Direct cross-corpus record duplication
+Cross-Dataset,All,All,Exact Match (Raw Text),0,Direct cross-corpus record duplication
+Cross-Dataset,real_fin_scam,synthetic_financial_scams,Normalized Match (Case & Whitespace),0,Cross-corpus duplication after conservative normalization
+Cross-Dataset,real_fin_scam,real_fin_legit,Normalized Match (Case & Whitespace),0,Cross-corpus duplication after conservative normalization
+Cross-Dataset,synthetic_financial_scams,real_fin_legit,Normalized Match (Case & Whitespace),0,Cross-corpus duplication after conservative normalization
+Cross-Dataset,All,All,Normalized Match (Case & Whitespace),0,Cross-corpus duplication after conservative normalization
+Cross-Dataset,real_fin_scam,synthetic_financial_scams,Near-Duplicate LSH (3-gram Jaccard >= 0.85),0,Cross-corpus template / near-duplicate leakage
+Cross-Dataset,real_fin_scam,real_fin_legit,Near-Duplicate LSH (3-gram Jaccard >= 0.85),0,Cross-corpus template / near-duplicate leakage
+Cross-Dataset,synthetic_financial_scams,real_fin_legit,Near-Duplicate LSH (3-gram Jaccard >= 0.85),0,Cross-corpus template / near-duplicate leakage

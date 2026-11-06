@@ -1,0 +1,4 @@
+dataset_name,record_count,num_columns,file_size_mb,sha256_hash,label_distribution,unique_ids_count,mean_word_count,median_word_count,std_word_count,min_word_count,max_word_count,p25_word_count,p75_word_count,p90_word_count,p95_word_count,mean_char_count,median_char_count,exact_duplicate_texts,normalized_duplicate_texts,near_duplicate_pairs,empty_text_records,invalid_labels_count
+real_fin_scam,13861,9,12.7,e00822c1e6469ea7e35fe7f2339c3fc557bdc13d13545cca4bda47385d3b4021,"{""1"": 13861}",13861,125.47,24.0,285.41,1,23486,19.0,74.0,468.0,559.0,745.32,152.0,0,0,3452,0,0
+synthetic_financial_scams,7643,11,4.56,8e708fa30aeaed63067db56c9b5c10e1cbb90b6fb8574c53882e32b3654240d7,"{""1"": 7643}",7643,49.06,47.0,13.47,21,169,42.0,53.0,59.0,63.0,320.95,311.0,0,0,320,0,0
+real_fin_legit,62332,13,140.05,6810244c341b8f484e19b16a6e13482b38877f5608debfb829874e145adac6bc,"{""0"": 62332}",62332,169.14,121.0,158.8,1,968,54.0,231.0,398.0,517.0,1099.52,769.0,0,0,2138,0,0

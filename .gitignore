@@ -74,6 +74,10 @@ data/splits/*
 *.pickle
 *.jsonl
 
+# Allow research audit and evaluation tables in reports/
+!reports/**/*.csv
+!reports/*.csv
+
 # --- Model Checkpoints & Weights ---
 *.pt
 *.pth

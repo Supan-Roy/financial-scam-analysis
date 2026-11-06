@@ -1,0 +1,895 @@
+{
+  "audit_metadata": {
+    "timestamp": "2026-11-06T16:21:02.717429",
+    "framework": "Explainable Multi-Level Transformer-Based Financial Scam Detection",
+    "audited_datasets_count": 3,
+    "total_corpus_records": 83836
+  },
+  "datasets": {
+    "real_fin_scam": {
+      "structural": {
+        "dataset_name": "real_fin_scam",
+        "file_path": "D:\\Programs and Codes\\financial-scam-analysis\\data\\raw\\real_fin_scam.csv",
+        "file_size_bytes": 13314882,
+        "file_size_mb": 12.7,
+        "sha256_hash": "e00822c1e6469ea7e35fe7f2339c3fc557bdc13d13545cca4bda47385d3b4021",
+        "num_rows": 13861,
+        "num_cols": 9,
+        "columns": [
+          "id",
+          "text",
+          "label",
+          "phishing_type",
+          "scam_channel",
+          "source",
+          "source_url",
+          "source_license",
+          "source_record_id"
+        ],
+        "dtypes": {
+          "id": "object",
+          "text": "object",
+          "label": "int64",
+          "phishing_type": "object",
+          "scam_channel": "object",
+          "source": "object",
+          "source_url": "object",
+          "source_license": "object",
+          "source_record_id": "object"
+        },
+        "duplicate_columns": [],
+        "id_column": "id",
+        "id_unique": true,
+        "id_unique_count": 13861,
+        "text_column": "text",
+        "label_column": "label"
+      },
+      "quality": {
+        "dataset_name": "real_fin_scam",
+        "total_records": 13861,
+        "null_counts": {
+          "id": 0,
+          "text": 0,
+          "label": 0,
+          "phishing_type": 0,
+          "scam_channel": 0,
+          "source": 0,
+          "source_url": 0,
+          "source_license": 0,
+          "source_record_id": 3792
+        },
+        "null_percentages": {
+          "id": 0.0,
+          "text": 0.0,
+          "label": 0.0,
+          "phishing_type": 0.0,
+          "scam_channel": 0.0,
+          "source": 0.0,
+          "source_url": 0.0,
+          "source_license": 0.0,
+          "source_record_id": 27.36
+        },
+        "empty_text_count": 0,
+        "whitespace_only_text_count": 0,
+        "non_string_text_count": 0,
+        "invalid_labels_count": 0,
+        "unique_labels": [
+          1
+        ],
+        "suspiciously_short_count": 1,
+        "suspiciously_long_count": 16,
+        "shortest_samples": [
+          {
+            "id": "FIN-05033",
+            "char_length": 5,
+            "word_count": 1,
+            "text_snippet": "<URL>"
+          },
+          {
+            "id": "FIN-05957",
+            "char_length": 10,
+            "word_count": 1,
+            "text_snippet": "e-Transfer"
+          },
+          {
+            "id": "FIN-08755",
+            "char_length": 12,
+            "word_count": 2,
+            "text_snippet": "UPIACT Q&..."
+          },
+          {
+            "id": "FIN-09842",
+            "char_length": 14,
+            "word_count": 1,
+            "text_snippet": "<NAMED_ENTITY>"
+          },
+          {
+            "id": "FIN-12294",
+            "char_length": 14,
+            "word_count": 2,
+            "text_snippet": "First transfer"
+          }
+        ],
+        "longest_samples": [
+          {
+            "id": "FIN-00350",
+            "char_length": 121724,
+            "word_count": 23486,
+            "text_snippet": "BUSINESS PROPOSER REQUESTING CHANGE OF OWNERSHIP ATTENTION\n\n\nDEAR SIR.\n\nMr.Dddddddd Rrrrr\n\n\n\nI am sending you this fax f"
+          },
+          {
+            "id": "FIN-00348",
+            "char_length": 26372,
+            "word_count": 1190,
+            "text_snippet": "PROJECT INTEREST. My dear friend, \r\n\r\nI am DR. Yetunde Bassey, Bank Manager of Diamond Bank of Nigeria,Lagos\r\nBranch. I "
+          },
+          {
+            "id": "FIN-00680",
+            "char_length": 21694,
+            "word_count": 3701,
+            "text_snippet": "urgent assitance MY DEAR FRIEND,\n\nI DO BELIEF THAT THIS MAIL WILL NOT BE A DISTURBANT TO\nYOUR LIFE OR MAKE YOU TO BE MOR"
+          },
+          {
+            "id": "FIN-01756",
+            "char_length": 16716,
+            "word_count": 2969,
+            "text_snippet": "FROM RICHARD  FROM RICHARD AND Janet\nDear sir,\n\nI am Sanko Richard the only son of late former Director of finance,  Dr "
+          },
+          {
+            "id": "FIN-01985",
+            "char_length": 13013,
+            "word_count": 2293,
+            "text_snippet": "honestly ok Qin Wang\nLloyds TSB Pacific Limited\nHong Kong Branch Two Exchange\nSquare Central, Hong Kong.\n\nAttention,\n\nTh"
+          }
+        ],
+        "angle_bracket_placeholders": 10990,
+        "square_bracket_placeholders": 132,
+        "potential_html_count": 10998
+      },
+      "composition": {
+        "dataset_name": "real_fin_scam",
+        "total_records": 13861,
+        "label_distribution": {
+          "1": 13861
+        },
+        "channel_distribution": {
+          "sms/email": 9600,
+          "email": 3765,
+          "sms": 496
+        },
+        "source_distribution": {
+          "Smishing Dataset IMC25 (public user reports)": 9600,
+          "Nigerian_Fraud.csv": 3265,
+          "Phishing and Legitimate Emails Dataset (Kaggle)": 500,
+          "smishtank.csv": 496
+        },
+        "synthetic_distribution": {},
+        "subtypes_distribution": {
+          "financial_scam": 13861
+        },
+        "fraudulent_intent_distribution": {},
+        "social_engineering_tactics_distribution": {},
+        "communication_types_distribution": {}
+      },
+      "text_statistics": {
+        "dataset_name": "real_fin_scam",
+        "total_records": 13861,
+        "empty_count": 0,
+        "char_min": 5,
+        "char_max": 121724,
+        "char_mean": 745.32,
+        "char_std": 1591.35,
+        "char_median": 152.0,
+        "char_p25": 120.0,
+        "char_p75": 452.0,
+        "char_p90": 2751.0,
+        "char_p95": 3296.0,
+        "word_min": 1,
+        "word_max": 23486,
+        "word_mean": 125.47,
+        "word_std": 285.41,
+        "word_median": 24.0,
+        "word_p25": 19.0,
+        "word_p75": 74.0,
+        "word_p90": 468.0,
+        "word_p95": 559.0
+      },
+      "duplicates": {
+        "exact_within": 0,
+        "normalized_within": 0,
+        "near_duplicates_within": 3452
+      }
+    },
+    "synthetic_financial_scams": {
+      "structural": {
+        "dataset_name": "synthetic_financial_scams",
+        "file_path": "D:\\Programs and Codes\\financial-scam-analysis\\data\\raw\\synthetic_financial_scams.csv",
+        "file_size_bytes": 4780679,
+        "file_size_mb": 4.56,
+        "sha256_hash": "8e708fa30aeaed63067db56c9b5c10e1cbb90b6fb8574c53882e32b3654240d7",
+        "num_rows": 7643,
+        "num_cols": 11,
+        "columns": [
+          "id",
+          "text",
+          "label",
+          "phishing_type",
+          "scam_channel",
+          "fraudulent_intent",
+          "social_engineering_tactics",
+          "language",
+          "synthetic",
+          "generation_scenario",
+          "risk_or_safety_note"
+        ],
+        "dtypes": {
+          "id": "object",
+          "text": "object",
+          "label": "int64",
+          "phishing_type": "object",
+          "scam_channel": "object",
+          "fraudulent_intent": "object",
+          "social_engineering_tactics": "object",
+          "language": "object",
+          "synthetic": "bool",
+          "generation_scenario": "object",
+          "risk_or_safety_note": "object"
+        },
+        "duplicate_columns": [],
+        "id_column": "id",
+        "id_unique": true,
+        "id_unique_count": 7643,
+        "text_column": "text",
+        "label_column": "label"
+      },
+      "quality": {
+        "dataset_name": "synthetic_financial_scams",
+        "total_records": 7643,
+        "null_counts": {
+          "id": 0,
+          "text": 0,
+          "label": 0,
+          "phishing_type": 0,
+          "scam_channel": 0,
+          "fraudulent_intent": 0,
+          "social_engineering_tactics": 0,
+          "language": 0,
+          "synthetic": 0,
+          "generation_scenario": 0,
+          "risk_or_safety_note": 0
+        },
+        "null_percentages": {
+          "id": 0.0,
+          "text": 0.0,
+          "label": 0.0,
+          "phishing_type": 0.0,
+          "scam_channel": 0.0,
+          "fraudulent_intent": 0.0,
+          "social_engineering_tactics": 0.0,
+          "language": 0.0,
+          "synthetic": 0.0,
+          "generation_scenario": 0.0,
+          "risk_or_safety_note": 0.0
+        },
+        "empty_text_count": 0,
+        "whitespace_only_text_count": 0,
+        "non_string_text_count": 0,
+        "invalid_labels_count": 0,
+        "unique_labels": [
+          1
+        ],
+        "suspiciously_short_count": 0,
+        "suspiciously_long_count": 0,
+        "shortest_samples": [
+          {
+            "id": "SYN-FIN-07503",
+            "char_length": 149,
+            "word_count": 23,
+            "text_snippet": "NOTICE 7503: \ud83d\udce9 Quick question: can you cover the card hold? [AMOUNT REDACTED]. Reply here. Fictional desk: fictional car"
+          },
+          {
+            "id": "SYN-FIN-07536",
+            "char_length": 151,
+            "word_count": 22,
+            "text_snippet": "NOTICE 7536:  Quick question: can you cover the loan hold? [AMOUNT REDACTED]. Reply here. Fictional desk: fictional lend"
+          },
+          {
+            "id": "SYN-FIN-07567",
+            "char_length": 151,
+            "word_count": 22,
+            "text_snippet": "NOTICE 7567:  Quick question: can you cover the reward hold? [AMOUNT REDACTED]. Reply here. Fictional desk: fictional pr"
+          },
+          {
+            "id": "SYN-FIN-07614",
+            "char_length": 152,
+            "word_count": 21,
+            "text_snippet": "NOTICE 7614:  Quick question: can you cover the emergency hold? [AMOUNT REDACTED]. Reply here. Fictional desk: fictional"
+          },
+          {
+            "id": "SYN-FIN-07518",
+            "char_length": 153,
+            "word_count": 22,
+            "text_snippet": "NOTICE 7518:  Quick question: can you cover the refund hold? [AMOUNT REDACTED]. Reply here. Fictional desk: fictional bi"
+          }
+        ],
+        "longest_samples": [
+          {
+            "id": "SYN-FIN-00957",
+            "char_length": 1130,
+            "word_count": 169,
+            "text_snippet": "[Fictional Contact]: Some recipients have already completed this step. A routine system check produced an unusual result"
+          },
+          {
+            "id": "SYN-FIN-02671",
+            "char_length": 1094,
+            "word_count": 163,
+            "text_snippet": "[Fictional Contact]: Some recipients have already completed this step. The fictional lending desk says one part of your "
+          },
+          {
+            "id": "SYN-FIN-02071",
+            "char_length": 1078,
+            "word_count": 161,
+            "text_snippet": "[Fictional Contact]: Hi \u2014 just checking in. The fictional accounts desk says one part of your invoice needs attention. P"
+          },
+          {
+            "id": "SYN-FIN-03119",
+            "char_length": 1074,
+            "word_count": 159,
+            "text_snippet": "Subject: case follow-up\n\nHello,\n\nSome recipients have already completed this step. A routine system check produced an un"
+          },
+          {
+            "id": "SYN-FIN-04390",
+            "char_length": 1072,
+            "word_count": 165,
+            "text_snippet": "[Fictional Contact]: Hi \u2014 just checking in. A routine system check produced an unusual result for the tax file. Reply wi"
+          }
+        ],
+        "angle_bracket_placeholders": 0,
+        "square_bracket_placeholders": 0,
+        "potential_html_count": 0
+      },
+      "composition": {
+        "dataset_name": "synthetic_financial_scams",
+        "total_records": 7643,
+        "label_distribution": {
+          "1": 7643
+        },
+        "channel_distribution": {
+          "sms": 1911,
+          "email": 1911,
+          "chat": 1911,
+          "notification": 1910
+        },
+        "source_distribution": {},
+        "synthetic_distribution": {
+          "True": 7643
+        },
+        "subtypes_distribution": {
+          "refund_chargeback": 589,
+          "job_task_commission": 589,
+          "recovery_support": 589,
+          "investment_crypto": 589,
+          "loan_offer": 588,
+          "family_emergency_request": 588,
+          "tax_payment": 588,
+          "card_transaction_alert": 588,
+          "account_verification": 587,
+          "invoice_payment_request": 587,
+          "prize_reward": 587,
+          "romance_financial_manipulation": 587,
+          "charity_donation": 587
+        },
+        "fraudulent_intent_distribution": {
+          "induce a payment": 5291,
+          "obtain sensitive information": 1763,
+          "promote a fraudulent investment": 589
+        },
+        "social_engineering_tactics_distribution": {
+          "trust_exploitation": 1618,
+          "urgency": 1588,
+          "false_legitimacy": 1397,
+          "scarcity": 834,
+          "reward_or_benefit": 828,
+          "fear_or_threat": 798,
+          "emotional_manipulation": 762,
+          "authority_impersonation": 748,
+          "secrecy": 707
+        },
+        "communication_types_distribution": {}
+      },
+      "text_statistics": {
+        "dataset_name": "synthetic_financial_scams",
+        "total_records": 7643,
+        "empty_count": 0,
+        "char_min": 149,
+        "char_max": 1130,
+        "char_mean": 320.95,
+        "char_std": 89.13,
+        "char_median": 311.0,
+        "char_p25": 276.0,
+        "char_p75": 352.0,
+        "char_p90": 387.0,
+        "char_p95": 409.0,
+        "word_min": 21,
+        "word_max": 169,
+        "word_mean": 49.06,
+        "word_std": 13.47,
+        "word_median": 47.0,
+        "word_p25": 42.0,
+        "word_p75": 53.0,
+        "word_p90": 59.0,
+        "word_p95": 63.0
+      },
+      "duplicates": {
+        "exact_within": 0,
+        "normalized_within": 0,
+        "near_duplicates_within": 320
+      }
+    },
+    "real_fin_legit": {
+      "structural": {
+        "dataset_name": "real_fin_legit",
+        "file_path": "D:\\Programs and Codes\\financial-scam-analysis\\data\\raw\\real_fin_legit.csv",
+        "file_size_bytes": 146855990,
+        "file_size_mb": 140.05,
+        "sha256_hash": "6810244c341b8f484e19b16a6e13482b38877f5608debfb829874e145adac6bc",
+        "num_rows": 62332,
+        "num_cols": 13,
+        "columns": [
+          "id",
+          "text",
+          "email_subject",
+          "email_body",
+          "label",
+          "legitimate_category",
+          "communication_type",
+          "scam_channel",
+          "source",
+          "source_url",
+          "source_license",
+          "source_record_id",
+          "synthetic"
+        ],
+        "dtypes": {
+          "id": "object",
+          "text": "object",
+          "email_subject": "object",
+          "email_body": "object",
+          "label": "int64",
+          "legitimate_category": "object",
+          "communication_type": "object",
+          "scam_channel": "object",
+          "source": "object",
+          "source_url": "object",
+          "source_license": "object",
+          "source_record_id": "object",
+          "synthetic": "bool"
+        },
+        "duplicate_columns": [],
+        "id_column": "id",
+        "id_unique": true,
+        "id_unique_count": 62332,
+        "text_column": "text",
+        "label_column": "label"
+      },
+      "quality": {
+        "dataset_name": "real_fin_legit",
+        "total_records": 62332,
+        "null_counts": {
+          "id": 0,
+          "text": 0,
+          "email_subject": 5618,
+          "email_body": 4670,
+          "label": 0,
+          "legitimate_category": 0,
+          "communication_type": 0,
+          "scam_channel": 0,
+          "source": 0,
+          "source_url": 0,
+          "source_license": 0,
+          "source_record_id": 0,
+          "synthetic": 0
+        },
+        "null_percentages": {
+          "id": 0.0,
+          "text": 0.0,
+          "email_subject": 9.01,
+          "email_body": 7.49,
+          "label": 0.0,
+          "legitimate_category": 0.0,
+          "communication_type": 0.0,
+          "scam_channel": 0.0,
+          "source": 0.0,
+          "source_url": 0.0,
+          "source_license": 0.0,
+          "source_record_id": 0.0,
+          "synthetic": 0.0
+        },
+        "empty_text_count": 0,
+        "whitespace_only_text_count": 0,
+        "non_string_text_count": 0,
+        "invalid_labels_count": 0,
+        "unique_labels": [
+          0
+        ],
+        "suspiciously_short_count": 29,
+        "suspiciously_long_count": 9,
+        "shortest_samples": [
+          {
+            "id": "LEG-FIN-02996",
+            "char_length": 2,
+            "word_count": 1,
+            "text_snippet": ":)"
+          },
+          {
+            "id": "LEG-FIN-01602",
+            "char_length": 3,
+            "word_count": 1,
+            "text_snippet": "645"
+          },
+          {
+            "id": "LEG-FIN-00524",
+            "char_length": 3,
+            "word_count": 1,
+            "text_snippet": "Yup"
+          },
+          {
+            "id": "MEAJOR-LEG-015067",
+            "char_length": 4,
+            "word_count": 1,
+            "text_snippet": "see!"
+          },
+          {
+            "id": "LEG-FIN-00545",
+            "char_length": 4,
+            "word_count": 1,
+            "text_snippet": "Ok.."
+          }
+        ],
+        "longest_samples": [
+          {
+            "id": "MEAJOR-LEG-054248",
+            "char_length": 30893,
+            "word_count": 448,
+            "text_snippet": "[[[[[PRODUCT]]]]]e: [[[[[[PRODUCT]]]]]] [PRODUCT][[[[[[PRODUCT]]]]]EFE[[[[[PRODUCT]]]]][[[PRODUCT]]][[[[[PRODUCT]]]]]]g "
+          },
+          {
+            "id": "MEAJOR-LEG-035290",
+            "char_length": 19149,
+            "word_count": 658,
+            "text_snippet": "[[[[USERNAME]]][[[[USERNAME]]]][[[USERNAME]]]] Re: [[[[USERNAME]]]]ultiway [[[[USERNAME]]][[[[USERNAME]]]]E]ranching que"
+          },
+          {
+            "id": "MEAJOR-LEG-042796",
+            "char_length": 16359,
+            "word_count": 622,
+            "text_snippet": "Re: [R] xyplot() [[REFERENCE_NUMBER]]nd [REFERENCE_NUMBER] p[[REFERENCE_NUMBER]]nel.polygon()\n\n[REFERENCE_NUMBER] [[[REF"
+          },
+          {
+            "id": "MEAJOR-LEG-040617",
+            "char_length": 13895,
+            "word_count": 490,
+            "text_snippet": "[R] Questio[[[[REFERENCE_NUMBER]]]] of the i[[[[REFERENCE_NUMBER]]]][[[REFERENCE_NUMBER]]] of the pilot experi[[[[REFERE"
+          },
+          {
+            "id": "MEAJOR-LEG-048499",
+            "char_length": 13517,
+            "word_count": 468,
+            "text_snippet": "[[[[PRODUCT]]]]e: [[[[[PRODUCT]]]]] using [P[[[[PRODUCT]]]]ODUC[USE[[[[PRODUCT]]]][[PRODUCT]]]] [[[PRODUCT]]] v[USE[[[[P"
+          }
+        ],
+        "angle_bracket_placeholders": 533,
+        "square_bracket_placeholders": 55982,
+        "potential_html_count": 3309
+      },
+      "composition": {
+        "dataset_name": "real_fin_legit",
+        "total_records": 62332,
+        "label_distribution": {
+          "0": 62332
+        },
+        "channel_distribution": {
+          "email": 57662,
+          "sms": 4670
+        },
+        "source_distribution": {
+          "MeAJOR (trec5)": 27291,
+          "MeAJOR (trec7)": 19244,
+          "MeAJOR (trec6)": 11127,
+          "UCI SMS Spam Collection": 4500,
+          "Financial scams detection dataset (Mendeley Data V2)": 170
+        },
+        "synthetic_distribution": {
+          "False": 62332
+        },
+        "subtypes_distribution": {
+          "general_legitimate": 43131,
+          "financial_legitimate": 19201
+        },
+        "fraudulent_intent_distribution": {},
+        "social_engineering_tactics_distribution": {},
+        "communication_types_distribution": {
+          "general_communication": 45781,
+          "payment": 5848,
+          "account_notice": 3407,
+          "card_notice": 2525,
+          "loan_notice": 2010,
+          "transfer_notice": 1941,
+          "financial_admin": 820
+        }
+      },
+      "text_statistics": {
+        "dataset_name": "real_fin_legit",
+        "total_records": 62332,
+        "empty_count": 0,
+        "char_min": 2,
+        "char_max": 30893,
+        "char_mean": 1099.52,
+        "char_std": 1066.15,
+        "char_median": 769.0,
+        "char_p25": 341.75,
+        "char_p75": 1504.0,
+        "char_p90": 2604.9,
+        "char_p95": 3405.45,
+        "word_min": 1,
+        "word_max": 968,
+        "word_mean": 169.14,
+        "word_std": 158.8,
+        "word_median": 121.0,
+        "word_p25": 54.0,
+        "word_p75": 231.0,
+        "word_p90": 398.0,
+        "word_p95": 517.0
+      },
+      "duplicates": {
+        "exact_within": 0,
+        "normalized_within": 0,
+        "near_duplicates_within": 2138
+      }
+    }
+  },
+  "cross_dataset_overlap": {
+    "exact_overlaps": {
+      "real_fin_scam vs synthetic_financial_scams": 0,
+      "real_fin_scam vs real_fin_legit": 0,
+      "synthetic_financial_scams vs real_fin_legit": 0,
+      "all_three_datasets": 0
+    },
+    "normalized_overlaps": {
+      "real_fin_scam vs synthetic_financial_scams": 0,
+      "real_fin_scam vs real_fin_legit": 0,
+      "synthetic_financial_scams vs real_fin_legit": 0,
+      "all_three_datasets": 0
+    },
+    "near_duplicate_overlaps": {
+      "real_fin_scam vs synthetic_financial_scams": 0,
+      "real_fin_scam vs real_fin_legit": 0,
+      "synthetic_financial_scams vs real_fin_legit": 0
+    }
+  },
+  "research_biases_and_shortcut_risks": {
+    "channel_length_disparity": [
+      {
+        "dataset": "real_fin_scam",
+        "channel": "email",
+        "count": 3765,
+        "mean_words": 392.9,
+        "median_words": 402.0,
+        "p25_words": 235.0,
+        "p75_words": 526.0,
+        "p95_words": 693.8
+      },
+      {
+        "dataset": "real_fin_scam",
+        "channel": "sms",
+        "count": 496,
+        "mean_words": 30.3,
+        "median_words": 22.0,
+        "p25_words": 16.0,
+        "p75_words": 42.0,
+        "p95_words": 68.0
+      },
+      {
+        "dataset": "real_fin_scam",
+        "channel": "sms/email",
+        "count": 9600,
+        "mean_words": 25.5,
+        "median_words": 22.0,
+        "p25_words": 18.0,
+        "p75_words": 26.0,
+        "p95_words": 54.0
+      },
+      {
+        "dataset": "synthetic_financial_scams",
+        "channel": "sms",
+        "count": 1911,
+        "mean_words": 43.0,
+        "median_words": 42.0,
+        "p25_words": 38.0,
+        "p75_words": 46.0,
+        "p95_words": 52.0
+      },
+      {
+        "dataset": "synthetic_financial_scams",
+        "channel": "email",
+        "count": 1911,
+        "mean_words": 48.6,
+        "median_words": 47.0,
+        "p25_words": 44.0,
+        "p75_words": 52.0,
+        "p95_words": 57.0
+      },
+      {
+        "dataset": "synthetic_financial_scams",
+        "channel": "chat",
+        "count": 1911,
+        "mean_words": 57.6,
+        "median_words": 57.0,
+        "p25_words": 53.0,
+        "p75_words": 61.0,
+        "p95_words": 67.0
+      },
+      {
+        "dataset": "synthetic_financial_scams",
+        "channel": "notification",
+        "count": 1910,
+        "mean_words": 47.0,
+        "median_words": 46.0,
+        "p25_words": 42.0,
+        "p75_words": 50.0,
+        "p95_words": 56.0
+      },
+      {
+        "dataset": "real_fin_legit",
+        "channel": "sms",
+        "count": 4670,
+        "mean_words": 14.1,
+        "median_words": 11.0,
+        "p25_words": 7.0,
+        "p75_words": 18.0,
+        "p95_words": 33.0
+      },
+      {
+        "dataset": "real_fin_legit",
+        "channel": "email",
+        "count": 57662,
+        "mean_words": 181.7,
+        "median_words": 133.0,
+        "p25_words": 67.0,
+        "p75_words": 244.0,
+        "p95_words": 529.0
+      }
+    ],
+    "legitimate_category_comparison": {
+      "financial_legitimate": {
+        "count": 19201,
+        "mean_words": 245.5,
+        "median_words": 193.0,
+        "mean_chars": 1580.9,
+        "median_chars": 1261.0,
+        "lexical_diversity": {
+          "sample_total_tokens": 512613,
+          "sample_unique_tokens": 19895,
+          "type_token_ratio": 0.0388
+        }
+      },
+      "general_legitimate": {
+        "count": 43131,
+        "mean_words": 135.1,
+        "median_words": 95.0,
+        "mean_chars": 885.2,
+        "median_chars": 602.0,
+        "lexical_diversity": {
+          "sample_total_tokens": 279701,
+          "sample_unique_tokens": 17022,
+          "type_token_ratio": 0.0609
+        }
+      }
+    },
+    "real_vs_synthetic_scam": {
+      "real_scam": {
+        "count": 13861,
+        "mean_words": 125.5,
+        "std_words": 285.4,
+        "median_words": 24.0,
+        "coefficient_of_variation": 2.27,
+        "max_words": 23486,
+        "min_words": 1,
+        "lexical_diversity": {
+          "sample_total_tokens": 260363,
+          "sample_unique_tokens": 12402,
+          "type_token_ratio": 0.0476
+        }
+      },
+      "synthetic_scam": {
+        "count": 7643,
+        "mean_words": 49.1,
+        "std_words": 13.5,
+        "median_words": 47.0,
+        "coefficient_of_variation": 0.27,
+        "max_words": 169,
+        "min_words": 21,
+        "lexical_diversity": {
+          "sample_total_tokens": 96671,
+          "sample_unique_tokens": 853,
+          "type_token_ratio": 0.0088
+        }
+      }
+    },
+    "spurious_shortcut_risks": {
+      "real_fin_scam": {
+        "total_records": 13861,
+        "angle_bracket_placeholders": 10990,
+        "angle_bracket_rate_pct": 79.29,
+        "square_bracket_placeholders": 132,
+        "square_bracket_rate_pct": 0.95
+      },
+      "synthetic_financial_scams": {
+        "total_records": 7643,
+        "angle_bracket_placeholders": 0,
+        "angle_bracket_rate_pct": 0.0,
+        "square_bracket_placeholders": 0,
+        "square_bracket_rate_pct": 0.0
+      },
+      "real_fin_legit": {
+        "total_records": 62332,
+        "angle_bracket_placeholders": 533,
+        "angle_bracket_rate_pct": 0.86,
+        "square_bracket_placeholders": 55982,
+        "square_bracket_rate_pct": 89.81
+      }
+    }
+  },
+  "sample_near_duplicates": [
+    {
+      "doc1": "real_fin_legit:MEAJOR-LEG-055723",
+      "doc2": "real_fin_legit:MEAJOR-LEG-044225",
+      "jaccard_similarity": 0.9024
+    },
+    {
+      "doc1": "real_fin_legit:MEAJOR-LEG-038922",
+      "doc2": "real_fin_legit:MEAJOR-LEG-054148",
+      "jaccard_similarity": 0.9036
+    },
+    {
+      "doc1": "real_fin_scam:FIN-02389",
+      "doc2": "real_fin_scam:FIN-02688",
+      "jaccard_similarity": 0.893
+    },
+    {
+      "doc1": "real_fin_scam:FIN-01786",
+      "doc2": "real_fin_scam:FIN-02454",
+      "jaccard_similarity": 0.8602
+    },
+    {
+      "doc1": "synthetic_financial_scams:SYN-FIN-05180",
+      "doc2": "synthetic_financial_scams:SYN-FIN-07388",
+      "jaccard_similarity": 0.8636
+    },
+    {
+      "doc1": "real_fin_scam:FIN-03843",
+      "doc2": "real_fin_scam:FIN-04232",
+      "jaccard_similarity": 0.907
+    },
+    {
+      "doc1": "real_fin_scam:FIN-00681",
+      "doc2": "real_fin_scam:FIN-00690",
+      "jaccard_similarity": 0.9889
+    },
+    {
+      "doc1": "real_fin_legit:MEAJOR-LEG-039080",
+      "doc2": "real_fin_legit:MEAJOR-LEG-047159",
+      "jaccard_similarity": 0.8909
+    },
+    {
+      "doc1": "real_fin_scam:FIN-10363",
+      "doc2": "real_fin_scam:FIN-10725",
+      "jaccard_similarity": 0.9444
+    },
+    {
+      "doc1": "real_fin_legit:MEAJOR-LEG-022395",
+      "doc2": "real_fin_legit:MEAJOR-LEG-022505",
+      "jaccard_similarity": 0.8605
+    }
+  ]
+}

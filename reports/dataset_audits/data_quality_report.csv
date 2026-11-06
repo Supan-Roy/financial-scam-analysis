@@ -1,0 +1,34 @@
+dataset,column_name,data_type,null_count,null_percentage,empty_string_count,quality_status,notes
+real_fin_scam,id,object,0,0.0,0,Clean,Unique primary identifier
+real_fin_scam,text,object,0,0.0,0,Clean,1 short records (<10 chars); 16 long records (>10k chars); 10990 angle-bracket placeholders; 132 square-bracket placeholders
+real_fin_scam,label,int64,0,0.0,0,Clean,Fully populated
+real_fin_scam,phishing_type,object,0,0.0,0,Clean,Fully populated
+real_fin_scam,scam_channel,object,0,0.0,0,Clean,Fully populated
+real_fin_scam,source,object,0,0.0,0,Clean,Fully populated
+real_fin_scam,source_url,object,0,0.0,0,Clean,Fully populated
+real_fin_scam,source_license,object,0,0.0,0,Clean,Fully populated
+real_fin_scam,source_record_id,object,3792,27.36,0,Contains Nulls / Artifacts,3792 missing values (27.36%)
+synthetic_financial_scams,id,object,0,0.0,0,Clean,Unique primary identifier
+synthetic_financial_scams,text,object,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,label,int64,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,phishing_type,object,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,scam_channel,object,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,fraudulent_intent,object,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,social_engineering_tactics,object,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,language,object,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,synthetic,bool,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,generation_scenario,object,0,0.0,0,Clean,Fully populated
+synthetic_financial_scams,risk_or_safety_note,object,0,0.0,0,Clean,Fully populated
+real_fin_legit,id,object,0,0.0,0,Clean,Unique primary identifier
+real_fin_legit,text,object,0,0.0,0,Clean,29 short records (<10 chars); 9 long records (>10k chars); 533 angle-bracket placeholders; 55982 square-bracket placeholders
+real_fin_legit,email_subject,object,5618,9.01,0,Contains Nulls / Artifacts,5618 missing values (9.01%)
+real_fin_legit,email_body,object,4670,7.49,0,Contains Nulls / Artifacts,4670 missing values (7.49%)
+real_fin_legit,label,int64,0,0.0,0,Clean,Fully populated
+real_fin_legit,legitimate_category,object,0,0.0,0,Clean,Fully populated
+real_fin_legit,communication_type,object,0,0.0,0,Clean,Fully populated
+real_fin_legit,scam_channel,object,0,0.0,0,Clean,Fully populated
+real_fin_legit,source,object,0,0.0,0,Clean,Fully populated
+real_fin_legit,source_url,object,0,0.0,0,Clean,Fully populated
+real_fin_legit,source_license,object,0,0.0,0,Clean,Fully populated
+real_fin_legit,source_record_id,object,0,0.0,0,Clean,Fully populated
+real_fin_legit,synthetic,bool,0,0.0,0,Clean,Fully populated
