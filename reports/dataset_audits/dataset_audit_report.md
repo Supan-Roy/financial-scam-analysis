@@ -68,8 +68,8 @@ Empirical verification of text integrity, null distributions, and anomaly indica
 1. **Zero Text Absence:** There are **zero** null, empty, or whitespace-only message records across all 83,836 samples.
 2. **Missing Metadata Isolation:** In `real_fin_scam.csv`, missing values occur strictly in `source_record_id` (3,792 records). In `real_fin_legit.csv`, missing values occur strictly in `email_subject` (5,618 records) and `email_body` (4,670 records), directly corresponding to SMS communications and subject-less emails.
 3. **Extreme Length Outliers:**
-   - `real_fin_scam.csv` contains **8** messages exceeding 10,000 characters (max: `121,724` chars / `23,486` words in `FIN-00350`). These represent multi-page 419 financial scam letters and legal contract fabrications.
-   - `real_fin_legit.csv` contains **11** messages exceeding 10,000 characters (max: `30,893` chars in `MEAJOR-LEG-054248`).
+   - `real_fin_scam.csv` contains **16** messages exceeding 10,000 characters (max: `121,724` chars / `23,486` words in `FIN-00350`). These represent multi-page 419 financial scam letters and legal contract fabrications.
+   - `real_fin_legit.csv` contains **9** messages exceeding 10,000 characters (max: `30,893` chars in `MEAJOR-LEG-054248`).
    - `real_fin_scam.csv` contains short outliers such as `FIN-05033` (`'<URL>'`, 5 chars), representing bare URL smishing messages.
    - `real_fin_legit.csv` contains short SMS messages such as `LEG-FIN-02996` (`':)'`, 2 chars) from the UCI SMS Spam Collection.
 
@@ -130,7 +130,7 @@ We evaluated exact raw duplicates, normalized duplicates (lowercased, whitespace
 | :--- | :--- | :--- | :--- | :--- |
 | **Within `real_fin_scam`** | 0 | 0 | 3,452 | **Template campaign clustering** (e.g. 419 letters sharing ~90% body text with variable names/amounts). High data leakage risk under random splitting. |
 | **Within `synthetic_financial_scams`** | 0 | 0 | 320 | **Factorial template variants** across writing styles and subtypes. |
-| **Within `real_fin_legit`** | 0 | 0 | 2,138 | **Email thread replies & system notices** in MeAJOR. |
+| **Within `real_fin_legit`** | 0 | 0 | 14,473 | **Email thread replies & system notices** in MeAJOR (full 100% coverage across all 62,332 records; preliminary 25k sample identified 2,138 pairs). |
 | **Cross: Real Scam vs Legit** | 0 | 0 | 0 | **Zero cross-contamination**. Scam and legitimate corpora are completely disjoint. |
 | **Cross: Synthetic vs Legit** | 0 | 0 | 0 | **Zero cross-contamination**. |
 | **Cross: Real Scam vs Synthetic** | 0 | 0 | 0 | **Zero cross-contamination**. Real and synthetic scam corpora share no overlapping text. |
@@ -154,7 +154,7 @@ A severe vulnerability identified during this audit is the presence of **diverge
 
 > **CRITICAL RESEARCH ALERT:**  
 > **79.3%** of real scam messages contain angle brackets (`<URL>`, `<PHONE>`), whereas less than **1%** of legitimate communications contain them. Conversely, **89.8%** of legitimate communications contain square brackets (`[NAME]`, `[FINANCIAL_INFO]`), while less than **1%** of real scams do.  
-> A naive Transformer or TF-IDF model will immediately latch onto these bracket characters as a shallow shortcut, attaining >90% validation accuracy while completely failing to learn semantic financial scam narratives. **These placeholders must be normalized or harmonized in the preprocessing pipeline.**
+> A naive Transformer or TF-IDF model risks exploiting these bracket characters as a spurious statistical shortcut rather than learning semantic financial scam narratives. **These placeholders must be normalized or harmonized in the preprocessing pipeline to ensure sound evaluation.**
 
 ![Research Bias Comparisons](figures/research_bias_comparisons.png)
 

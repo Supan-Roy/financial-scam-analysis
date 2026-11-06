@@ -23,6 +23,11 @@ def main() -> None:
         help="Run the complete dataset audit pipeline (Task 01).",
     )
     parser.add_argument(
+        "--validate",
+        action="store_true",
+        help="Run the dataset audit validation & leakage investigation pipeline (Task 02).",
+    )
+    parser.add_argument(
         "--skip-plots",
         action="store_true",
         help="Skip figure generation during audit.",
@@ -30,13 +35,22 @@ def main() -> None:
 
     args = parser.parse_args()
 
+    project_root = Path(__file__).resolve().parent
+
     if args.audit:
         from scripts.run_dataset_audit import run_pipeline
-        project_root = Path(__file__).resolve().parent
         exit_code = run_pipeline(
             raw_dir=project_root / "data" / "raw",
             output_dir=project_root / "reports" / "dataset_audits",
             skip_plots=args.skip_plots,
+        )
+        sys.exit(exit_code)
+
+    if args.validate:
+        from scripts.run_audit_validation import run_validation_pipeline
+        exit_code = run_validation_pipeline(
+            raw_dir=project_root / "data" / "raw",
+            output_dir=project_root / "reports" / "dataset_audits",
         )
         sys.exit(exit_code)
 
@@ -46,8 +60,10 @@ def main() -> None:
     print("Narrative Detection and Fraud Analysis in Digital Communications")
     print("=" * 70)
     print("\nAvailable Commands:")
-    print("  python main.py --audit            Run the complete dataset audit pipeline")
+    print("  python main.py --audit            Run the complete dataset audit pipeline (Task 01)")
+    print("  python main.py --validate         Run audit validation & leakage investigation (Task 02)")
     print("  python scripts/run_dataset_audit.py  Run dataset audit with custom flags")
+    print("  python scripts/run_audit_validation.py Run validation pipeline with custom flags")
     print("\nStatus: Framework initialized. Dataset auditing pipeline ready.")
 
 

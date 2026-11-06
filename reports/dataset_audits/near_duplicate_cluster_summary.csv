@@ -1,0 +1,4 @@
+dataset_name,total_records,records_in_clusters,pct_records_in_clusters,total_pairs,total_clusters,max_cluster_size,mean_cluster_size,median_cluster_size,clusters_size_2,clusters_size_3_5,clusters_size_6_10,clusters_size_gt_10
+real_fin_scam,13861,3206,23.13,3452,1217,18,2.63,2.0,879,278,52,8
+synthetic_financial_scams,7643,345,4.51,320,130,4,2.65,2.5,65,65,0,0
+real_fin_legit,62332,4005,6.43,14473,1334,166,3.0,2.0,1063,216,30,25
