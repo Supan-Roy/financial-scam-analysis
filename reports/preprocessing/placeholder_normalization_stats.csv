@@ -1,0 +1,4 @@
+dataset_name,total_records,records_with_placeholders_original,records_with_placeholders_normalized,total_placeholders_original,total_placeholders_normalized,distinct_unresolved_tokens,total_unresolved_occurrences,top_unresolved_tokens
+real_fin_scam,13861,11070,11070,22957,22957,241,497,[REDACTED] (32); [IRS] (27); [heir] (22); [redacted] (14); [BINANCE] (9)
+synthetic_financial_scams,7643,6855,6855,14705,14705,13,155,[EDGE-1] (13); [EDGE-2] (13); [EDGE-3] (13); [EDGE-4] (13); [EDGE-5] (13)
+real_fin_legit,62332,56065,56065,949145,949145,2786,35254,[R] (5503); [1] (2749); [NUMBER] (2572); [DMDX] (1929); [i] (1006)

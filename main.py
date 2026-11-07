@@ -28,6 +28,11 @@ def main() -> None:
         help="Run the dataset audit validation & leakage investigation pipeline (Task 02).",
     )
     parser.add_argument(
+        "--preprocess",
+        action="store_true",
+        help="Run the canonical preprocessing and harmonization pipeline (Task 03).",
+    )
+    parser.add_argument(
         "--skip-plots",
         action="store_true",
         help="Skip figure generation during audit.",
@@ -54,6 +59,17 @@ def main() -> None:
         )
         sys.exit(exit_code)
 
+    if args.preprocess:
+        from src.preprocessing.pipeline import CanonicalPreprocessingPipeline
+        pipeline = CanonicalPreprocessingPipeline(
+            raw_dir=project_root / "data" / "raw",
+            processed_dir=project_root / "data" / "processed",
+            reports_dir=project_root / "reports" / "preprocessing",
+            cluster_csv_path=project_root / "reports" / "dataset_audits" / "near_duplicate_clusters.csv",
+        )
+        pipeline.run_pipeline()
+        sys.exit(0)
+
     print("=" * 70)
     print("Financial Scam Research Framework")
     print("An Explainable Multi-Level Transformer-Based Framework for Financial Scam")
@@ -62,9 +78,11 @@ def main() -> None:
     print("\nAvailable Commands:")
     print("  python main.py --audit            Run the complete dataset audit pipeline (Task 01)")
     print("  python main.py --validate         Run audit validation & leakage investigation (Task 02)")
-    print("  python scripts/run_dataset_audit.py  Run dataset audit with custom flags")
-    print("  python scripts/run_audit_validation.py Run validation pipeline with custom flags")
-    print("\nStatus: Framework initialized. Dataset auditing pipeline ready.")
+    print("  python main.py --preprocess       Run canonical preprocessing pipeline (Task 03)")
+    print("  python scripts/run_dataset_audit.py     Run dataset audit with custom flags")
+    print("  python scripts/run_audit_validation.py  Run validation pipeline with custom flags")
+    print("  python scripts/run_preprocessing.py     Run canonical preprocessing directly")
+    print("\nStatus: Framework initialized. Preprocessing and auditing pipelines ready.")
 
 
 if __name__ == "__main__":

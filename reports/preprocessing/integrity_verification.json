@@ -1,0 +1,35 @@
+{
+  "status": "VERIFIED_INTACT",
+  "datasets": {
+    "real_fin_scam": {
+      "raw_file": "real_fin_scam.csv",
+      "raw_sha256": "e00822c1e6469ea7e35fe7f2339c3fc557bdc13d13545cca4bda47385d3b4021",
+      "raw_sha256_verified": true,
+      "raw_row_count": 13861,
+      "processed_row_count": 13861,
+      "row_count_preserved": true,
+      "original_text_verbatim_match": true,
+      "record_ids_unique": true
+    },
+    "synthetic_financial_scams": {
+      "raw_file": "synthetic_financial_scams.csv",
+      "raw_sha256": "8e708fa30aeaed63067db56c9b5c10e1cbb90b6fb8574c53882e32b3654240d7",
+      "raw_sha256_verified": true,
+      "raw_row_count": 7643,
+      "processed_row_count": 7643,
+      "row_count_preserved": true,
+      "original_text_verbatim_match": true,
+      "record_ids_unique": true
+    },
+    "real_fin_legit": {
+      "raw_file": "real_fin_legit.csv",
+      "raw_sha256": "6810244c341b8f484e19b16a6e13482b38877f5608debfb829874e145adac6bc",
+      "raw_sha256_verified": true,
+      "raw_row_count": 62332,
+      "processed_row_count": 62332,
+      "row_count_preserved": true,
+      "original_text_verbatim_match": true,
+      "record_ids_unique": true
+    }
+  }
+}

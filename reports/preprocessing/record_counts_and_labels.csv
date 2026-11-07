@@ -1,0 +1,4 @@
+dataset_name,total_records,label_0_legit,label_1_scam,synthetic_records,real_records,clustered_records,unclustered_records
+real_fin_scam,13861,0,13861,0,13861,3206,10655
+synthetic_financial_scams,7643,0,7643,7643,0,345,7298
+real_fin_legit,62332,62332,0,0,62332,4005,58327

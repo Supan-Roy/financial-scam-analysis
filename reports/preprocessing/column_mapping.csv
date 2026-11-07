@@ -1,0 +1,27 @@
+canonical_column,data_type,nullable,source_field_real_scam,source_field_synthetic_scam,source_field_real_legit,description
+record_id,string,False,id,id,id,"Unique stable identifier with collision-free source prefixes (FIN-, SYNTH_, SMS-LEG-, etc.)"
+original_text,string,False,text,text,text,Raw original text preserved verbatim for auditability and verification
+normalized_text,string,False,derived from text,derived from text,derived from text,Standardized text with canonical square-bracket entity tokens and collapsed nested brackets
+label,integer,False,label (1),label (1),label (0),"Binary fraud indicator: 1 = Financial Scam / Fraudulent, 0 = Legitimate / Benign"
+channel,string,False,scam_channel (harmonized),scam_channel,scam_channel,"Canonical communication medium: 'email', 'sms', 'chat', 'notification'"
+original_channel,string,False,scam_channel,scam_channel,scam_channel,Raw channel designation from source before harmonization (e.g. 'sms/email')
+is_email_gateway,boolean,False,derived (True for IMC25),False,False,True if message evidence / provenance supports carrier email-to-SMS gateway delivery
+has_gateway_headers,boolean,False,derived from headers,False,False,"True if text starts with or contains explicit carrier gateway headers (FRM:, SUBJ:, MSG:)"
+source,string,False,source,synthetic generator,source,Originating dataset or corpus attribution
+source_url,string,True,source_url,None,source_url,Upstream dataset download URL or repository DOI link
+source_license,string,True,source_license,Research Synthetic Asset,source_license,Licensing terms governing research asset usage
+source_record_id,string,True,source_record_id,None,source_record_id,Identifier assigned by upstream corpus curator before ingestion
+is_synthetic,boolean,False,False,True,False,Explicit distinction between generative synthetic data and real collected communications
+scam_subtype,string,True,phishing_type,phishing_type,None,"Scam taxonomy classification (e.g. banking, investment, advance_fee, loan, etc.)"
+fraudulent_intent,string,True,None,fraudulent_intent,None,"Primary adversarial objective (credentials harvesting, payment inducement, etc.)"
+social_engineering_tactics,string,True,None,social_engineering_tactics,None,"Cognitive/psychological manipulation techniques (urgency, authority, scarcity, fear)"
+legitimate_category,string,True,None,None,legitimate_category,Benign communication domain: 'financial_legitimate' or 'general_legitimate'
+email_subject,string,True,None,None,email_subject,Subject header extracted from email communications where separate in source
+email_body,string,True,None,None,email_body,Body payload extracted from email communications where separate in source
+duplicate_cluster_id,string,True,audited cluster ID,audited cluster ID,audited cluster ID,Connected component cluster ID for near-duplicates; None for unclustered singletons
+char_count_original,integer,False,computed,computed,computed,Character length of original_text
+word_count_original,integer,False,computed,computed,computed,Whitespace word count of original_text
+char_count_normalized,integer,False,computed,computed,computed,Character length of normalized_text
+word_count_normalized,integer,False,computed,computed,computed,Whitespace word count of normalized_text
+placeholder_count_original,integer,False,computed,computed,computed,Total bracketed placeholder tokens detected in original_text
+placeholder_count_normalized,integer,False,computed,computed,computed,Total bracketed placeholder tokens detected in normalized_text
