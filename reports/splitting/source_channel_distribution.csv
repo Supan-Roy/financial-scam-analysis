@@ -1,0 +1,10 @@
+dataset,source,channel,record_count,pct_of_dataset,pct_of_total_corpus,clustered_records,singleton_records,distinct_clusters,total_groups,financial_legitimate_count,general_legitimate_count
+real_fin_legit,MeAJOR (trec5),email,27291,43.78,35.82,2612,24679,907,25586,13124,14167
+real_fin_legit,MeAJOR (trec7),email,19244,30.87,25.26,1090,18154,289,18443,3350,15894
+real_fin_legit,MeAJOR (trec6),email,11127,17.85,14.6,283,10844,128,10972,2505,8622
+real_fin_legit,UCI SMS Spam Collection,sms,4500,7.22,5.91,19,4481,10,4491,146,4354
+real_fin_legit,Financial scams detection dataset (Mendeley Data V2),sms,170,0.27,0.22,1,169,1,170,76,94
+real_fin_scam,Smishing Dataset IMC25 (public user reports),sms,9600,69.26,12.6,2162,7438,870,8308,0,0
+real_fin_scam,Nigerian_Fraud.csv,email,3265,23.56,4.29,914,2351,338,2689,0,0
+real_fin_scam,Phishing and Legitimate Emails Dataset (Kaggle),email,500,3.61,0.66,0,500,0,500,0,0
+real_fin_scam,smishtank.csv,sms,496,3.58,0.65,130,366,70,436,0,0

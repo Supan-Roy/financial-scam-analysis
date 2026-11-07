@@ -1,0 +1,4 @@
+dataset,label,total_records,record_share_pct,total_groups,group_share_pct,clustered_records,clustered_records_pct,singleton_records,singleton_records_pct,multi_record_clusters,singleton_groups,mean_records_per_group,median_records_per_group,max_records_per_group,email_records,email_records_pct,email_groups,sms_records,sms_records_pct,sms_groups
+real_fin_scam,scam (1),13861,18.19,11872,16.6,3206,23.13,10655,76.87,1217,10655,1.168,1,18,3765,27.16,3189,10096,72.84,8683
+real_fin_legit,legitimate (0),62332,81.81,59661,83.4,4005,6.43,58327,93.57,1334,58327,1.045,1,166,57662,92.51,55001,4670,7.49,4660
+total_corpus,combined (binary),76193,100.0,71533,100.0,7211,9.46,68982,90.54,2551,68982,1.065,1,166,61427,80.62,58190,14766,19.38,13343
