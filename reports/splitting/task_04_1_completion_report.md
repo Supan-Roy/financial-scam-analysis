@@ -246,3 +246,4 @@ To deterministically reproduce the exact splits and audit reports:
 1. [`.gitignore`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/.gitignore) — Explicitly unignored `!data/splits/split_assignments.csv` to ensure fast 1-click reproducibility in git.
 2. [`main.py`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/main.py) — Added `--split` CLI option and execution binding.
 3. [`requirements.txt`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/requirements.txt) — Added `pyyaml>=6.0` dependency.
+

@@ -231,3 +231,4 @@ $$\\begin{{array}}{{l|cc|cc|c}}
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(md_content)
         logger.info(f"Saved summary markdown to {output_path}")
+
