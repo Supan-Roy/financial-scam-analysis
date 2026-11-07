@@ -33,8 +33,8 @@ scipy>=1.11.0
 # lime>=0.2.0.1
 
 # --- Interactive Notebooks & Environment ---
-# jupyterlab>=4.0.0
-# ipykernel>=6.26.0
+jupyterlab>=4.0.0
+ipykernel>=6.26.0
 
 # --- Testing & Quality Assurance ---
 pytest>=7.4.0
