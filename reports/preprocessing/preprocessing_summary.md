@@ -71,8 +71,10 @@ The canonical schema preserves all original attributes while providing normalize
 ## 4. Channel Harmonization & Gateway Transmission Findings
 
 Harmonization resolved the compound `sms/email` channel in `real_fin_scam.csv`:
-- **9,600 IMC25 Records:** Harmonized to canonical channel **`sms`** (`original_channel = 'sms/email'`). All receive `is_email_gateway = True` based on source evidence.
-- **Gateway Transport Headers:** Exactly **22 records in IMC25** (and 14 in smishtank) contain carrier gateway transport headers (`FRM:... SUBJ:... MSG:...`) and are flagged with `has_gateway_headers = True`.
+- **9,600 IMC25 Records:** Harmonized to canonical channel **`sms`** (`original_channel = 'sms/email'`). Only records with empirical carrier gateway transport evidence receive `is_email_gateway = True` (**24 verified records**). Ordinary mobile SMS messages receive `is_email_gateway = False` (**9,576 records**).
+- **Gateway Transport Headers:**
+  - In IMC25: Exactly **24 records** contain carrier gateway headers (`FRM:...`, `FROM:... SUBJ:... MSG:...`) and are flagged with `has_gateway_headers = True` and `is_email_gateway = True`.
+  - In smishtank: Exactly **22 records** contain carrier gateway headers and are flagged with `has_gateway_headers = True` and `is_email_gateway = True`.
 - **Other Channels:**
   - 57,662 legitimate emails + 3,765 real scam emails + 1,911 synthetic emails = **63,338 canonical `email` records**.
   - 4,670 legitimate SMS + 496 smishtank SMS + 9,600 IMC25 SMS + 1,911 synthetic SMS = **16,677 canonical `sms` records**.
@@ -88,14 +90,18 @@ All anonymized entities were standardized into canonical square-bracket tokens:
 - **`[URL]`**: `<URL>`, `[URL]`, `[LINK REDACTED]`
 - **`[PHONE_NUMBER]`**: `<PHONE>`, `<PHONE_NUMBER>`, `[PHONE_NUMBER]`, `[FAX_NUMBER]`
 - **`[EMAIL_ADDRESS]`**: `<EMAIL>`, `<EMAIL_ADDRESS>`, `[EMAIL_ADDRESS]`
-- **`[PERSON_NAME]`**: `<NAMED_ENTITY>`, `[NAME]`, `[USERNAME]`, `[INITIALS]`, `[Fictional Contact]`, `[You]`
-- **`[ORGANIZATION]`**: `<NRP>`, `[ORGANIZATION]`, `[FICTIONAL ORGANIZATION]`, `[FICTITIOUS SERVICE DESK]`, `[FICTIONAL SERVICE]`
+- **`[PERSON_NAME]`**: `[NAME]`, `[USERNAME]`, `[INITIALS]`, `[Fictional Contact]`
+- **`[ORGANIZATION]`**: `[ORGANIZATION]`, `[FICTIONAL ORGANIZATION]`, `[FICTITIOUS SERVICE DESK]`, `[FICTIONAL SERVICE]`
 - **`[FINANCIAL_DATA]`**: `<US_BANK_NUMBER>`, `[FINANCIAL_INFO]`, `[AMOUNT REDACTED]`, `[ACCOUNT_NUMBER]`, `<CREDIT_CARD>`
 - **`[IDENTIFIER]`**: `<US_DRIVER_LICENSE>`, `<US_SSN>`, `<US_PASSPORT>`, `<UK_NHS>`, `<MEDICAL_LICENSE>`, `[REFERENCE_NUMBER]`, `[CASE REDACTED]`
 - **`[DATE_TIME]`**: `<DATE_TIME>`, `[DATE]`, `[TIME]`
 - **`[LOCATION]`**: `<LOCATION>`, `[ADDRESS]`
-- **`[SYSTEM_ARTIFACT]`**: `<IP_ADDRESS>`, `[IP_ADDRESS]`, `[FILE_NAME]`, `[FILE_PATH]`, `[PASSWORD]`, `[SYMBOL]`, `[VERSION]`, `[alternative HTML version deleted]`
+- **`[CREDENTIAL]`**: `[PASSWORD]` (Targeted ontology extension for authentication secrets)
+- **`[NAMED_ENTITY]`**: `<NAMED_ENTITY>` (Preserves general entity category from IMC25 without fabricating personal names)
+- **`[NRP]`**: `<NRP>` (Standardizes SpaCy NORP demographic/national entity token to bracket style)
+- **`[SYSTEM_ARTIFACT]`**: `<IP_ADDRESS>`, `[IP_ADDRESS]`, `[FILE_NAME]`, `[FILE_PATH]`, `[SYMBOL]`, `[VERSION]`, `[alternative HTML version deleted]`
 - **`[PRODUCT]`**: Preserved domain entity from MeAJOR (retained to prevent converting commercial products into organizations).
+- **`[You]`**: Preserved dialogue turn marker in synthetic chat transcripts.
 
 ### Nested Bracket Artifact Cleaning:
 - Redundant nested brackets (e.g. `[[[[[PRODUCT]]]]]`, `[[NAME]]`, `<<[FILE_NAME]>>`) were safely collapsed to canonical tokens.

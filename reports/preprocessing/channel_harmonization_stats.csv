@@ -1,7 +1,7 @@
 dataset_name,original_channel,canonical_channel,record_count,is_email_gateway_count,has_gateway_headers_count
 real_fin_scam,email,email,3765,0,0
-real_fin_scam,sms,sms,496,0,20
-real_fin_scam,sms/email,sms,9600,9600,22
+real_fin_scam,sms,sms,496,22,22
+real_fin_scam,sms/email,sms,9600,24,24
 synthetic_financial_scams,chat,chat,1911,0,0
 synthetic_financial_scams,email,email,1911,0,0
 synthetic_financial_scams,notification,notification,1910,0,0

@@ -35,18 +35,15 @@ CANONICAL_PLACEHOLDER_MAPPINGS: Dict[str, str] = {
     "[EMAIL_ADDRESS]": "[EMAIL_ADDRESS]",
     "[EMAIL]": "[EMAIL_ADDRESS]",
 
-    # 4. Person Names & Identities
-    "<NAMED_ENTITY>": "[PERSON_NAME]",
+    # 4. Person Names & Personal Identities (only where evidence clearly indicates person name)
     "[NAME]": "[PERSON_NAME]",
     "[Name]": "[PERSON_NAME]",
     "<name>": "[PERSON_NAME]",
     "[USERNAME]": "[PERSON_NAME]",
     "[INITIALS]": "[PERSON_NAME]",
     "[Fictional Contact]": "[PERSON_NAME]",
-    "[You]": "[PERSON_NAME]",
 
     # 5. Organizations & Services
-    "<NRP>": "[ORGANIZATION]",
     "[ORGANIZATION]": "[ORGANIZATION]",
     "[FICTIONAL ORGANIZATION]": "[ORGANIZATION]",
     "[FICTITIOUS SERVICE DESK]": "[ORGANIZATION]",
@@ -78,21 +75,34 @@ CANONICAL_PLACEHOLDER_MAPPINGS: Dict[str, str] = {
     "<LOCATION>": "[LOCATION]",
     "[ADDRESS]": "[LOCATION]",
 
-    # 10. System & Markup Artifacts
+    # 10. Credentials (Targeted Ontology Extension for Authentication Secrets)
+    "[PASSWORD]": "[CREDENTIAL]",
+    "[password]": "[CREDENTIAL]",
+    "<password>": "[CREDENTIAL]",
+
+    # 11. Generic Named Entities & Nationalities (Standardizing bracket style while preserving ambiguity)
+    # <NAMED_ENTITY> in IMC25 covers banks, apps, persons, and services; standardized to [NAMED_ENTITY]
+    "<NAMED_ENTITY>": "[NAMED_ENTITY]",
+    # <NRP> in IMC25 represents SpaCy NORP (Nationality, Religious, or Political group); standardized to [NRP]
+    "<NRP>": "[NRP]",
+
+    # 12. System & Markup Artifacts
     "<IP_ADDRESS>": "[SYSTEM_ARTIFACT]",
     "[IP_ADDRESS]": "[SYSTEM_ARTIFACT]",
     "[FILE_NAME]": "[SYSTEM_ARTIFACT]",
     "[FILE_PATH]": "[SYSTEM_ARTIFACT]",
-    "[PASSWORD]": "[SYSTEM_ARTIFACT]",
     "[SYMBOL]": "[SYSTEM_ARTIFACT]",
     "[VERSION]": "[SYSTEM_ARTIFACT]",
     "[alternative HTML version deleted]": "[SYSTEM_ARTIFACT]",
 
-    # Preserved Domain Entities (MeAJOR product entity retained to preserve domain distinction)
+    # 13. Preserved Domain Entities & Conversational Markers
+    # [PRODUCT]: MeAJOR product entity retained to preserve domain distinction without converting to organization
     "[PRODUCT]": "[PRODUCT]",
+    # [You]: Conversational recipient turn marker in synthetic chat dialogue; retained as [You]
+    "[You]": "[You]",
 }
 
-# 10 Standard Canonical Tokens + Preserved Domain Entity
+# Recognized Canonical & Domain-Preserved Tokens
 CANONICAL_TOKENS: Set[str] = {
     "[URL]",
     "[PHONE_NUMBER]",
@@ -103,8 +113,12 @@ CANONICAL_TOKENS: Set[str] = {
     "[IDENTIFIER]",
     "[DATE_TIME]",
     "[LOCATION]",
+    "[CREDENTIAL]",
+    "[NAMED_ENTITY]",
+    "[NRP]",
     "[SYSTEM_ARTIFACT]",
     "[PRODUCT]",
+    "[You]",
 }
 
 
@@ -198,4 +212,3 @@ class PlaceholderHarmonizer:
         char_count = len(text)
         word_count = len(text.split())
         return char_count, word_count
-

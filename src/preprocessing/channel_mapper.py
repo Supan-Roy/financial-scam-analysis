@@ -3,7 +3,7 @@ Channel Harmonization and Email Gateway Detection Module.
 
 This module maps raw channel strings across heterogeneous sources to canonical
 communication channels ('email', 'sms', 'chat', 'notification'), while identifying
-email-to-SMS gateway delivery mechanisms and header markers.
+email-to-SMS gateway delivery mechanisms and header markers based on empirical source evidence.
 """
 
 import re
@@ -12,9 +12,12 @@ from typing import Tuple, Dict, Any, Optional
 
 logger = logging.getLogger(__name__)
 
-# Precompiled regex for email-to-SMS carrier gateway headers
+# Precompiled regex for email-to-SMS carrier gateway headers.
+# Captures standard carrier gateway delivery headers:
+# - Messages starting with FRM: (e.g. 'FRM:Chase Alert SUBJ:... MSG:...')
+# - Messages with multi-field carrier headers (FRM/FROM followed by SUBJ/MSG/CONTENT)
 RE_GATEWAY_HEADERS = re.compile(
-    r"(?:^FRM:|\bFRM:\s*.*?\b(?:SUBJ:|MSG:))",
+    r"(?:^FRM:|(?:^|\n|\s)(?:FRM|FROM):\s*.*?\b(?:SUBJ|MSG|CONTENT):|\bFRM:\s*.*?\b(?:SUBJ:|MSG:))",
     re.IGNORECASE | re.DOTALL,
 )
 
@@ -36,7 +39,6 @@ class ChannelHarmonizer:
         """
         if not isinstance(text, str) or not text:
             return False
-        # Matches ^FRM: or explicit multi-field carrier header format
         if text.startswith("FRM:"):
             return True
         return bool(RE_GATEWAY_HEADERS.search(text))
@@ -50,10 +52,19 @@ class ChannelHarmonizer:
         """
         Harmonizes raw channel label into canonical channel and evaluates gateway flags.
 
+        Rules:
+        - `channel`: Canonical communication medium ('sms', 'email', 'chat', 'notification').
+        - `original_channel`: Preserved raw channel string from upstream source.
+        - `has_gateway_headers`: True if text contains explicit carrier transport headers.
+        - `is_email_gateway`: True ONLY when email-to-SMS gateway transport is supported
+          by empirical source evidence (presence of carrier gateway headers/origin).
+          Ordinary mobile SMS records (including the 9,576+ records in IMC25 without
+          gateway evidence) receive is_email_gateway = False.
+
         Returns:
             Tuple of:
             - canonical_channel (str): 'email', 'sms', 'chat', 'notification', or raw if unmapped
-            - is_email_gateway (bool): True if source evidence supports email-to-SMS gateway transport
+            - is_email_gateway (bool): True if gateway transport is supported by source evidence
             - has_gateway_headers (bool): True if message contains explicit transport headers
         """
         raw_clean = str(raw_channel).strip().lower() if raw_channel is not None else "unknown"
@@ -64,16 +75,19 @@ class ChannelHarmonizer:
 
         # 1. IMC25 Compound Channel: sms/email
         # Provenance: IMC25 Smishing Dataset contains public user-reported mobile smishing
-        # messages delivered to handsets, some originating via email-to-SMS gateways.
+        # messages delivered to cellular handsets. The compound label 'sms/email' denoted
+        # that mobile reports could have originated via SMS or carrier email-to-SMS gateways.
+        # Only records with explicit gateway evidence receive is_email_gateway = True.
+        # Ordinary mobile SMS messages must NOT be labelled as email gateways.
         if raw_clean == "sms/email":
             canonical_channel = "sms"
-            is_gateway = True  # Supported by source provenance as gateway smishing
+            is_gateway = has_headers  # True only if empirical gateway header evidence exists
             return canonical_channel, is_gateway, has_headers
 
         # 2. Standard SMS (UCI SMS, Mendeley, smishtank, synthetic)
         if raw_clean == "sms":
             canonical_channel = "sms"
-            is_gateway = False
+            is_gateway = has_headers  # In smishtank, gateway headers also indicate gateway delivery
             return canonical_channel, is_gateway, has_headers
 
         # 3. Standard Email (MeAJOR, Nigerian_Fraud, Kaggle, synthetic)
@@ -101,4 +115,3 @@ class ChannelHarmonizer:
         # 7. Unmapped / Ambiguous records: retain original without arbitrary guessing
         logger.warning(f"Unrecognized channel '{raw_channel}' from source '{source}'")
         return raw_clean, False, has_headers
-

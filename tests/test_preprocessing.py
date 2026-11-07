@@ -1,5 +1,5 @@
 """
-Unit tests for Canonical Preprocessing Pipeline (Task 03).
+Unit tests for Canonical Preprocessing Pipeline (Tasks 03 & 03.1).
 """
 
 import pytest
@@ -39,10 +39,10 @@ def test_placeholder_normalization_categories():
 
     sample_text = (
         "Visit <URL> or [LINK REDACTED]. Call <PHONE> or <PHONE_NUMBER> or [PHONE_NUMBER]. "
-        "Email <EMAIL> or [EMAIL_ADDRESS]. Spoke with <NAMED_ENTITY>, [NAME], and [Fictional Contact]. "
-        "Issued by <NRP> and [FICTIONAL ORGANIZATION] for [AMOUNT REDACTED] from <US_BANK_NUMBER>. "
+        "Email <EMAIL> or [EMAIL_ADDRESS]. Spoke with [NAME] and [Fictional Contact]. "
+        "Issued by [FICTIONAL ORGANIZATION] for [AMOUNT REDACTED] from <US_BANK_NUMBER>. "
         "Check <US_DRIVER_LICENSE>, <US_SSN>, and [REFERENCE_NUMBER] on <DATE_TIME> at <LOCATION>. "
-        "Review file [FILE_NAME] with commodity [PRODUCT]."
+        "Review file [FILE_NAME] with commodity [PRODUCT]. Enter password [PASSWORD]."
     )
 
     norm = harmonizer.normalize_text(sample_text)
@@ -59,12 +59,10 @@ def test_placeholder_normalization_categories():
     assert "<EMAIL>" not in norm
 
     assert "[PERSON_NAME]" in norm
-    assert "<NAMED_ENTITY>" not in norm
     assert "[NAME]" not in norm
     assert "[Fictional Contact]" not in norm
 
     assert "[ORGANIZATION]" in norm
-    assert "<NRP>" not in norm
     assert "[FICTIONAL ORGANIZATION]" not in norm
 
     assert "[FINANCIAL_DATA]" in norm
@@ -85,7 +83,39 @@ def test_placeholder_normalization_categories():
     assert "[SYSTEM_ARTIFACT]" in norm
     assert "[FILE_NAME]" not in norm
 
+    assert "[CREDENTIAL]" in norm
+    assert "[PASSWORD]" not in norm
+
     assert "[PRODUCT]" in norm
+
+
+def test_targeted_placeholder_corrections():
+    """Test Task 03.1 semantic corrections: NAMED_ENTITY, NRP, You, and PASSWORD."""
+    harmonizer = PlaceholderHarmonizer()
+
+    # 1. <NAMED_ENTITY> preserved as [NAMED_ENTITY] (not person name)
+    t1 = "Your <NAMED_ENTITY> account is locked."
+    n1 = harmonizer.normalize_text(t1)
+    assert "[NAMED_ENTITY]" in n1
+    assert "[PERSON_NAME]" not in n1
+
+    # 2. <NRP> preserved as [NRP] (NORP demographic entity, not organization)
+    t2 = "The mission is to help <NRP> taxpayers in the <NRP> market."
+    n2 = harmonizer.normalize_text(t2)
+    assert "[NRP]" in n2
+    assert "[ORGANIZATION]" not in n2
+
+    # 3. [You] preserved as [You] (dialogue turn marker, not person name)
+    t3 = "[Fictional Contact]: Alert! [You]: Can you provide details?"
+    n3 = harmonizer.normalize_text(t3)
+    assert "[You]:" in n3
+    assert "[PERSON_NAME]: Can you" not in n3
+
+    # 4. [PASSWORD] mapped to [CREDENTIAL] (not system artifact)
+    t4 = "User ID: [USERNAME] PW: [PASSWORD]"
+    n4 = harmonizer.normalize_text(t4)
+    assert "[CREDENTIAL]" in n4
+    assert "[SYSTEM_ARTIFACT]" not in n4
 
 
 def test_nested_and_malformed_placeholders():
@@ -108,6 +138,18 @@ def test_nested_and_malformed_placeholders():
         assert norm == expected, f"Failed for {inp}: expected {expected}, got {norm}"
 
 
+def test_nested_cleanup_preserves_words():
+    """Verify that bracket un-nesting does not strip natural language words."""
+    harmonizer = PlaceholderHarmonizer()
+
+    text = "Important notice: please review [[[[[PRODUCT]]]]] and [[NAME]] before deadline tomorrow."
+    norm = harmonizer.normalize_text(text)
+
+    # Natural words must be completely intact
+    for word in ["Important", "notice:", "please", "review", "before", "deadline", "tomorrow."]:
+        assert word in norm
+
+
 def test_placeholder_idempotency():
     """Verify that normalization is strictly idempotent: f(f(x)) == f(x)."""
     harmonizer = PlaceholderHarmonizer()
@@ -117,6 +159,7 @@ def test_placeholder_idempotency():
         "[[[[[PRODUCT]]]]] from [ORGANIZATION] sent to [[NAME]] <<[FILE_NAME]>>.",
         "Simple plain text with no placeholders at all.",
         "Mixed: <PHONE> and [PHONE_NUMBER] and [unknown_bracket_token].",
+        "Your <NAMED_ENTITY> account is locked. Contact <NRP> with [PASSWORD]. [You]: OK.",
     ]
 
     for t in texts:
@@ -149,13 +192,13 @@ def test_channel_harmonization_rules():
     """Test channel mapping rules and email-to-SMS gateway identification."""
     mapper = ChannelHarmonizer()
 
-    # 1. IMC25 sms/email without gateway headers
+    # 1. IMC25 sms/email without gateway headers (ordinary SMS)
     ch, is_gw, has_hdr = mapper.harmonize_channel("sms/email", "Smishing Dataset IMC25", "Your code is 12345")
     assert ch == "sms"
-    assert is_gw is True
+    assert is_gw is False
     assert has_hdr is False
 
-    # 2. IMC25 sms/email with FRM header
+    # 2. IMC25 sms/email with FRM header (verified gateway transmission)
     ch, is_gw, has_hdr = mapper.harmonize_channel("sms/email", "Smishing Dataset IMC25", "FRM:Bank MSG:Alert")
     assert ch == "sms"
     assert is_gw is True
@@ -194,7 +237,7 @@ def test_schema_mapping_and_columns():
 
     mock_df = pd.DataFrame([{
         "id": "TEST-0001",
-        "text": "Hello <URL> for [NAME]",
+        "text": "FRM:Bank MSG:Hello <URL> for [NAME]",
         "label": 1,
         "scam_channel": "sms/email",
         "source": "Smishing Dataset IMC25 (public user reports)",
@@ -212,12 +255,13 @@ def test_schema_mapping_and_columns():
     row = proc.iloc[0]
 
     assert row["record_id"] == "TEST-0001"
-    assert row["original_text"] == "Hello <URL> for [NAME]"
-    assert row["normalized_text"] == "Hello [URL] for [PERSON_NAME]"
+    assert row["original_text"] == "FRM:Bank MSG:Hello <URL> for [NAME]"
+    assert row["normalized_text"] == "FRM:Bank MSG:Hello [URL] for [PERSON_NAME]"
     assert row["label"] == 1
     assert row["channel"] == "sms"
     assert row["original_channel"] == "sms/email"
     assert bool(row["is_email_gateway"]) is True
+    assert bool(row["has_gateway_headers"]) is True
     assert row["duplicate_cluster_id"] == "TEST_C0001"
     assert bool(row["is_synthetic"]) is False
     assert row["char_count_original"] == len(mock_df["text"].iloc[0])
@@ -251,7 +295,7 @@ def test_synthetic_and_legit_processing_mock():
     # Synthetic mock
     synth_df = pd.DataFrame([{
         "id": "SYNTH-01",
-        "text": "Transfer [AMOUNT REDACTED] to [Fictional Contact] at [FICTIONAL SERVICE]",
+        "text": "Transfer [AMOUNT REDACTED] to [Fictional Contact] at [FICTIONAL SERVICE]. [You]: OK",
         "label": 1,
         "scam_channel": "chat",
         "fraudulent_intent": "Advance Fee",
@@ -271,11 +315,12 @@ def test_synthetic_and_legit_processing_mock():
     assert "[FINANCIAL_DATA]" in s_row["normalized_text"]
     assert "[PERSON_NAME]" in s_row["normalized_text"]
     assert "[ORGANIZATION]" in s_row["normalized_text"]
+    assert "[You]: OK" in s_row["normalized_text"]
 
     # Legit mock
     legit_df = pd.DataFrame([{
         "id": "LEGIT-01",
-        "text": "Meeting with [[NAME]] regarding [PRODUCT]",
+        "text": "Meeting with [[NAME]] regarding [PRODUCT] and login [PASSWORD]",
         "email_subject": "Meeting",
         "email_body": "Meeting details",
         "label": 0,
@@ -298,4 +343,4 @@ def test_synthetic_and_legit_processing_mock():
     assert l_row["legitimate_category"] == "financial_legitimate"
     assert "[PERSON_NAME]" in l_row["normalized_text"]
     assert "[PRODUCT]" in l_row["normalized_text"]
-
+    assert "[CREDENTIAL]" in l_row["normalized_text"]
