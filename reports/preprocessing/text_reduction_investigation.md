@@ -102,3 +102,4 @@ In a minority of records, whitespace-tokenized word counts changed. We audited a
 ## 5. Verification Conclusion
 
 The large character reductions observed in `MEAJOR-LEG-054248` and related records are **100% legitimate, verified, and beneficial**. They eliminate extreme regex bracket corruption from legacy upstream curation without modifying any natural language text. No normalizer bug or unintended truncation occurred.
+

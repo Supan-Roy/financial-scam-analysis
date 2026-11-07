@@ -115,3 +115,4 @@ The pipeline has been updated in [`src/preprocessing/channel_mapper.py`](file://
 
 ### Documented Limitation:
 For the remaining 9,576 records in IMC25, users reported receiving these messages as SMS on cellular phones. Because upstream collectors did not archive carrier routing metadata, we preserve empirical truth: without transport headers, gateway delivery cannot be proven, and these messages are correctly classified as ordinary mobile SMS.
+
