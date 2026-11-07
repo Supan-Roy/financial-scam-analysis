@@ -33,6 +33,11 @@ def main() -> None:
         help="Run the canonical preprocessing and harmonization pipeline (Task 03).",
     )
     parser.add_argument(
+        "--split",
+        action="store_true",
+        help="Run the leakage-resistant group-aware dataset splitting pipeline (Task 04.1).",
+    )
+    parser.add_argument(
         "--skip-plots",
         action="store_true",
         help="Skip figure generation during audit.",
@@ -70,6 +75,11 @@ def main() -> None:
         pipeline.run_pipeline()
         sys.exit(0)
 
+    if args.split:
+        from scripts.run_split import run_splitting_pipeline
+        exit_code = run_splitting_pipeline()
+        sys.exit(exit_code)
+
     print("=" * 70)
     print("Financial Scam Research Framework")
     print("An Explainable Multi-Level Transformer-Based Framework for Financial Scam")
@@ -79,10 +89,12 @@ def main() -> None:
     print("  python main.py --audit            Run the complete dataset audit pipeline (Task 01)")
     print("  python main.py --validate         Run audit validation & leakage investigation (Task 02)")
     print("  python main.py --preprocess       Run canonical preprocessing pipeline (Task 03)")
+    print("  python main.py --split            Run group-aware dataset splitting pipeline (Task 04.1)")
     print("  python scripts/run_dataset_audit.py     Run dataset audit with custom flags")
     print("  python scripts/run_audit_validation.py  Run validation pipeline with custom flags")
     print("  python scripts/run_preprocessing.py     Run canonical preprocessing directly")
-    print("\nStatus: Framework initialized. Preprocessing and auditing pipelines ready.")
+    print("  python scripts/run_split.py             Run group-aware dataset splitting directly")
+    print("\nStatus: Framework initialized. Preprocessing, auditing, and splitting ready.")
 
 
 if __name__ == "__main__":

@@ -62,6 +62,7 @@ data/interim/*
 
 data/splits/*
 !data/splits/.gitkeep
+!data/splits/split_assignments.csv
 
 # Catch-all data file formats
 *.csv
@@ -77,6 +78,9 @@ data/splits/*
 # Allow research audit and evaluation tables in reports/
 !reports/**/*.csv
 !reports/*.csv
+
+# Allow lightweight split assignments mapping for reproducibility
+!data/splits/split_assignments.csv
 
 # --- Model Checkpoints & Weights ---
 *.pt

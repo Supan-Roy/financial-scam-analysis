@@ -1,0 +1,49 @@
+# ==============================================================================
+# Financial Scam Research Framework - Group-Aware Data Splitting Configuration
+# ==============================================================================
+# Task 04.1: Leakage-resistant group-aware train/val/test splitting for
+# the real-world binary scam classification benchmark.
+
+dataset_scope:
+  scam_dataset_path: "data/processed/real_fin_scam_processed.csv"
+  legit_dataset_path: "data/processed/real_fin_legit_processed.csv"
+  synthetic_dataset_path: "data/processed/synthetic_financial_scams_processed.csv"
+  exclude_synthetic: true
+  expected_record_count: 76193
+
+target_proportions:
+  train: 0.80
+  validation: 0.10
+  test: 0.10
+
+grouping:
+  cluster_column: "duplicate_cluster_id"
+  record_id_column: "record_id"
+  singleton_prefix: "singleton_"
+
+stratification:
+  primary_strata_columns:
+    - "label"
+    - "channel"
+  secondary_diagnostic_columns:
+    - "legitimate_category"
+    - "source"
+
+algorithm:
+  name: "stratified_group_greedy_partitioning"
+  deterministic: true
+  random_seed: 42
+  sort_keys:
+    - "size"      # primary: descending by cluster size (bin packing heuristic)
+    - "group_id"  # secondary: ascending deterministic tie-breaker
+
+output_paths:
+  splits_dir: "data/splits"
+  train_file: "data/splits/train.csv"
+  validation_file: "data/splits/validation.csv"
+  test_file: "data/splits/test.csv"
+  assignments_file: "data/splits/split_assignments.csv"
+  reports_dir: "reports/splitting"
+  summary_report: "reports/splitting/split_summary.md"
+  distribution_report: "reports/splitting/split_distribution.csv"
+  integrity_report: "reports/splitting/split_group_integrity.csv"

@@ -1,0 +1,43 @@
+split,label,channel,source,legitimate_category,record_count,group_count,pct_of_split,pct_of_total_corpus
+test,0,email,MeAJOR (trec7),general_legitimate,1589,1567,20.858,2.085
+test,0,email,MeAJOR (trec5),general_legitimate,1406,1317,18.456,1.845
+test,0,email,MeAJOR (trec5),financial_legitimate,1321,1243,17.341,1.734
+test,0,email,MeAJOR (trec6),general_legitimate,881,869,11.565,1.156
+test,0,email,MeAJOR (trec7),financial_legitimate,337,277,4.424,0.442
+test,0,email,MeAJOR (trec6),financial_legitimate,232,229,3.045,0.304
+test,0,sms,UCI SMS Spam Collection,general_legitimate,436,435,5.723,0.572
+test,0,sms,UCI SMS Spam Collection,financial_legitimate,15,15,0.197,0.02
+test,0,sms,Financial scams detection dataset (Mendeley Data V2),general_legitimate,9,9,0.118,0.012
+test,0,sms,Financial scams detection dataset (Mendeley Data V2),financial_legitimate,7,7,0.092,0.009
+test,1,email,Nigerian_Fraud.csv,,326,269,4.279,0.428
+test,1,email,Phishing and Legitimate Emails Dataset (Kaggle),,50,50,0.656,0.066
+test,1,sms,Smishing Dataset IMC25 (public user reports),,963,831,12.641,1.264
+test,1,sms,smishtank.csv,,46,45,0.604,0.06
+train,0,email,MeAJOR (trec7),general_legitimate,12648,12490,20.749,16.6
+train,0,email,MeAJOR (trec5),general_legitimate,11298,10737,18.534,14.828
+train,0,email,MeAJOR (trec5),financial_legitimate,10544,9746,17.297,13.839
+train,0,email,MeAJOR (trec6),general_legitimate,6913,6828,11.341,9.073
+train,0,email,MeAJOR (trec7),financial_legitimate,2737,2256,4.49,3.592
+train,0,email,MeAJOR (trec6),financial_legitimate,1990,1949,3.265,2.612
+train,0,sms,UCI SMS Spam Collection,general_legitimate,3482,3475,5.712,4.57
+train,0,sms,UCI SMS Spam Collection,financial_legitimate,117,117,0.192,0.154
+train,0,sms,Financial scams detection dataset (Mendeley Data V2),general_legitimate,75,75,0.123,0.098
+train,0,sms,Financial scams detection dataset (Mendeley Data V2),financial_legitimate,62,62,0.102,0.081
+train,1,email,Nigerian_Fraud.csv,,2613,2151,4.287,3.429
+train,1,email,Phishing and Legitimate Emails Dataset (Kaggle),,400,400,0.656,0.525
+train,1,sms,Smishing Dataset IMC25 (public user reports),,7674,6646,12.589,10.072
+train,1,sms,smishtank.csv,,404,348,0.663,0.53
+validation,0,email,MeAJOR (trec7),general_legitimate,1657,1598,21.751,2.175
+validation,0,email,MeAJOR (trec5),general_legitimate,1463,1351,19.205,1.92
+validation,0,email,MeAJOR (trec5),financial_legitimate,1259,1201,16.527,1.652
+validation,0,email,MeAJOR (trec6),general_legitimate,828,821,10.869,1.087
+validation,0,email,MeAJOR (trec6),financial_legitimate,283,276,3.715,0.371
+validation,0,email,MeAJOR (trec7),financial_legitimate,276,256,3.623,0.362
+validation,0,sms,UCI SMS Spam Collection,general_legitimate,436,435,5.723,0.572
+validation,0,sms,UCI SMS Spam Collection,financial_legitimate,14,14,0.184,0.018
+validation,0,sms,Financial scams detection dataset (Mendeley Data V2),general_legitimate,10,10,0.131,0.013
+validation,0,sms,Financial scams detection dataset (Mendeley Data V2),financial_legitimate,7,7,0.092,0.009
+validation,1,email,Nigerian_Fraud.csv,,326,269,4.279,0.428
+validation,1,email,Phishing and Legitimate Emails Dataset (Kaggle),,50,50,0.656,0.066
+validation,1,sms,Smishing Dataset IMC25 (public user reports),,963,831,12.641,1.264
+validation,1,sms,smishtank.csv,,46,43,0.604,0.06

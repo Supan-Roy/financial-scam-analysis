@@ -1,0 +1,5 @@
+split,total_records,total_groups,cluster_groups,clustered_records,singleton_groups,singleton_records,mean_group_size,median_group_size,max_group_size,leaked_groups_count
+train,60957,57221,2037,5773,55184,55184,1.065,1,166,0
+validation,7618,7156,257,719,6899,6899,1.065,1,47,0
+test,7618,7156,257,719,6899,6899,1.065,1,47,0
+total_corpus,76193,71533,2551,7211,68982,68982,1.065,1,166,0

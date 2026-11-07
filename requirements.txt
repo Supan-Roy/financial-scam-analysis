@@ -8,6 +8,7 @@
 # --- Core Data Manipulation & Mathematics (Active in Phase 1 / Task 01) ---
 pandas>=2.0.0
 numpy>=1.24.0
+pyyaml>=6.0
 
 # --- Visualization & Reporting (Active in Phase 1 / Task 01) ---
 matplotlib>=3.8.0
