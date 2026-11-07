@@ -1,7 +1,7 @@
 # An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
-[![License: Academic Research](https://img.shields.io/badge/license-Research%20Only-lightgrey.svg)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Framework: PyTorch & HuggingFace](https://img.shields.io/badge/framework-PyTorch%20%7C%20Transformers-orange.svg)](https://pytorch.org/)
 
 ## 1. Project Overview & Research Objectives
@@ -109,4 +109,13 @@ financial-scam-analysis/
 1. **Environment Setup:** Dependency specifications are recorded in `requirements.txt`.
 2. **Reproducibility:** Experiments are controlled via structured configurations in `configs/`.
 3. **Data Integrity:** Any script accessing `data/raw/` must treat raw files as strictly read-only.
+
+---
+
+## 6. License
+
+This project is licensed under the **Apache License 2.0** — see the [LICENSE](LICENSE) file for details.
+
+Third-party datasets utilized or referenced retain their original licenses and attribution requirements.
+
 
