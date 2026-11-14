@@ -30,6 +30,7 @@ This research project develops an intelligent, explainable, natural language pro
 | **Task 03.1: Preprocessing Forensic Verification** | **Completed** | Empirical gateway header verification (46 verified gateway transports), semantic placeholder alignment, and text reduction mathematical proof. [`reports/preprocessing/task_03_1_verification_report.md`](reports/preprocessing/task_03_1_verification_report.md) |
 | **Task 04.0: Group-Aware Splitting Feasibility Analysis** | **Completed** | Disproved source-level grouping; established 71,533 indivisible group units; designed Stratified Group-Aware Greedy Partitioning (SGGP). [`reports/splitting/split_feasibility_report.md`](reports/splitting/split_feasibility_report.md) |
 | **Task 04.1: Leakage-Resistant Dataset Splitting** | **Completed** | Partitioned 76,193 real records into Train (80%), Val (10%), Test (10%) with **0% duplicate cluster leakage** and < 0.004% deviation. [`docs/splitting_methodology.md`](docs/splitting_methodology.md) |
+| **Exploratory Research & Text Profiling** | **Completed** | Distribution analysis, channel-class interaction, Simpson's Paradox word counts, 115k vocabulary forensic profiling, and sparsity pruning. [`docs/exploratory_data_analysis_and_text_representation.md`](docs/exploratory_data_analysis_and_text_representation.md) |
 | **Task 05+: Baseline Models & Transformers** | *Next Phase* | Classical ML benchmarks (TF-IDF + SVM/XGBoost), fine-tuning modern Transformers (DeBERTa-v3, RoBERTa), and multi-task learning. |
 
 ---
@@ -63,7 +64,18 @@ The initial empirical benchmark includes all **76,193 real-world records**, part
 
 ---
 
-## 5. Pipeline Execution & CLI Reference
+## 5. Exploratory Notebooks & Text Representation Research
+
+The repository includes two foundational exploratory research notebooks in `notebooks/` detailing linguistic distributions, representation mechanics, and forensic vocabulary profiling on the training split (60,957 records):
+
+- **[`notebooks/01_dataset_understanding.ipynb`](notebooks/01_dataset_understanding.ipynb):** Comprehensive dataset understanding, class balance (81.81% legit vs 18.19% scam), cross-channel interaction (Scams are 72.83% SMS while Legit is 92.51% Email), word count distribution by channel and class (uncovering Simpson's Paradox in message lengths), and placeholder frequency asymmetry across sources.
+- **[`notebooks/02_text_representation.ipynb`](notebooks/02_text_representation.ipynb):** Classical Bag-of-Words and TF-IDF representations, word-order invariance demonstrations, matrix sparsity analysis (99.28% sparse at full vocabulary), forensic tracing of numeric zero-strings (C source code and R statistical mailing list artifacts in legitimate emails), vocabulary document-frequency distribution (48.83% hapax legomena), and empirical pruning rationale (`min_df=5` cutting 75.13% noise).
+
+*For a full technical report of the methodology, statistical distributions, and engineering takeaways, see [`docs/exploratory_data_analysis_and_text_representation.md`](docs/exploratory_data_analysis_and_text_representation.md).*
+
+---
+
+## 6. Pipeline Execution & CLI Reference
 
 The project provides an integrated CLI interface through `main.py`:
 
@@ -86,7 +98,7 @@ python -m pytest tests/ -v
 
 ---
 
-## 6. Repository Structure
+## 7. Repository Structure
 
 ```text
 financial-scam-analysis/
@@ -106,6 +118,7 @@ financial-scam-analysis/
 │   ├── legitimate_dataset_card.md
 │   ├── canonical_preprocessing_and_schema.md
 │   ├── splitting_methodology.md
+│   ├── exploratory_data_analysis_and_text_representation.md
 │   └── meajor_legit_audit.md
 │
 ├── notebooks/                   # Interactive Jupyter research and exploration notebooks
@@ -144,7 +157,7 @@ financial-scam-analysis/
 
 ---
 
-## 7. Technology Stack
+## 8. Technology Stack
 
 - **Core & Numerics:** Python (>=3.10), [pandas](https://pandas.pydata.org/), [NumPy](https://numpy.org/), [PyYAML](https://pyyaml.org/)
 - **Machine Learning Baselines:** [scikit-learn](https://scikit-learn.org/), [SciPy](https://scipy.org/)
@@ -156,7 +169,7 @@ financial-scam-analysis/
 
 ---
 
-## 8. License & Attribution
+## 9. License & Attribution
 
 This project is licensed under the **Apache License 2.0** — see the [LICENSE](LICENSE) file for details.
 
