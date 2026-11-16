@@ -44,6 +44,18 @@ This document provides a comprehensive research synthesis of the exploratory dat
 7. **Non-ASCII & Foreign Language Infiltrations:**
    - **8.92% of scam messages** contain non-ASCII characters (mojibake, foreign scripts, currency signs) versus only **2.91% of legitimate messages** (a 3.1x enrichment in scams).
 
+8. **Three-Way Analytical Group Comparison:**
+   - Decomposing the dataset into *Financial Scams* (11,091), *Financial Legitimate* (15,450), and *General Legitimate* (34,416) allows isolating true fraudulent intent from benign financial jargon (e.g. distinguishing fraudulent wire requests from normal account alerts).
+
+9. **Character-Level TF-IDF Representation:**
+   - Character word-boundary n-grams (`char_wb`, range 3–5, `min_df=5`, `float32`) produce **289,006 features** with a compact **~484.62 MB** CSR sparse matrix.
+   - Captures character-level obfuscation, leetspeak, URL patterns, and typos resistant to tokenization anomalies.
+
+10. **Anomalous Control Character Audit & Cleaning Impact:**
+    - Standard `Cc` control characters occur in 80.69% of records due to normal linebreaks (`\n`, `\r`, `\t`).
+    - True anomalous control characters (unrendered byte codes like `0x84`, `0x16`, `0x7f`) occur in only **474 records (0.78%)**.
+    - Filtering anomalous control characters yields **99.8734% vocabulary retention** (288,823 features), demonstrating that these artifacts do not distort character-level representations.
+
 ---
 
 ## 2. Notebook 01: Dataset Understanding & Profiling
@@ -245,6 +257,42 @@ Notebook 02 measured the prevalence of non-ASCII characters (`ord(char) > 127`):
 2. **Currency Symbols:** `¢` (CENT SIGN), `£` (POUND SIGN), `€` (EURO SIGN) — frequent in multi-currency lottery and inheritance scams.
 3. **Typographic Characters:** Smart apostrophes (`’`), curved quotes (`“`, `”`), bullets (`•`), em-dashes (`—`).
 4. **Foreign Language Templates:** Korean boilerplate spam headers (`주소를`, `이메일주소로`, `새로운`) and Chinese promotional text (`外国货也超便宜`) traced to isolated spam campaigns in `Nigerian_Fraud.csv`.
+
+### 3.7 Three-Way Analytical Group Comparison & Bigram Isolation
+
+To prevent models from relying solely on generic financial vocabulary, Notebook 02 establishes a three-way partition:
+1. **Financial Scams** ($N = 11,091$)
+2. **Financial Legitimate** ($N = 15,450$)
+3. **General Legitimate** ($N = 34,416$)
+
+#### Key Findings:
+- Comparing Financial Scams against Financial Legitimate distinguishes deceptive social engineering tropes (e.g. `"account suspended"`, `"unauthorized transfer"`, `"urgent verification"`, `"claim prize"`) from routine financial administration (e.g. `"monthly statement"`, `"account balance"`, `"tax invoice"`).
+- Separating placeholder bigrams (e.g. `[PERSON_NAME] [ORGANIZATION]`) from natural text bigrams confirmed that placeholder co-occurrences account for a large portion of high-frequency bigram space in legitimate email corpora.
+
+### 3.8 Higher-Order N-gram Vocabulary Scaling & Thresholding
+
+- **N-gram Expansion:** Combining unigrams, bigrams, and trigrams expands the raw feature space to over **5.3 million features**.
+- **Threshold Pruning:** 
+  - `min_df`: Increasing minimum document frequency drastically suppresses feature explosion (e.g. `min_df=5` eliminates >75% of noise).
+  - `max_df`: Evaluating upper bounds (`max_df=0.75`, `0.90`) removed almost zero features, indicating that stopword removal or natural frequency drops already keep top terms below corpus dominance.
+
+### 3.9 Character-Level TF-IDF Representation
+
+To evaluate robustness against typos, deliberate leetspeak obfuscation, and unconventional tokenization:
+- **Configuration:** `analyzer="char_wb"`, `ngram_range=(3, 5)`, `min_df=5`, `dtype=np.float32`.
+- **Dimensions:** $60,957 \times 289,006$ features.
+- **Memory Consumption:** Approximately **484.62 MB** in sparse CSR format.
+- **Utility:** Successfully captures word boundary character patterns without being brittle to spacing manipulation or punctuation insertion.
+
+### 3.10 Control Character Audit & Reversible Sanitization
+
+- **Naive Control Audit (`Cc`):** Flagged 49,186 records (80.69%) due to standard multi-line formatting (`\n`, `\r`, `\t`).
+- **Anomalous Control Audit (`Cc` excluding `\n`, `\r`, `\t`):** Confirmed true anomalous control codes (e.g. `0x84`, `0x16`, `0x7f`, `0x9e`) exist in only **474 records (0.78%)**.
+- **Sanitization Impact:** A reversible cleaning experiment removing anomalous control characters produced:
+  - Original vocabulary: 289,006 features
+  - Cleaned vocabulary: 288,823 features
+  - **Vocabulary retention: 99.8734%** (484.58 MB vs 484.62 MB)
+- **Conclusion:** Control character noise does not meaningfully alter the character-level feature space, confirming that standard normalization is safe without aggressive destructive filtering.
 
 ---
 
