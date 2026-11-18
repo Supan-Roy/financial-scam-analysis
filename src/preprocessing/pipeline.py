@@ -111,7 +111,11 @@ class CanonicalPreprocessingPipeline:
         for filename, expected_hash in EXPECTED_RAW_HASHES.items():
             path = self.raw_dir / filename
             if not path.exists():
-                raise FileNotFoundError(f"Raw dataset missing: {path}")
+                archive_path = self.raw_dir.parent / "archive" / "synthetic_iterations" / filename
+                if archive_path.exists():
+                    path = archive_path
+                else:
+                    raise FileNotFoundError(f"Raw dataset missing: {path}")
             current_hash = self.compute_file_sha256(path)
             is_valid = current_hash == expected_hash
             results[filename] = {
