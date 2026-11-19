@@ -1,8 +1,23 @@
 # Synthetic Financial-Scam Research Dataset
 
+## Active Dataset: Version 3 Corrected
+
+The active production candidate is **`synthetic_financial_scams_v3_corrected.csv`** (and processed [`data/processed/synthetic_financial_scams_v3_corrected_processed.csv`](../data/processed/synthetic_financial_scams_v3_corrected_processed.csv)).
+
+- **Total Records:** 7,800 (exactly 600 records per subtype across 13 canonical subtypes).
+- **Group Isolation:** 104 scenario families partitioned into Train (78 families / 6,240 records), Validation (13 families / 780 records), and Test (13 families / 780 records) with **0.0% scenario-family leakage** and **0.0% cluster leakage**.
+- **Character-Level Evidence Spans:** 100% exact substring match verification across all 7,800 records for `primary_intent_evidence`, `narrative_evidence`, and `tactics_evidence`.
+- **Channels:** SMS, Email, Chat (dynamic multi-turn dialogues), and Notification (lockscreen alerts).
+- **Safety & RFC 2606:** 100% of URLs strictly use reserved `.example` domains. 0 prohibited meta-tokens (`fictional`, `NOTICE <N>:`).
+- **Audit Reports:** [`reports/dataset_audits/synthetic_v3_corrected_validation.md`](../reports/dataset_audits/synthetic_v3_corrected_validation.md) and [`reports/dataset_audits/synthetic_v3_corrected_final_review.md`](../reports/dataset_audits/synthetic_v3_corrected_final_review.md).
+
+*Historical Note:* Prior iterations (Version 1: 7,643 records, Version 2, and original Version 3) have been archived to `data/archive/synthetic_iterations/` for scientific provenance.
+
+---
+
 ## Purpose
 
-`synthetic_financial_scams.csv` is a fully synthetic, English-only corpus for controlled experiments in financial-scam narrative detection, fraudulent-intent analysis, and social-engineering pattern recognition. It must be evaluated separately from the real-world corpus.
+The synthetic corpus provides controlled, leak-free supervision for multi-level financial scam narrative detection, fraudulent intent analysis, and social-engineering pattern recognition. It is evaluated separately from the real-world binary benchmark.
 
 ## Generation and stopping rule
 

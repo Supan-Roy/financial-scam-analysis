@@ -3,7 +3,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Framework: PyTorch & HuggingFace](https://img.shields.io/badge/framework-PyTorch%20%7C%20Transformers-orange.svg)](https://pytorch.org/)
-[![Tests: 29 Passed](https://img.shields.io/badge/tests-29%20passed-brightgreen.svg)](tests/)
+[![Tests: 40 Passed](https://img.shields.io/badge/tests-40%20passed-brightgreen.svg)](tests/)
 
 ---
 
@@ -31,7 +31,9 @@ This research project develops an intelligent, explainable, natural language pro
 | **Task 04.0: Group-Aware Splitting Feasibility Analysis** | **Completed** | Disproved source-level grouping; established 71,533 indivisible group units; designed Stratified Group-Aware Greedy Partitioning (SGGP). [`reports/splitting/split_feasibility_report.md`](reports/splitting/split_feasibility_report.md) |
 | **Task 04.1: Leakage-Resistant Dataset Splitting** | **Completed** | Partitioned 76,193 real records into Train (80%), Val (10%), Test (10%) with **0% duplicate cluster leakage** and < 0.004% deviation. [`docs/splitting_methodology.md`](docs/splitting_methodology.md) |
 | **Exploratory Research & Text Profiling** | **Completed** | Distribution analysis, channel-class interaction, Simpson's Paradox word counts, 115k vocabulary forensic profiling, and sparsity pruning. [`docs/exploratory_data_analysis_and_text_representation.md`](docs/exploratory_data_analysis_and_text_representation.md) |
-| **Task 05+: Baseline Models & Transformers** | *Next Phase* | Classical ML benchmarks (TF-IDF + SVM/XGBoost), fine-tuning modern Transformers (DeBERTa-v3, RoBERTa), and multi-task learning. |
+| **Task 05: Traditional ML Baselines** | **Completed** | Word-level TF-IDF baselines: Linear SVM (99.17% F1), Logistic Regression (98.39% F1), Multinomial Naive Bayes (90.78% F1); placeholder sensitivity ablation; source-class confounding investigation. [`notebooks/03_baseline_machine_learning.ipynb`](notebooks/03_baseline_machine_learning.ipynb) |
+| **Task 06: Synthetic V3 Corrected Generation** | **Completed** | 7,800 records across 13 subtypes, 5 intents, 9 tactics; 104 mathematically isolated scenario families (0.0% leakage); 100% verified character-level evidence spans. [`reports/dataset_audits/synthetic_v3_corrected_final_review.md`](reports/dataset_audits/synthetic_v3_corrected_final_review.md) |
+| **Task 07+: Multi-Level & Transformer Modeling** | *Next Phase* | Fine-tuning modern Transformer backbones (DeBERTa-v3, RoBERTa), multi-task architecture decoupling, and explainability evaluation. |
 
 ---
 
@@ -42,7 +44,7 @@ The research framework incorporates three complementary datasets located in `dat
 | Dataset Asset | Filename | Record Count | Class Label | Synthetic Flag | Description & Documentation |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **Real-world Financial Scams** | `real_fin_scam.csv` | 13,861 | `label=1` | `false` | Real-world email and SMS/smishing messages spanning banking, card alerts, loan offers, crypto investments, tax, refunds, and invoice fraud. Sources include IMC25 smishing, Nigerian Fraud, Kaggle phishing, and smishtank. [`docs/real_scam_dataset_card.md`](docs/real_scam_dataset_card.md) |
-| **Synthetic Financial Scams** | `synthetic_financial_scams.csv` | 7,643 | `label=1` | `true` | Controlled synthetic corpus covering 13 scam subtypes, 4 channels (email, SMS, chat, notification), and fine-grained annotations for fraudulent intent and social engineering tactics. Fictional entities and redacted placeholders only. Held out for OOD/transfer evaluation. [`docs/synthetic_dataset_card.md`](docs/synthetic_dataset_card.md) |
+| **Synthetic Financial Scams (Active)** | `synthetic_financial_scams_v3_corrected.csv` | 7,800 | `label=1` | `true` | Controlled synthetic corpus covering 13 scam subtypes, 4 channels (email, SMS, chat, notification), and fine-grained annotations for fraudulent intent (5 classes), social engineering tactics (9 classes), and character-level evidence spans. 104 mathematically isolated scenario families (0% leakage). Legacy iterations archived in `data/archive/synthetic_iterations/`. [`docs/synthetic_dataset_card.md`](docs/synthetic_dataset_card.md) |
 | **Legitimate Communications** | `real_fin_legit.csv` | 62,332 | `label=0` | `false` | Baseline legitimate communications (4,670 SMS, 57,662 emails) covering `financial_legitimate` (19,201) and `general_legitimate` (43,131) categories. Sources include UCI SMS, Mendeley, and MeAJOR benign emails (trec5/6/7). [`docs/legitimate_dataset_card.md`](docs/legitimate_dataset_card.md) |
 
 > **Data Governance Policy:** Raw CSV files in `data/raw/` are strictly read-only. All transformations produce derived data in `data/processed/` or `data/splits/`.
@@ -64,14 +66,15 @@ The initial empirical benchmark includes all **76,193 real-world records**, part
 
 ---
 
-## 5. Exploratory Notebooks & Text Representation Research
+## 5. Exploratory Notebooks & Baseline Modeling
 
-The repository includes two foundational exploratory research notebooks in `notebooks/` detailing linguistic distributions, representation mechanics, and forensic vocabulary profiling on the training split (60,957 records):
+The repository includes three foundational research notebooks in `notebooks/` detailing linguistic distributions, representation mechanics, forensic vocabulary profiling, and traditional machine learning baselines on the training split (60,957 records) and validation split (7,618 records):
 
 - **[`notebooks/01_dataset_understanding.ipynb`](notebooks/01_dataset_understanding.ipynb):** Comprehensive dataset understanding, class balance (81.81% legit vs 18.19% scam), cross-channel interaction (Scams are 72.83% SMS while Legit is 92.51% Email), word count distribution by channel and class (uncovering Simpson's Paradox in message lengths), and placeholder frequency asymmetry across sources.
 - **[`notebooks/02_text_representation.ipynb`](notebooks/02_text_representation.ipynb):** Classical Bag-of-Words and TF-IDF representations, word-order invariance demonstrations, matrix sparsity analysis (99.28% sparse at full vocabulary), forensic tracing of numeric zero-strings (C source code and R statistical mailing list artifacts in legitimate emails), vocabulary document-frequency distribution (48.83% hapax legomena), and empirical pruning rationale (`min_df=5` cutting 75.13% noise).
+- **[`notebooks/03_baseline_machine_learning.ipynb`](notebooks/03_baseline_machine_learning.ipynb):** Traditional binary classification baselines (Logistic Regression, Multinomial Naive Bayes, Linear SVM), error analysis across communication channels, placeholder sensitivity ablation (original vs removed vs generic replacement), source-level class confounding investigation (MeAJOR vs IMC25 vs Mendeley), and transition to multi-level modeling.
 
-*For a full technical report of the methodology, statistical distributions, and engineering takeaways, see [`docs/exploratory_data_analysis_and_text_representation.md`](docs/exploratory_data_analysis_and_text_representation.md).*
+*For a full technical report of the exploratory methodology, statistical distributions, and engineering takeaways, see [`docs/exploratory_data_analysis_and_text_representation.md`](docs/exploratory_data_analysis_and_text_representation.md).*
 
 ---
 
@@ -92,7 +95,7 @@ python main.py --preprocess
 # 4. Run leakage-resistant group-aware dataset splitting (Task 04.1)
 python main.py --split
 
-# 5. Execute automated test suite (29 tests)
+# 5. Execute automated test suite (40 tests across preprocessing, splitter, audit, and V3 Corrected)
 python -m pytest tests/ -v
 ```
 
