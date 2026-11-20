@@ -1,6 +1,6 @@
 """Group-Aware Leakage-Resistant Dataset Splitter.
 
-Title: An Explainable Multi-Level Transformer-Based Framework for Financial Scam
+Title: Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 Narrative Detection and Fraud Analysis in Digital Communications.
 
 Implements deterministic group-aware stratified partitioning (SGGP) to create

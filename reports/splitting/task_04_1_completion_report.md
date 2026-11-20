@@ -1,6 +1,6 @@
 # Task 04.1 Completion Report: Leakage-Resistant Group-Aware Dataset Splitter
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Implementation Date:** 2026-11-08  
 **Pipeline Status:** Verified, Validated & Reproducible  
 **Referenced Deliverables:**

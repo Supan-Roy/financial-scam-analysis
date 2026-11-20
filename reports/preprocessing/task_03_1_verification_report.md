@@ -1,6 +1,6 @@
 # Task 03.1 Forensic Verification & Semantic Validation Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Investigation Date:** 2026-11-07  
 **Status:** Completed & Fully Verified  
 **Referenced Deliverables:**

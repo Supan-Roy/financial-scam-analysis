@@ -1,6 +1,6 @@
 # Leakage-Resistant Group-Aware Dataset Splitting Summary Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Execution Date:** 2026-11-08  
 **Scope:** Real-world benchmark (`real_fin_scam` + `real_fin_legit`), 76,193 total records.  
 **Synthetic Scam Status:** Strictly excluded from initial benchmark splits.

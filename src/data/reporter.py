@@ -190,7 +190,7 @@ def generate_audit_json_summary(
     summary = {
         "audit_metadata": {
             "timestamp": datetime.now().isoformat(),
-            "framework": "Explainable Multi-Level Transformer-Based Financial Scam Detection",
+            "framework": "Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications",
             "audited_datasets_count": len(structural_infos),
             "total_corpus_records": sum(s.num_rows for s in structural_infos.values()),
         },
@@ -238,7 +238,7 @@ def generate_audit_markdown_report(
 
     md = []
     md.append("# Comprehensive Research Dataset Audit Report")
-    md.append("\n**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications")
+    md.append("\n**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications")
     md.append(f"\n**Audit Date:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}  ")
     md.append(f"**Total Records Analyzed:** `{total_records:,}` across `3` distinct corpora (`{total_mb:.2f} MB` total raw footprint)  ")
     md.append("**Governance Policy:** Raw CSV assets are preserved without modification in `data/raw/`.\n")

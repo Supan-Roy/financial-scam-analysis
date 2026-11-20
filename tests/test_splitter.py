@@ -1,6 +1,6 @@
 """Unit and Integration Tests for Group-Aware Dataset Splitter.
 
-Title: An Explainable Multi-Level Transformer-Based Framework for Financial Scam
+Title: Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 Narrative Detection and Fraud Analysis in Digital Communications.
 
 Tests singleton group construction, cluster integrity, leakage prevention,

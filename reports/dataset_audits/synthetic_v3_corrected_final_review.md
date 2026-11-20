@@ -5,7 +5,7 @@
 - **Processed File:** [`data/processed/synthetic_financial_scams_v3_corrected_processed.csv`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/data/processed/synthetic_financial_scams_v3_corrected_processed.csv) (7,800 records, 36 columns, 15.45 MB)
 - **Audit Date:** 2026-11-19
 - **Auditor:** Independent Research Evaluation Desk
-- **Target Research Framework:** *"An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection, Fraudulent Intent Analysis and Social Engineering Pattern Recognition in Digital Communications."*
+- **Target Research Framework:** *"Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications."*
 
 ---
 

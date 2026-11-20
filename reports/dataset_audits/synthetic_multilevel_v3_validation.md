@@ -12,7 +12,7 @@
 
 ## Executive Summary & Architectural Evolution
 
-Version 3 represents the complete, full-scale reconstruction of the synthetic financial scam dataset for the research framework: *"An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection, Fraud Analysis and Social Engineering Pattern Recognition in Digital Communications."*
+Version 3 represents the complete, full-scale reconstruction of the synthetic financial scam dataset for the research framework: *"Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications"*
 
 The generation methodology addresses all qualitative defects identified in V1, V2, and Pilot 1, incorporating all principles approved in Pilot 2:
 

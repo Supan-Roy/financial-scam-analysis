@@ -1,7 +1,7 @@
 # ==============================================================================
 # Financial Scam Research Framework - Technology Stack & Dependencies
 #
-# Project: An Explainable Multi-Level Transformer-Based Framework for
+# Project: Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 #          Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 # ==============================================================================
 

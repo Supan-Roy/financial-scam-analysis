@@ -1,6 +1,6 @@
 """Split Summary and Distribution Reporting Suite.
 
-Title: An Explainable Multi-Level Transformer-Based Framework for Financial Scam
+Title: Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 Narrative Detection and Fraud Analysis in Digital Communications.
 
 Generates structured statistical tables and markdown audit reports for train,
@@ -168,7 +168,7 @@ class SplitReporter:
 
         md_content = f"""# Leakage-Resistant Group-Aware Dataset Splitting Summary Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Execution Date:** 2026-11-08  
 **Scope:** Real-world benchmark (`real_fin_scam` + `real_fin_legit`), 76,193 total records.  
 **Synthetic Scam Status:** Strictly excluded from initial benchmark splits.

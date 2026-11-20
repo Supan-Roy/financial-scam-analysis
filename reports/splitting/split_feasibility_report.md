@@ -1,6 +1,6 @@
 # Task 04.0: Group-Aware Data Splitting Feasibility Analysis Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Investigation Date:** 2026-11-07  
 **Status:** Completed & Validated  
 **Referenced Deliverables:**

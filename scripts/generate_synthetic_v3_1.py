@@ -4955,6 +4955,7 @@ def build_validation_report(
     lines = [
         "# Comprehensive Multi-Level Dataset Validation Report: Synthetic Financial Scams (Version 3.1)",
         "",
+        "- **Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications",
         "- **Dataset Version:** Synthetic Financial Scam Corpus Version 3.1 (Production Candidate)",
         f"- **Raw File:** `data/raw/synthetic_financial_scams_v3_1.csv`",
         f"- **Processed File:** `data/processed/synthetic_financial_scams_v3_1_processed.csv`",

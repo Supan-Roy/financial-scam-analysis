@@ -1,6 +1,6 @@
 """Execution Pipeline for Dataset Splitting.
 
-Title: An Explainable Multi-Level Transformer-Based Framework for Financial Scam
+Title: Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 Narrative Detection and Fraud Analysis in Digital Communications.
 
 Executes the group-aware, leakage-resistant dataset splitting pipeline,

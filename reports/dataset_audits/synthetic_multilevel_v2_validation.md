@@ -1,6 +1,6 @@
 # Synthetic Multi-Level Financial Scam Dataset (Version 2) Validation Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection, Fraudulent Intent Analysis and Social Engineering Pattern Recognition in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications.  
 **Deliverable Path:** `reports/dataset_audits/synthetic_multilevel_v2_validation.md`  
 **Datasets Validated:**  
 - Raw: `data/raw/synthetic_financial_scams_v2.csv` (7,800 records, 14 columns)  

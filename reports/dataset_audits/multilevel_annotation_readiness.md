@@ -1,6 +1,6 @@
 # Multi-Level Annotation Readiness Inspection Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection, Fraud Analysis and Social Engineering Pattern Recognition in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Deliverable:** `reports/dataset_audits/multilevel_annotation_readiness.md`  
 **Inspection Type:** Read-Only Forensic Audit across Raw and Canonical Processed Assets  
 **Evaluation Scope:** Multi-Level Annotation Coverage, Taxonomies, Serialization Formats, and Schema Harmonization  

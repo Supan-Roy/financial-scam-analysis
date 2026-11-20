@@ -1,6 +1,6 @@
 """Split Integrity and Leakage Validation Suite.
 
-Title: An Explainable Multi-Level Transformer-Based Framework for Financial Scam
+Title: Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 Narrative Detection and Fraud Analysis in Digital Communications.
 
 Implements rigorous verification of split assignments, duplicate cluster

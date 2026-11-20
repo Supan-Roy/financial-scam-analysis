@@ -1,6 +1,6 @@
 # Comprehensive Research Dataset Audit Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 
 **Audit Date:** 2026-11-06 16:21:02  
 **Total Records Analyzed:** `83,836` across `3` distinct corpora (`157.31 MB` total raw footprint)  

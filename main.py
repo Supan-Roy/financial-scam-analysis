@@ -1,6 +1,6 @@
 """Financial Scam Research Framework.
 
-Title: An Explainable Multi-Level Transformer-Based Framework for Financial Scam
+Title: Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 Narrative Detection and Fraud Analysis in Digital Communications.
 
 Entry point for orchestrating data pipelines, model training, evaluation,
@@ -15,7 +15,7 @@ from pathlib import Path
 def main() -> None:
     """Main execution entry point."""
     parser = argparse.ArgumentParser(
-        description="Explainable Multi-Level Transformer Framework for Financial Scam Detection."
+        description="Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications."
     )
     parser.add_argument(
         "--audit",
@@ -82,7 +82,7 @@ def main() -> None:
 
     print("=" * 70)
     print("Financial Scam Research Framework")
-    print("An Explainable Multi-Level Transformer-Based Framework for Financial Scam")
+    print("Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications")
     print("Narrative Detection and Fraud Analysis in Digital Communications")
     print("=" * 70)
     print("\nAvailable Commands:")

@@ -2,7 +2,7 @@
 
 This directory stores archived, intermediate, and legacy iterations of the synthetic financial scam dataset generated during the development of the multi-level research framework:
 
-> *"An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection, Fraudulent Intent Analysis and Social Engineering Pattern Recognition in Digital Communications."*
+> *"Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications."*
 
 **Active Production Datasets:**
 - Raw Active: [`data/raw/synthetic_financial_scams_v3_corrected.csv`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/data/raw/synthetic_financial_scams_v3_corrected.csv)

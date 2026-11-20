@@ -1,6 +1,6 @@
 # Dataset Readiness Audit and Improvement Plan — Financial Scam Research
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection, Fraud Analysis and Social Engineering Pattern Recognition in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Deliverable Type:** Academic Dataset Readiness Audit & 10-Day Improvement Strategy  
 **Evaluation Milestone:** Phase 1 Research Evaluation  
 **Status:** Read-Only Audit Completed — No Datasets or Splits Modified  

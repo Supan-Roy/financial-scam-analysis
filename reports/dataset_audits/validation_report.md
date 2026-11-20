@@ -1,6 +1,6 @@
 # Task 02: Dataset Audit Validation & Leakage Investigation Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications
 
 **Investigation Date:** 2026-11-06 23:53:11
 **Status:** Complete 100% Corpus Validation & Forensic Analysis
@@ -112,7 +112,9 @@ The initial audit report contained a textual discrepancy regarding suspiciously 
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | `real_fin_scam` | `FIN-00350` | long_outlier (>10k chars) | 121,724 | 23,486 | Nigerian_Fraud.csv | `email` | `BUSINESS PROPOSER REQUESTING CHANGE OF OWNERSHIP ATTENTION  ...` | Multi-page Nigerian 419 financial scam solicitation letter |
 | `real_fin_legit` | `MEAJOR-LEG-054248` | long_outlier (>10k chars) | 30,893 | 448 | MeAJOR (trec7) | `email` | `[[[[[PRODUCT]]]]]e: [[[[[[PRODUCT]]]]]] [PRODUCT][[[[[[PRODU...` | Corporate legal disclaimer / multi-party quoted email chain in MeAJOR |
-| `real_fin_scam` | `FIN-00348` | long_outlier (>10k chars) | 26,372 | 1,190 | Nigerian_Fraud.csv | `email` | `PROJECT INTEREST. My dear friend,   I am DR. Yetunde Basse...` | Multi-page Nigerian 419 financial scam solicitation letter |
+| `real_fin_scam` | `FIN-00348` | long_outlier (>10k chars) | 26,372 | 1,190 | Nigerian_Fraud.csv | `email` | `PROJECT INTEREST. My dear friend, 
+ 
+ I am DR. Yetunde Basse...` | Multi-page Nigerian 419 financial scam solicitation letter |
 | `real_fin_scam` | `FIN-00680` | long_outlier (>10k chars) | 21,694 | 3,701 | Nigerian_Fraud.csv | `email` | `urgent assitance MY DEAR FRIEND,  I DO BELIEF THAT THIS MAIL...` | Multi-page Nigerian 419 financial scam solicitation letter |
 | `real_fin_legit` | `MEAJOR-LEG-035290` | long_outlier (>10k chars) | 19,149 | 658 | MeAJOR (trec6) | `email` | `[[[[USERNAME]]][[[[USERNAME]]]][[[USERNAME]]]] Re: [[[[USERN...` | Corporate legal disclaimer / multi-party quoted email chain in MeAJOR |
 | `real_fin_scam` | `FIN-01756` | long_outlier (>10k chars) | 16,716 | 2,969 | Nigerian_Fraud.csv | `email` | `FROM RICHARD  FROM RICHARD AND Janet Dear sir,  I am Sanko R...` | Multi-page Nigerian 419 financial scam solicitation letter |

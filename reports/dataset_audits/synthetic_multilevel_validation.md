@@ -1,6 +1,6 @@
 # Synthetic Multi-Level Dataset Validation Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection, Fraud Analysis and Social Engineering Pattern Recognition in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Deliverable Path:** `reports/dataset_audits/synthetic_multilevel_validation.md`  
 **Dataset Under Inspection:** `data/raw/synthetic_financial_scams.csv` & `data/processed/synthetic_financial_scams_processed.csv`  
 **Scope:** Multi-Level Class Distributions, Factorial Template Mechanics, Label Consistency, Duplicate Clusters, and Splitting Recommendations  

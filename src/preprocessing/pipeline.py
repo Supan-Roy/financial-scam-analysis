@@ -824,7 +824,7 @@ class CanonicalPreprocessingPipeline:
 
         md_content = f"""# Task 03: Canonical Dataset Engineering & Preprocessing Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Execution Status:** Completed & Cryptographically Verified  
 **Total Records Processed:** {total_proc:,} (100% of raw records preserved)
 

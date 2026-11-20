@@ -1,6 +1,6 @@
 # Task 03: Canonical Dataset Engineering & Preprocessing Report
 
-**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
+**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications  
 **Execution Status:** Completed & Cryptographically Verified  
 **Total Records Processed:** 83,836 (100% of raw records preserved)
 

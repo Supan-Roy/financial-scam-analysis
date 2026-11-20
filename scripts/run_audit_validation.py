@@ -181,7 +181,7 @@ def write_validation_markdown(
 
     md = []
     md.append("# Task 02: Dataset Audit Validation & Leakage Investigation Report")
-    md.append("\n**Project Title:** An Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications")
+    md.append("\n**Project Title:** Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications")
     md.append(f"\n**Investigation Date:** {now_str}")
     md.append("**Status:** Complete 100% Corpus Validation & Forensic Analysis\n")
     md.append("---")
