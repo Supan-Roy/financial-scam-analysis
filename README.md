@@ -31,9 +31,11 @@ This research project develops an intelligent, explainable, natural language pro
 | **Task 04.0: Group-Aware Splitting Feasibility Analysis** | **Completed** | Disproved source-level grouping; established 71,533 indivisible group units; designed Stratified Group-Aware Greedy Partitioning (SGGP). [`reports/splitting/split_feasibility_report.md`](reports/splitting/split_feasibility_report.md) |
 | **Task 04.1: Leakage-Resistant Dataset Splitting** | **Completed** | Partitioned 76,193 real records into Train (80%), Val (10%), Test (10%) with **0% duplicate cluster leakage** and < 0.004% deviation. [`docs/splitting_methodology.md`](docs/splitting_methodology.md) |
 | **Exploratory Research & Text Profiling** | **Completed** | Distribution analysis, channel-class interaction, Simpson's Paradox word counts, 115k vocabulary forensic profiling, and sparsity pruning. [`docs/exploratory_data_analysis_and_text_representation.md`](docs/exploratory_data_analysis_and_text_representation.md) |
-| **Task 05: Traditional ML Baselines** | **Completed** | Word-level TF-IDF baselines: Linear SVM (99.17% F1), Logistic Regression (98.39% F1), Multinomial Naive Bayes (90.78% F1); placeholder sensitivity ablation; source-class confounding investigation. [`notebooks/03_baseline_machine_learning.ipynb`](notebooks/03_baseline_machine_learning.ipynb) |
-| **Task 06: Synthetic V3 Corrected Generation** | **Completed** | 7,800 records across 13 subtypes, 5 intents, 9 tactics; 104 mathematically isolated scenario families (0.0% leakage); 100% verified character-level evidence spans. [`reports/dataset_audits/synthetic_v3_corrected_final_review.md`](reports/dataset_audits/synthetic_v3_corrected_final_review.md) |
-| **Task 07+: Multi-Level & Transformer Modeling** | *Next Phase* | Fine-tuning modern Transformer backbones (DeBERTa-v3, RoBERTa), multi-task architecture decoupling, and explainability evaluation. |
+| **Task 05: Traditional ML Baselines (Binary)** | **Completed** | Word-level TF-IDF baselines: Linear SVM (99.17% F1), Logistic Regression (98.39% F1), Multinomial Naive Bayes (90.78% F1); placeholder sensitivity ablation; source-class confounding investigation. [`notebooks/03_baseline_machine_learning.ipynb`](notebooks/03_baseline_machine_learning.ipynb) |
+| **Task 06: Synthetic V3.1 & LLM Corpus Generation** | **Completed** | Programmatic V3.1 (7,800 records; resolved intent decoupling & link monopoly) + LLM-authored corpus (2,730 records across 130 scenario families and 7 writing styles; 100% verified substring evidence slices). [`reports/dataset_audits/synthetic_v3_1_validation.md`](reports/dataset_audits/synthetic_v3_1_validation.md) & [`reports/dataset_audits/llm_authored_dataset_validation.md`](reports/dataset_audits/llm_authored_dataset_validation.md) |
+| **Task 07: Multi-Level Synthetic Baselines** | **Completed** | Multi-level baselines on Synthetic V3.1: Subtype classification (96.92% Acc), Intent classification (98.21% Acc), and Multi-label Tactics recognition (98.73% Micro-F1); entity-removal ablation; intent lexical challenge tests. [`notebooks/04_synthetic_multilevel_baselines.ipynb`](notebooks/04_synthetic_multilevel_baselines.ipynb) |
+| **Task 08: Cross-Generation Generalization Evaluation** | **Completed** | Systematic cross-generation generalization evaluation comparing V3.1-only, LLM-only, and combined training; identified significant distribution shifts; proved size-controlled robustness of mixed training. [`notebooks/05_llm_authored_generalization_evaluation.ipynb`](notebooks/05_llm_authored_generalization_evaluation.ipynb) & [`reports/dataset_audits/llm_authored_generalization_evaluation_report.md`](reports/dataset_audits/llm_authored_generalization_evaluation_report.md) |
+| **Task 09+: Contextual Transformer & Explainability** | *Next Phase* | Fine-tuning modern Transformer backbones (DeBERTa-v3, RoBERTa), multi-task architecture decoupling, and explainability evaluation (SHAP, LIME, token-level attribution). |
 
 ---
 
@@ -44,8 +46,9 @@ The research framework incorporates three complementary datasets located in `dat
 | Dataset Asset | Filename | Record Count | Class Label | Synthetic Flag | Description & Documentation |
 | :--- | :--- | :---: | :---: | :---: | :--- |
 | **Real-world Financial Scams** | `real_fin_scam.csv` | 13,861 | `label=1` | `false` | Real-world email and SMS/smishing messages spanning banking, card alerts, loan offers, crypto investments, tax, refunds, and invoice fraud. Sources include IMC25 smishing, Nigerian Fraud, Kaggle phishing, and smishtank. [`docs/real_scam_dataset_card.md`](docs/real_scam_dataset_card.md) |
-| **Synthetic Financial Scams (Active)** | `synthetic_financial_scams_v3_corrected.csv` | 7,800 | `label=1` | `true` | Controlled synthetic corpus covering 13 scam subtypes, 4 channels (email, SMS, chat, notification), and fine-grained annotations for fraudulent intent (5 classes), social engineering tactics (9 classes), and character-level evidence spans. 104 mathematically isolated scenario families (0% leakage). Legacy iterations archived in `data/archive/synthetic_iterations/`. [`docs/synthetic_dataset_card.md`](docs/synthetic_dataset_card.md) |
 | **Legitimate Communications** | `real_fin_legit.csv` | 62,332 | `label=0` | `false` | Baseline legitimate communications (4,670 SMS, 57,662 emails) covering `financial_legitimate` (19,201) and `general_legitimate` (43,131) categories. Sources include UCI SMS, Mendeley, and MeAJOR benign emails (trec5/6/7). [`docs/legitimate_dataset_card.md`](docs/legitimate_dataset_card.md) |
+| **Synthetic Financial Scams (V3.1)** | `synthetic_financial_scams_v3_1.csv` | 7,800 | `label=1` | `true` | Controlled programmatic synthetic corpus covering 13 scam subtypes (600/subtype), 4 channels, 5 fraudulent intents, and 9 social-engineering tactics. Balanced notification link distribution (50.7% URL / 49.3% non-URL) and intent-conditioned phrasing. 104 mathematically isolated scenario families (0% leakage). [`docs/synthetic_dataset_card.md`](docs/synthetic_dataset_card.md) |
+| **LLM-Authored Financial Scams** | `llm_authored_financial_scams.csv` | 2,730 | `label=1` | `true` | Independently authored corpus generated via contextual LLM reasoning (`gemini-3.8-flash-low`) across 13 subtypes (210/subtype), 130 scenario families, 7 writing styles, and 4 channels. 100% verified substring evidence slices for intent and tactics. 130 scenario-isolated partitions (80% Train, 10% Val, 10% Test). [`docs/llm_authored_dataset_card.md`](docs/llm_authored_dataset_card.md) |
 
 > **Data Governance Policy:** Raw CSV files in `data/raw/` are strictly read-only. All transformations produce derived data in `data/processed/` or `data/splits/`.
 
@@ -66,13 +69,17 @@ The initial empirical benchmark includes all **76,193 real-world records**, part
 
 ---
 
-## 5. Exploratory Notebooks & Baseline Modeling
+## 5. Exploratory Notebooks & Multi-Level Modeling
 
-The repository includes three foundational research notebooks in `notebooks/` detailing linguistic distributions, representation mechanics, forensic vocabulary profiling, and traditional machine learning baselines on the training split (60,957 records) and validation split (7,618 records):
+The repository includes five foundational research notebooks in `notebooks/` detailing linguistic distributions, representation mechanics, binary baselines, multi-level classification, and cross-generation generalization:
 
 - **[`notebooks/01_dataset_understanding.ipynb`](notebooks/01_dataset_understanding.ipynb):** Comprehensive dataset understanding, class balance (81.81% legit vs 18.19% scam), cross-channel interaction (Scams are 72.83% SMS while Legit is 92.51% Email), word count distribution by channel and class (uncovering Simpson's Paradox in message lengths), and placeholder frequency asymmetry across sources.
 - **[`notebooks/02_text_representation.ipynb`](notebooks/02_text_representation.ipynb):** Classical Bag-of-Words and TF-IDF representations, word-order invariance demonstrations, matrix sparsity analysis (99.28% sparse at full vocabulary), forensic tracing of numeric zero-strings (C source code and R statistical mailing list artifacts in legitimate emails), vocabulary document-frequency distribution (48.83% hapax legomena), and empirical pruning rationale (`min_df=5` cutting 75.13% noise).
 - **[`notebooks/03_baseline_machine_learning.ipynb`](notebooks/03_baseline_machine_learning.ipynb):** Traditional binary classification baselines (Logistic Regression, Multinomial Naive Bayes, Linear SVM), error analysis across communication channels, placeholder sensitivity ablation (original vs removed vs generic replacement), source-level class confounding investigation (MeAJOR vs IMC25 vs Mendeley), and transition to multi-level modeling.
+- **[`notebooks/04_synthetic_multilevel_baselines.ipynb`](notebooks/04_synthetic_multilevel_baselines.ipynb):** Multi-level baseline modeling on the Synthetic V3.1 corpus across three analytical tasks: Scam Subtype classification (96.92% Acc), Fraudulent Intent classification (98.21% Acc), and Multi-label Social Engineering Tactic recognition (98.73% Micro-F1). Includes entity-removal ablation experiments, intent lexical challenge evaluations, channel-wise error profiling, and false-positive annotation audits.
+- **[`notebooks/05_llm_authored_generalization_evaluation.ipynb`](notebooks/05_llm_authored_generalization_evaluation.ipynb):** Cross-generation generalization evaluation investigating distribution shifts between programmatic (V3.1) and LLM-reasoned financial scam narratives. Benchmarks V3.1-only, LLM-only, and combined training regimes; identifies significant out-of-distribution performance drops for template-trained models (Subtype F1 drops from 0.9962 to 0.4819; Intent F1 drops from 0.9960 to 0.5354; Tactic F1 drops from 0.9941 to 0.2046); proves that combined training restores generalization (0.7099 Subtype F1, 0.6716 Intent F1, 0.6667 Tactic F1 on LLM data); and confirms via size-controlled experiments that data diversity, rather than sample volume, drives generalization resilience.
+
+*For detailed reports on the generalization experiments, see [`reports/dataset_audits/llm_authored_generalization_evaluation_report.md`](reports/dataset_audits/llm_authored_generalization_evaluation_report.md).*
 
 *For a full technical report of the exploratory methodology, statistical distributions, and engineering takeaways, see [`docs/exploratory_data_analysis_and_text_representation.md`](docs/exploratory_data_analysis_and_text_representation.md).*
 
@@ -118,6 +125,7 @@ financial-scam-analysis/
 ├── docs/                        # Research documentation, methodology, and dataset cards
 │   ├── real_scam_dataset_card.md
 │   ├── synthetic_dataset_card.md
+│   ├── llm_authored_dataset_card.md
 │   ├── legitimate_dataset_card.md
 │   ├── canonical_preprocessing_and_schema.md
 │   ├── splitting_methodology.md
@@ -125,8 +133,11 @@ financial-scam-analysis/
 │   └── meajor_legit_audit.md
 │
 ├── notebooks/                   # Interactive Jupyter research and exploration notebooks
-│   ├── 01_dataset_understanding.ipynb   # Exploratory distributions, text profiling, and split verification
-│   └── 02_text_representation.ipynb      # Bag-of-Words, n-grams, and TF-IDF representations
+│   ├── 01_dataset_understanding.ipynb                       # Exploratory distributions and profiling
+│   ├── 02_text_representation.ipynb                          # Bag-of-Words, n-grams, and TF-IDF
+│   ├── 03_baseline_machine_learning.ipynb                   # Binary scam classification baselines
+│   ├── 04_synthetic_multilevel_baselines.ipynb               # Multi-level baselines on Synthetic V3.1
+│   └── 05_llm_authored_generalization_evaluation.ipynb      # Cross-generation generalization evaluation
 │
 ├── reports/                     # Generated academic reports and audit deliverables
 │   ├── dataset_audits/          # Data quality, near-duplicate clusters, and validation reports

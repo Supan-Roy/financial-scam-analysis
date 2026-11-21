@@ -1,98 +1,98 @@
-# Synthetic Financial-Scam Research Dataset
+# Synthetic Financial-Scam Research Dataset (Version 3.1)
 
-## Active Dataset: Version 3 Corrected
+## 1. Active Dataset: Version 3.1
 
-The active production candidate is **`synthetic_financial_scams_v3_corrected.csv`** (and processed [`data/processed/synthetic_financial_scams_v3_corrected_processed.csv`](../data/processed/synthetic_financial_scams_v3_corrected_processed.csv)).
+The active programmatic synthetic corpus is **`synthetic_financial_scams_v3_1.csv`** (and processed [`data/processed/synthetic_financial_scams_v3_1_processed.csv`](../data/processed/synthetic_financial_scams_v3_1_processed.csv)).
 
-- **Total Records:** 7,800 (exactly 600 records per subtype across 13 canonical subtypes).
-- **Group Isolation:** 104 scenario families partitioned into Train (78 families / 6,240 records), Validation (13 families / 780 records), and Test (13 families / 780 records) with **0.0% scenario-family leakage** and **0.0% cluster leakage**.
-- **Character-Level Evidence Spans:** 100% exact substring match verification across all 7,800 records for `primary_intent_evidence`, `narrative_evidence`, and `tactics_evidence`.
-- **Channels:** SMS, Email, Chat (dynamic multi-turn dialogues), and Notification (lockscreen alerts).
+- **Total Records:** Exactly 7,800 records (exactly 600 records per subtype across 13 canonical subtypes).
+- **Group Isolation:** 104 scenario families partitioned into Train (83 families / 6,240 records), Validation (10 families / 780 records), and Test (11 families / 780 records) with **0.0% scenario-family leakage** and **0.0% cluster leakage**.
+- **Character-Level Evidence Spans:** 100.0% exact substring match verification across all 7,800 records for `primary_intent_evidence`, `narrative_evidence`, and `tactics_evidence`.
+- **Channels:** SMS (2,752), Email (2,504), Chat (1,724), and Notification (820).
+- **Notification Modality Balance:** Resolves the artificial link monopoly in notifications:
+  - 416 notifications with safe RFC 2606 `.example` URLs (50.73%).
+  - 404 notifications without URLs (app opening / status alerts) (49.27%).
+- **Intent-Conditioned Notification Generation:** Every notification expresses intent-specific phrasing and evidence, completely resolving the intent decoupling bug identified in earlier versions.
 - **Safety & RFC 2606:** 100% of URLs strictly use reserved `.example` domains. 0 prohibited meta-tokens (`fictional`, `NOTICE <N>:`).
-- **Audit Reports:** [`reports/dataset_audits/synthetic_v3_corrected_validation.md`](../reports/dataset_audits/synthetic_v3_corrected_validation.md) and [`reports/dataset_audits/synthetic_v3_corrected_final_review.md`](../reports/dataset_audits/synthetic_v3_corrected_final_review.md).
+- **Audit Reports:** [`reports/dataset_audits/synthetic_v3_1_validation.md`](../reports/dataset_audits/synthetic_v3_1_validation.md).
 
-*Historical Note:* Prior iterations (Version 1: 7,643 records, Version 2, and original Version 3) have been archived to `data/archive/synthetic_iterations/` for scientific provenance.
+*Historical Note:* Prior iterations (Version 1: 7,643 records, Version 2, Version 3, and Version 3 Corrected) have been archived to `data/archive/synthetic_iterations/` for scientific provenance.
 
 ---
 
-## Purpose
+## 2. Research Purpose
 
-The synthetic corpus provides controlled, leak-free supervision for multi-level financial scam narrative detection, fraudulent intent analysis, and social-engineering pattern recognition. It is evaluated separately from the real-world binary benchmark.
+The synthetic corpus provides controlled, leak-free supervision for multi-level financial scam narrative detection, fraudulent intent analysis, and social-engineering pattern recognition. It is evaluated separately from the real-world binary benchmark and serves as the training foundation for multi-level classifiers.
 
-## Generation and stopping rule
+---
 
-The corpus uses 13 fictional scam subtypes, four channels, six writing styles, twelve subtype-aware openings, sixteen varied requests, and twelve closings. This factorial coverage produced **7643** records. A small edge-case supplement adds terse, long-form, indirect, conversational, and emoji-bearing messages that do not all follow the dominant three-part structure. A limited subset of chat messages contains multiple emoji inserted at varied positions, and 96 existing records contain extended narrative context; these are intentional hard-case formatting variations, not platform-specific templates.
+## 3. Annotation Taxonomy & Schema Definitions
 
-Generation stopped after the coverage audit showed every planned subtype/channel/style family was represented and additional combinations were becoming structural paraphrases. The final count is therefore determined by the coverage design and the saturation check, not by a round-number target.
+- `record_id`: Unique identifier (e.g., `SYNTH-V3-00001`).
+- `scam_subtype` / `phishing_type`: 13 canonical scam subtypes.
+- `channel` / `scam_channel`: `email`, `sms`, `chat`, or `notification`.
+- `fraudulent_intent`: 5 canonical intent classes.
+- `social_engineering_tactics`: JSON list containing verified tactics present in the message.
+- `primary_intent_evidence`: Verbatim substring evidence supporting the assigned intent.
+- `tactics_evidence`: JSON array containing `{tactic, span_text, start, end}` for each tactic.
+- `narrative_evidence`: Verbatim substring evidence of the core scam narrative.
+- `split_partition`: Group-aware split (`train`, `val`, `test`).
+- `duplicate_cluster_id`: MinHash LSH duplicate cluster identifier.
 
-## Annotation definitions
+---
 
-- `label`: always `1`, meaning synthetic financial scam.
-- `phishing_type`: the fictional scam subtype.
-- `scam_channel`: `sms`, `email`, `chat`, or `notification`.
-- `fraudulent_intent`: the deceptive goal represented in the message.
-- `social_engineering_tactics`: JSON list containing only tactics evidenced by the message.
-- `language`: always `English`.
-- `synthetic`: always `true`.
-- `generation_scenario`: concise scenario description.
-- `risk_or_safety_note`: confirms fictional entities and redacted details.
+## 4. Multi-Level Target Distributions
 
-Tactic taxonomy: `urgency, authority_impersonation, fear_or_threat, reward_or_benefit, scarcity, trust_exploitation, emotional_manipulation, false_legitimacy, secrecy`.
+### A. Subtypes (600 records each = 7,800 total)
+- `account_verification`: 600
+- `card_transaction_alert`: 600
+- `refund_chargeback`: 600
+- `invoice_payment_request`: 600
+- `loan_offer`: 600
+- `investment_crypto`: 600
+- `prize_reward`: 600
+- `tax_payment`: 600
+- `job_task_commission`: 600
+- `romance_financial_manipulation`: 600
+- `family_emergency_request`: 600
+- `recovery_support`: 600
+- `charity_donation`: 600
 
-## Coverage summary
+### B. Fraudulent Intent (5 Classes)
+- `induce_payment_or_transfer`: 4,772 records (61.18%)
+- `obtain_personal_or_financial_information`: 1,538 records (19.72%)
+- `obtain_credentials_or_codes`: 796 records (10.21%)
+- `induce_fraudulent_investment`: 482 records (6.18%)
+- `gain_account_or_device_access`: 212 records (2.72%)
 
-### Subtypes
+### C. Social Engineering Tactics (9 Classes)
+- `urgency`: 4,008 records (51.38%)
+- `false_legitimacy`: 3,858 records (49.46%)
+- `reward_or_benefit`: 2,059 records (26.40%)
+- `authority_impersonation`: 1,939 records (24.86%)
+- `trust_exploitation`: 1,468 records (18.82%)
+- `fear_or_threat`: 1,180 records (15.13%)
+- `emotional_manipulation`: 904 records (11.59%)
+- `scarcity`: 804 records (10.31%)
+- `secrecy`: 625 records (8.01%)
 
-- `account_verification`: 587
-- `card_transaction_alert`: 588
-- `charity_donation`: 587
-- `family_emergency_request`: 588
-- `investment_crypto`: 589
-- `invoice_payment_request`: 587
-- `job_task_commission`: 589
-- `loan_offer`: 588
-- `prize_reward`: 587
-- `recovery_support`: 589
-- `refund_chargeback`: 589
-- `romance_financial_manipulation`: 587
-- `tax_payment`: 588
+---
 
-### Channels
+## 5. Partition Integrity & Isolation
 
-- `chat`: 1911
-- `email`: 1911
-- `notification`: 1910
-- `sms`: 1911
+| Split | Scenario Families | Records | % of Dataset | Partition Leakage |
+| :--- | :---: | :---: | :---: | :---: |
+| **Train** | 83 | 6,240 | 80.00% | **0.0% (Zero)** |
+| **Validation** | 10 | 780 | 10.00% | **0.0% (Zero)** |
+| **Test** | 11 | 780 | 10.00% | **0.0% (Zero)** |
+| **Total** | **104** | **7,800** | **100.00%** | **Strictly Disjoint** |
 
-### Message presentation/style families
+---
 
-- `chat_dialogue`: 1270
-- `email_or_formatted`: 1267
-- `emoji_or_edge`: 2569
-- `short_or_notification`: 2537
+## 6. Usage & Generalization Experiments
 
-### Fraudulent intent
+In [`notebooks/04_synthetic_multilevel_baselines.ipynb`](../notebooks/04_synthetic_multilevel_baselines.ipynb), models trained and evaluated on V3.1 achieved high in-distribution performance:
+- Scam Subtype Accuracy: **96.92%**
+- Fraudulent Intent Accuracy: **98.21%**
+- Social-Engineering Multi-Label Micro-F1: **98.73%**
 
-- `induce a payment`: 5291
-- `obtain sensitive information`: 1763
-- `promote a fraudulent investment`: 589
-
-### Tactics
-
-- `authority_impersonation`: 748
-- `emotional_manipulation`: 762
-- `false_legitimacy`: 1397
-- `fear_or_threat`: 798
-- `reward_or_benefit`: 828
-- `scarcity`: 834
-- `secrecy`: 707
-- `trust_exploitation`: 1618
-- `urgency`: 1588
-
-## Safety constraints
-
-All organizations, names, case identifiers, amounts, links, phone numbers, emails, and payment destinations are fictional, redacted, or represented by explicit placeholders. No real-world message was copied. Emoji are included only as non-actionable research features; no live Telegram, WhatsApp, or other platform destination is supplied.
-
-## Limitations
-
-Synthetic language does not establish real-world robustness. The corpus contains only scam-labeled records, may reflect generator assumptions, and does not model real sender infrastructure or regional language variation. Researchers should report results separately on real and synthetic data and include legitimate controls before making deployment claims.
+However, in [`notebooks/05_llm_authored_generalization_evaluation.ipynb`](../notebooks/05_llm_authored_generalization_evaluation.ipynb), cross-generation evaluation demonstrated that V3.1-only models experience significant generalization degradation on independently reasoned LLM-authored scam messages, motivating combined training regimes and contextual Transformer modeling.
