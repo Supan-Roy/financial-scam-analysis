@@ -57,6 +57,8 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 !data/processed/README.md
+!data/processed/synthetic_financial_scams_v3_1_processed.csv
+!data/processed/llm_authored_financial_scams_processed.csv
 
 data/interim/*
 !data/interim/.gitkeep
@@ -87,6 +89,10 @@ data/archive/**
 
 # Allow lightweight split assignments mapping for reproducibility
 !data/splits/split_assignments.csv
+
+# Allow key processed synthetic benchmarks requested for tracking
+!data/processed/synthetic_financial_scams_v3_1_processed.csv
+!data/processed/llm_authored_financial_scams_processed.csv
 
 # --- Model Checkpoints & Weights ---
 *.pt

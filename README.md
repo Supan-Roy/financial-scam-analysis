@@ -78,6 +78,7 @@ The repository includes five foundational research notebooks in `notebooks/` det
 - **[`notebooks/03_baseline_machine_learning.ipynb`](notebooks/03_baseline_machine_learning.ipynb):** Traditional binary classification baselines (Logistic Regression, Multinomial Naive Bayes, Linear SVM), error analysis across communication channels, placeholder sensitivity ablation (original vs removed vs generic replacement), source-level class confounding investigation (MeAJOR vs IMC25 vs Mendeley), and transition to multi-level modeling.
 - **[`notebooks/04_synthetic_multilevel_baselines.ipynb`](notebooks/04_synthetic_multilevel_baselines.ipynb):** Multi-level baseline modeling on the Synthetic V3.1 corpus across three analytical tasks: Scam Subtype classification (96.92% Acc), Fraudulent Intent classification (98.21% Acc), and Multi-label Social Engineering Tactic recognition (98.73% Micro-F1). Includes entity-removal ablation experiments, intent lexical challenge evaluations, channel-wise error profiling, and false-positive annotation audits.
 - **[`notebooks/05_llm_authored_generalization_evaluation.ipynb`](notebooks/05_llm_authored_generalization_evaluation.ipynb):** Cross-generation generalization evaluation investigating distribution shifts between programmatic (V3.1) and LLM-reasoned financial scam narratives. Benchmarks V3.1-only, LLM-only, and combined training regimes; identifies significant out-of-distribution performance drops for template-trained models (Subtype F1 drops from 0.9962 to 0.4819; Intent F1 drops from 0.9960 to 0.5354; Tactic F1 drops from 0.9941 to 0.2046); proves that combined training restores generalization (0.7099 Subtype F1, 0.6716 Intent F1, 0.6667 Tactic F1 on LLM data); and confirms via size-controlled experiments that data diversity, rather than sample volume, drives generalization resilience.
+- **[`notebooks/06_transformer_based_modeling.ipynb`](notebooks/06_transformer_based_modeling.ipynb):** Pretrained Transformer-based modeling for multi-level financial scam narrative classification, investigating contextual language representations across scam subtype, fraudulent intent, and social-engineering tactic recognition to evaluate whether deep contextual representations resolve the generalization gaps exposed by shallow n-gram baselines.
 
 *For detailed reports on the generalization experiments, see [`reports/dataset_audits/llm_authored_generalization_evaluation_report.md`](reports/dataset_audits/llm_authored_generalization_evaluation_report.md).*
 
@@ -137,7 +138,8 @@ financial-scam-analysis/
 │   ├── 02_text_representation.ipynb                          # Bag-of-Words, n-grams, and TF-IDF
 │   ├── 03_baseline_machine_learning.ipynb                   # Binary scam classification baselines
 │   ├── 04_synthetic_multilevel_baselines.ipynb               # Multi-level baselines on Synthetic V3.1
-│   └── 05_llm_authored_generalization_evaluation.ipynb      # Cross-generation generalization evaluation
+│   ├── 05_llm_authored_generalization_evaluation.ipynb      # Cross-generation generalization evaluation
+│   └── 06_transformer_based_modeling.ipynb                  # Pretrained Transformer multi-level modeling
 │
 ├── reports/                     # Generated academic reports and audit deliverables
 │   ├── dataset_audits/          # Data quality, near-duplicate clusters, and validation reports
