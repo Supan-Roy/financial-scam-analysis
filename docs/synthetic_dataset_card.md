@@ -2,7 +2,8 @@
 
 ## 1. Active Dataset: Version 3.1
 
-The active programmatic synthetic corpus is **`synthetic_financial_scams_v3_1.csv`** (and processed [`data/processed/synthetic_financial_scams_v3_1_processed.csv`](../data/processed/synthetic_financial_scams_v3_1_processed.csv)).
+- **Research Project:** *Explainable Multi-Level Transformer-Based Framework for Financial Scam Narrative Detection and Fraud Analysis in Digital Communications*
+- **Dataset File:** **`synthetic_financial_scams_v3_1.csv`** (and processed [`data/processed/synthetic_financial_scams_v3_1_processed.csv`](../data/processed/synthetic_financial_scams_v3_1_processed.csv)).
 
 - **Total Records:** Exactly 7,800 records (exactly 600 records per subtype across 13 canonical subtypes).
 - **Group Isolation:** 104 scenario families partitioned into Train (83 families / 6,240 records), Validation (10 families / 780 records), and Test (11 families / 780 records) with **0.0% scenario-family leakage** and **0.0% cluster leakage**.
@@ -96,3 +97,16 @@ In [`notebooks/04_synthetic_multilevel_baselines.ipynb`](../notebooks/04_synthet
 - Social-Engineering Multi-Label Micro-F1: **98.73%**
 
 However, in [`notebooks/05_llm_authored_generalization_evaluation.ipynb`](../notebooks/05_llm_authored_generalization_evaluation.ipynb), cross-generation evaluation demonstrated that V3.1-only models experience significant generalization degradation on independently reasoned LLM-authored scam messages, motivating combined training regimes and contextual Transformer modeling.
+
+---
+
+## 7. Role in Binary Classification & Augmentation (Notebook 08)
+
+In [`notebooks/08_synthetic_data_augmentation_evaluation.ipynb`](../notebooks/08_synthetic_data_augmentation_evaluation.ipynb), the 7,800 V3.1 records (mapped to binary scam label `1`) were evaluated for binary scam detection alongside real-world communications and LLM-authored data:
+
+1. **Cross-Distribution Transfer (Model A):** A DistilBERT model trained strictly on real communications achieved **99.8859% accuracy** and **99.8718% recall** (779/780 scams detected) when evaluated on the held-out V3.1 test split paired with real legitimate messages.
+2. **Synthetic-Only Scams Failure (Experiment B):** When trained on 6,240 V3.1 and 2,184 LLM-authored synthetic scams alongside real legitimate messages, DistilBERT achieved a deceptive **100.0% validation accuracy**, but collapsed to **11.6968% recall** on the real test benchmark due to source-class confounding.
+3. **Combined Augmentation (Experiment C):** Combining V3.1 training data with real scams and legitimate messages preserved high detection performance on the real test partition (**99.8819% accuracy**, **99.8556% scam recall**, **99.8017% macro F1**). McNemar's paired test against real-only training confirmed no statistically significant difference ($p = 1.0000$), demonstrating that synthetic data safely supplements real training without degrading accuracy.
+
+*For full experimental details, see [`reports/dataset_audits/synthetic_data_augmentation_evaluation_report.md`](../reports/dataset_audits/synthetic_data_augmentation_evaluation_report.md).*
+

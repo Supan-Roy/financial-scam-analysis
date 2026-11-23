@@ -116,3 +116,16 @@ The dataset serves as the independent evaluation benchmark in [`notebooks/05_llm
    - Social Engineering Tactic Macro F1 drops from **0.9941** on V3.1 to **0.2046** on LLM-authored (-78.95%).
 2. **Cross-Generation Resilience:** Combined training (V3.1 + LLM) restores Macro F1 on LLM-authored data to **0.7099** (Subtype), **0.6716** (Intent), and **0.6667** (Tactics) while retaining **0.9962 / 0.9891 / 0.9746** on V3.1.
 3. **Size-Controlled Robustness:** Even when total training samples are held equal to V3.1-only, mixed generation training yields **0.7060 / 0.6559 / 0.6576** Macro F1 on the LLM-authored distribution.
+
+---
+
+## 9. Role in Binary Classification & Augmentation (Notebook 08)
+
+In [`notebooks/08_synthetic_data_augmentation_evaluation.ipynb`](../notebooks/08_synthetic_data_augmentation_evaluation.ipynb), the 2,730 LLM-authored records (mapped to binary scam label `1`) were evaluated within a contextual DistilBERT binary classification framework:
+
+1. **Cross-Distribution Transfer (Model A):** When evaluated on the held-out LLM test partition (273 records) paired with real legitimate test messages, the real-only DistilBERT model achieved **99.8309% accuracy**, **97.4638% precision**, and **98.5348% recall** (269/273 detected). The 4 missed scams represented subtle charity appeals and invoice payment requests lacking overt urgency markers.
+2. **Synthetic-Only Risk Diagnostic (Experiment B):** Utilizing 2,184 LLM-authored and 6,240 V3.1 synthetic scams as the sole fraudulent training signal yielded 100% validation scores, but resulted in an 88.30% false-negative rate on real scams (11.70% recall), confirming that synthetic diversity cannot replace real fraud narratives when source and label are correlated.
+3. **Combined Real + Synthetic Augmentation (Experiment C):** Combining LLM-authored scams, V3.1 scams, and real scam data successfully preserved real-world detection capability (**99.8819% accuracy**, **99.8556% scam recall**, **99.8017% macro F1** across 7,618 test records), showing complete robustness with no catastrophic interference.
+
+*For full experimental details, see [`reports/dataset_audits/synthetic_data_augmentation_evaluation_report.md`](../reports/dataset_audits/synthetic_data_augmentation_evaluation_report.md).*
+
