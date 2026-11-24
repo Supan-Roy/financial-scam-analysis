@@ -67,10 +67,18 @@ data/splits/*
 !data/splits/.gitkeep
 !data/splits/split_assignments.csv
 
+data/external_evaluation/*
+!data/external_evaluation/.gitkeep
+!data/external_evaluation/*.md
+
 data/archive/**
 !data/archive/
 !data/archive/synthetic_iterations/
 !data/archive/synthetic_iterations/README.md
+
+# --- Temporary Audit & Scratch Directories ---
+tmp_*/
+tmp_candidate_audit/
 
 # Catch-all data file formats
 *.csv
