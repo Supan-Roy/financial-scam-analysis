@@ -1,0 +1,793 @@
+record_id,label,channel,source,scam_probability,predicted_label
+EXT-SCAM-00001,1,email,Jose Nazario Phishing Corpus,0.99865925,1
+EXT-SCAM-00002,1,email,Jose Nazario Phishing Corpus,0.99998176,1
+EXT-SCAM-00003,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00004,1,email,Jose Nazario Phishing Corpus,0.9999876,1
+EXT-SCAM-00005,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00006,1,email,Jose Nazario Phishing Corpus,0.99999046,1
+EXT-SCAM-00007,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00008,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00009,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00010,1,email,Jose Nazario Phishing Corpus,0.9989072,1
+EXT-SCAM-00011,1,email,Jose Nazario Phishing Corpus,0.9999845,1
+EXT-SCAM-00012,1,email,Jose Nazario Phishing Corpus,0.99998474,1
+EXT-SCAM-00013,1,email,Jose Nazario Phishing Corpus,0.99998724,1
+EXT-SCAM-00014,1,email,Jose Nazario Phishing Corpus,0.99998605,1
+EXT-SCAM-00015,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00016,1,email,Jose Nazario Phishing Corpus,0.9999707,1
+EXT-SCAM-00017,1,email,Jose Nazario Phishing Corpus,0.99998796,1
+EXT-SCAM-00018,1,email,Jose Nazario Phishing Corpus,0.999985,1
+EXT-SCAM-00019,1,email,Jose Nazario Phishing Corpus,0.99998724,1
+EXT-SCAM-00020,1,email,Jose Nazario Phishing Corpus,0.9997793,1
+EXT-SCAM-00021,1,email,Jose Nazario Phishing Corpus,0.99998593,1
+EXT-SCAM-00022,1,email,Jose Nazario Phishing Corpus,0.9999906,1
+EXT-SCAM-00023,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00024,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00025,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00026,1,email,Jose Nazario Phishing Corpus,0.9999871,1
+EXT-SCAM-00027,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00028,1,email,Jose Nazario Phishing Corpus,0.048572343,0
+EXT-SCAM-00029,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00030,1,email,Jose Nazario Phishing Corpus,0.999987,1
+EXT-SCAM-00031,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00032,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00033,1,email,Jose Nazario Phishing Corpus,0.99998844,1
+EXT-SCAM-00034,1,email,Jose Nazario Phishing Corpus,0.3896424,0
+EXT-SCAM-00035,1,email,Jose Nazario Phishing Corpus,0.9999776,1
+EXT-SCAM-00036,1,email,Jose Nazario Phishing Corpus,0.9999784,1
+EXT-SCAM-00037,1,email,Jose Nazario Phishing Corpus,0.9999807,1
+EXT-SCAM-00038,1,email,Jose Nazario Phishing Corpus,0.99998593,1
+EXT-SCAM-00039,1,email,Jose Nazario Phishing Corpus,0.4259456,0
+EXT-SCAM-00040,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00041,1,email,Jose Nazario Phishing Corpus,0.9999882,1
+EXT-SCAM-00042,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00043,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00044,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00045,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00046,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00047,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00048,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00049,1,email,Jose Nazario Phishing Corpus,8.844138e-05,0
+EXT-SCAM-00050,1,email,Jose Nazario Phishing Corpus,0.99998724,1
+EXT-SCAM-00051,1,email,Jose Nazario Phishing Corpus,0.99967897,1
+EXT-SCAM-00052,1,email,Jose Nazario Phishing Corpus,0.9999882,1
+EXT-SCAM-00053,1,email,Jose Nazario Phishing Corpus,0.9999863,1
+EXT-SCAM-00054,1,email,Jose Nazario Phishing Corpus,0.9999882,1
+EXT-SCAM-00055,1,email,Jose Nazario Phishing Corpus,0.99998593,1
+EXT-SCAM-00056,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00057,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00058,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00059,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00060,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00061,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00062,1,email,Jose Nazario Phishing Corpus,0.00022202078,0
+EXT-SCAM-00063,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00064,1,email,Jose Nazario Phishing Corpus,0.99998367,1
+EXT-SCAM-00065,1,email,Jose Nazario Phishing Corpus,0.9999808,1
+EXT-SCAM-00066,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00067,1,email,Jose Nazario Phishing Corpus,0.99998796,1
+EXT-SCAM-00068,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00069,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00070,1,email,Jose Nazario Phishing Corpus,0.99998367,1
+EXT-SCAM-00071,1,email,Jose Nazario Phishing Corpus,0.9999846,1
+EXT-SCAM-00072,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00073,1,email,Jose Nazario Phishing Corpus,0.0035958332,0
+EXT-SCAM-00074,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00075,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00076,1,email,Jose Nazario Phishing Corpus,0.9999857,1
+EXT-SCAM-00077,1,email,Jose Nazario Phishing Corpus,0.9999299,1
+EXT-SCAM-00078,1,email,Jose Nazario Phishing Corpus,0.9999826,1
+EXT-SCAM-00079,1,email,Jose Nazario Phishing Corpus,0.9999846,1
+EXT-SCAM-00080,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00081,1,email,Jose Nazario Phishing Corpus,0.99997675,1
+EXT-SCAM-00082,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00083,1,email,Jose Nazario Phishing Corpus,0.99998665,1
+EXT-SCAM-00084,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00085,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00086,1,email,Jose Nazario Phishing Corpus,0.99992335,1
+EXT-SCAM-00087,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00088,1,email,Jose Nazario Phishing Corpus,0.99998724,1
+EXT-SCAM-00089,1,email,Jose Nazario Phishing Corpus,0.9999801,1
+EXT-SCAM-00090,1,email,Jose Nazario Phishing Corpus,0.9999887,1
+EXT-SCAM-00091,1,email,Jose Nazario Phishing Corpus,0.99997437,1
+EXT-SCAM-00092,1,email,Jose Nazario Phishing Corpus,0.9999876,1
+EXT-SCAM-00093,1,email,Jose Nazario Phishing Corpus,0.99998796,1
+EXT-SCAM-00094,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00095,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00096,1,email,Jose Nazario Phishing Corpus,0.9999815,1
+EXT-SCAM-00097,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00098,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00099,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00100,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00101,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00102,1,email,Jose Nazario Phishing Corpus,0.9999865,1
+EXT-SCAM-00103,1,email,Jose Nazario Phishing Corpus,0.99998736,1
+EXT-SCAM-00104,1,email,Jose Nazario Phishing Corpus,0.9999831,1
+EXT-SCAM-00105,1,email,Jose Nazario Phishing Corpus,0.99811804,1
+EXT-SCAM-00107,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00108,1,email,Jose Nazario Phishing Corpus,0.02871507,0
+EXT-SCAM-00109,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00110,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00111,1,email,Jose Nazario Phishing Corpus,0.99998724,1
+EXT-SCAM-00112,1,email,Jose Nazario Phishing Corpus,0.99998844,1
+EXT-SCAM-00113,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00114,1,email,Jose Nazario Phishing Corpus,0.9999864,1
+EXT-SCAM-00115,1,email,Jose Nazario Phishing Corpus,0.9999697,1
+EXT-SCAM-00116,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00117,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00118,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00119,1,email,Jose Nazario Phishing Corpus,0.9999809,1
+EXT-SCAM-00120,1,email,Jose Nazario Phishing Corpus,0.99998677,1
+EXT-SCAM-00121,1,email,Jose Nazario Phishing Corpus,0.9999862,1
+EXT-SCAM-00122,1,email,Jose Nazario Phishing Corpus,0.99998534,1
+EXT-SCAM-00123,1,email,Jose Nazario Phishing Corpus,0.99999046,1
+EXT-SCAM-00124,1,email,Jose Nazario Phishing Corpus,0.99997365,1
+EXT-SCAM-00125,1,email,Jose Nazario Phishing Corpus,0.9999776,1
+EXT-SCAM-00126,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00127,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00128,1,email,Jose Nazario Phishing Corpus,0.99998367,1
+EXT-SCAM-00129,1,email,Jose Nazario Phishing Corpus,0.9999876,1
+EXT-SCAM-00130,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00131,1,email,Jose Nazario Phishing Corpus,0.99998796,1
+EXT-SCAM-00132,1,email,Jose Nazario Phishing Corpus,0.99998844,1
+EXT-SCAM-00133,1,email,Jose Nazario Phishing Corpus,0.9999739,1
+EXT-SCAM-00134,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00135,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00136,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00137,1,email,Jose Nazario Phishing Corpus,0.9999871,1
+EXT-SCAM-00138,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00139,1,email,Jose Nazario Phishing Corpus,0.9999882,1
+EXT-SCAM-00140,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00141,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00142,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00143,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00144,1,email,Jose Nazario Phishing Corpus,0.9999825,1
+EXT-SCAM-00145,1,email,Jose Nazario Phishing Corpus,0.9999827,1
+EXT-SCAM-00146,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00147,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00148,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00149,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00150,1,email,Jose Nazario Phishing Corpus,0.9999876,1
+EXT-SCAM-00151,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00152,1,email,Jose Nazario Phishing Corpus,0.99999046,1
+EXT-SCAM-00153,1,email,Jose Nazario Phishing Corpus,0.9999604,1
+EXT-SCAM-00154,1,email,Jose Nazario Phishing Corpus,0.9999839,1
+EXT-SCAM-00155,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00156,1,email,Jose Nazario Phishing Corpus,0.99998724,1
+EXT-SCAM-00157,1,email,Jose Nazario Phishing Corpus,0.99998593,1
+EXT-SCAM-00158,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00159,1,email,Jose Nazario Phishing Corpus,0.9999887,1
+EXT-SCAM-00160,1,email,Jose Nazario Phishing Corpus,0.99998474,1
+EXT-SCAM-00161,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00162,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00163,1,email,Jose Nazario Phishing Corpus,0.99995005,1
+EXT-SCAM-00164,1,email,Jose Nazario Phishing Corpus,0.9999844,1
+EXT-SCAM-00165,1,email,Jose Nazario Phishing Corpus,0.9999887,1
+EXT-SCAM-00166,1,email,Jose Nazario Phishing Corpus,0.99996865,1
+EXT-SCAM-00167,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00168,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00169,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00170,1,email,Jose Nazario Phishing Corpus,0.99999046,1
+EXT-SCAM-00171,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00172,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00173,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00174,1,email,Jose Nazario Phishing Corpus,0.9999862,1
+EXT-SCAM-00175,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00176,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00177,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00178,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00179,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00180,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00181,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00182,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00183,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00184,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00185,1,email,Jose Nazario Phishing Corpus,0.99998546,1
+EXT-SCAM-00186,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00187,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00188,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00189,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00190,1,email,Jose Nazario Phishing Corpus,0.999982,1
+EXT-SCAM-00191,1,email,Jose Nazario Phishing Corpus,0.99997616,1
+EXT-SCAM-00192,1,email,Jose Nazario Phishing Corpus,0.9999778,1
+EXT-SCAM-00193,1,email,Jose Nazario Phishing Corpus,0.06672426,0
+EXT-SCAM-00194,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00195,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00196,1,email,Jose Nazario Phishing Corpus,0.99954563,1
+EXT-SCAM-00197,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00198,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00199,1,email,Jose Nazario Phishing Corpus,0.99998426,1
+EXT-SCAM-00200,1,email,Jose Nazario Phishing Corpus,0.99998593,1
+EXT-SCAM-00201,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00202,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00203,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00204,1,email,Jose Nazario Phishing Corpus,0.99995697,1
+EXT-SCAM-00205,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00206,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00207,1,email,Jose Nazario Phishing Corpus,0.9998442,1
+EXT-SCAM-00208,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00209,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00210,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00211,1,email,Jose Nazario Phishing Corpus,0.99998736,1
+EXT-SCAM-00212,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00213,1,email,Jose Nazario Phishing Corpus,0.9999887,1
+EXT-SCAM-00214,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00215,1,email,Jose Nazario Phishing Corpus,0.99998224,1
+EXT-SCAM-00216,1,email,Jose Nazario Phishing Corpus,0.9999697,1
+EXT-SCAM-00217,1,email,Jose Nazario Phishing Corpus,0.9999844,1
+EXT-SCAM-00218,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00219,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00220,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00221,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00222,1,email,Jose Nazario Phishing Corpus,0.9999865,1
+EXT-SCAM-00223,1,email,Jose Nazario Phishing Corpus,0.999987,1
+EXT-SCAM-00225,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00226,1,email,Jose Nazario Phishing Corpus,0.99998415,1
+EXT-SCAM-00227,1,email,Jose Nazario Phishing Corpus,0.99998796,1
+EXT-SCAM-00228,1,email,Jose Nazario Phishing Corpus,0.99998844,1
+EXT-SCAM-00229,1,email,Jose Nazario Phishing Corpus,0.99998736,1
+EXT-SCAM-00230,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00231,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00232,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00233,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00234,1,email,Jose Nazario Phishing Corpus,0.99998724,1
+EXT-SCAM-00235,1,email,Jose Nazario Phishing Corpus,0.99999046,1
+EXT-SCAM-00236,1,email,Jose Nazario Phishing Corpus,0.9999876,1
+EXT-SCAM-00237,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00238,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00239,1,email,Jose Nazario Phishing Corpus,0.9999876,1
+EXT-SCAM-00240,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00241,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00242,1,email,Jose Nazario Phishing Corpus,0.99995565,1
+EXT-SCAM-00243,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00244,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00245,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00246,1,email,Jose Nazario Phishing Corpus,0.99998724,1
+EXT-SCAM-00247,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00248,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00249,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00250,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00251,1,email,Jose Nazario Phishing Corpus,0.99998415,1
+EXT-SCAM-00252,1,email,Jose Nazario Phishing Corpus,0.9999392,1
+EXT-SCAM-00253,1,email,Jose Nazario Phishing Corpus,0.99996686,1
+EXT-SCAM-00254,1,email,Jose Nazario Phishing Corpus,0.99994326,1
+EXT-SCAM-00255,1,email,Jose Nazario Phishing Corpus,0.9999852,1
+EXT-SCAM-00256,1,email,Jose Nazario Phishing Corpus,0.9999845,1
+EXT-SCAM-00257,1,email,Jose Nazario Phishing Corpus,0.503112,1
+EXT-SCAM-00258,1,email,Jose Nazario Phishing Corpus,0.999987,1
+EXT-SCAM-00259,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00260,1,email,Jose Nazario Phishing Corpus,0.99997926,1
+EXT-SCAM-00261,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00262,1,email,Jose Nazario Phishing Corpus,0.9999844,1
+EXT-SCAM-00263,1,email,Jose Nazario Phishing Corpus,0.99998796,1
+EXT-SCAM-00264,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00265,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00266,1,email,Jose Nazario Phishing Corpus,0.9999856,1
+EXT-SCAM-00267,1,email,Jose Nazario Phishing Corpus,0.9985958,1
+EXT-SCAM-00268,1,email,Jose Nazario Phishing Corpus,0.9999876,1
+EXT-SCAM-00269,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00270,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00271,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00272,1,email,Jose Nazario Phishing Corpus,0.99996924,1
+EXT-SCAM-00273,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00274,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00275,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00276,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00277,1,email,Jose Nazario Phishing Corpus,0.99997044,1
+EXT-SCAM-00278,1,email,Jose Nazario Phishing Corpus,0.9999833,1
+EXT-SCAM-00279,1,email,Jose Nazario Phishing Corpus,0.99995697,1
+EXT-SCAM-00280,1,email,Jose Nazario Phishing Corpus,2.4525664e-06,0
+EXT-SCAM-00281,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00282,1,email,Jose Nazario Phishing Corpus,0.99991834,1
+EXT-SCAM-00283,1,email,Jose Nazario Phishing Corpus,0.99998593,1
+EXT-SCAM-00284,1,email,Jose Nazario Phishing Corpus,0.9999865,1
+EXT-SCAM-00285,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00286,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00287,1,email,Jose Nazario Phishing Corpus,0.0018760016,0
+EXT-SCAM-00288,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00289,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00290,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00291,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00292,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00293,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00294,1,email,Jose Nazario Phishing Corpus,0.9999727,1
+EXT-SCAM-00295,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00296,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00297,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00298,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00299,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00300,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00301,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00302,1,email,Jose Nazario Phishing Corpus,2.7888036e-06,0
+EXT-SCAM-00303,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00304,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00305,1,email,Jose Nazario Phishing Corpus,0.99998546,1
+EXT-SCAM-00306,1,email,Jose Nazario Phishing Corpus,0.9999852,1
+EXT-SCAM-00307,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00308,1,email,Jose Nazario Phishing Corpus,0.999977,1
+EXT-SCAM-00309,1,email,Jose Nazario Phishing Corpus,0.9999869,1
+EXT-SCAM-00310,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00311,1,email,Jose Nazario Phishing Corpus,0.9999826,1
+EXT-SCAM-00312,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00313,1,email,Jose Nazario Phishing Corpus,0.013063296,0
+EXT-SCAM-00314,1,email,Jose Nazario Phishing Corpus,0.999984,1
+EXT-SCAM-00315,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00316,1,email,Jose Nazario Phishing Corpus,0.9999833,1
+EXT-SCAM-00317,1,email,Jose Nazario Phishing Corpus,0.9999827,1
+EXT-SCAM-00318,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00319,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00320,1,email,Jose Nazario Phishing Corpus,0.9999752,1
+EXT-SCAM-00321,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00322,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00323,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00324,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00325,1,email,Jose Nazario Phishing Corpus,0.9999784,1
+EXT-SCAM-00326,1,email,Jose Nazario Phishing Corpus,0.99998343,1
+EXT-SCAM-00327,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00328,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00329,1,email,Jose Nazario Phishing Corpus,0.99998844,1
+EXT-SCAM-00330,1,email,Jose Nazario Phishing Corpus,0.65231675,1
+EXT-SCAM-00331,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00332,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00333,1,email,Jose Nazario Phishing Corpus,0.9999639,1
+EXT-SCAM-00334,1,email,Jose Nazario Phishing Corpus,0.999987,1
+EXT-SCAM-00335,1,email,Jose Nazario Phishing Corpus,0.9999857,1
+EXT-SCAM-00336,1,email,Jose Nazario Phishing Corpus,0.9999862,1
+EXT-SCAM-00337,1,email,Jose Nazario Phishing Corpus,0.99998355,1
+EXT-SCAM-00338,1,email,Jose Nazario Phishing Corpus,0.9999732,1
+EXT-SCAM-00339,1,email,Jose Nazario Phishing Corpus,0.99998844,1
+EXT-SCAM-00340,1,email,Jose Nazario Phishing Corpus,0.9999869,1
+EXT-SCAM-00341,1,email,Jose Nazario Phishing Corpus,0.9999862,1
+EXT-SCAM-00342,1,email,Jose Nazario Phishing Corpus,0.99998796,1
+EXT-SCAM-00343,1,email,Jose Nazario Phishing Corpus,0.9999845,1
+EXT-SCAM-00344,1,email,Jose Nazario Phishing Corpus,0.9999862,1
+EXT-SCAM-00345,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00346,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00347,1,email,Jose Nazario Phishing Corpus,0.011200468,0
+EXT-SCAM-00348,1,email,Jose Nazario Phishing Corpus,0.99998546,1
+EXT-SCAM-00349,1,email,Jose Nazario Phishing Corpus,0.99997723,1
+EXT-SCAM-00350,1,email,Jose Nazario Phishing Corpus,0.99997437,1
+EXT-SCAM-00351,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00352,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00353,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00354,1,email,Jose Nazario Phishing Corpus,0.99998415,1
+EXT-SCAM-00355,1,email,Jose Nazario Phishing Corpus,0.74815065,1
+EXT-SCAM-00356,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00357,1,email,Jose Nazario Phishing Corpus,0.9999887,1
+EXT-SCAM-00358,1,email,Jose Nazario Phishing Corpus,0.99990296,1
+EXT-SCAM-00359,1,email,Jose Nazario Phishing Corpus,0.9999887,1
+EXT-SCAM-00360,1,email,Jose Nazario Phishing Corpus,0.9999869,1
+EXT-SCAM-00361,1,email,Jose Nazario Phishing Corpus,0.9999864,1
+EXT-SCAM-00362,1,email,Jose Nazario Phishing Corpus,0.9999863,1
+EXT-SCAM-00363,1,email,Jose Nazario Phishing Corpus,0.99997747,1
+EXT-SCAM-00364,1,email,Jose Nazario Phishing Corpus,0.99418396,1
+EXT-SCAM-00365,1,email,Jose Nazario Phishing Corpus,0.9997918,1
+EXT-SCAM-00366,1,email,Jose Nazario Phishing Corpus,0.9999651,1
+EXT-SCAM-00367,1,email,Jose Nazario Phishing Corpus,0.99998295,1
+EXT-SCAM-00368,1,email,Jose Nazario Phishing Corpus,0.9996381,1
+EXT-SCAM-00369,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00370,1,email,Jose Nazario Phishing Corpus,0.99968374,1
+EXT-SCAM-00371,1,email,Jose Nazario Phishing Corpus,0.9999777,1
+EXT-SCAM-00372,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00373,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00374,1,email,Jose Nazario Phishing Corpus,0.999985,1
+EXT-SCAM-00375,1,email,Jose Nazario Phishing Corpus,0.99997973,1
+EXT-SCAM-00376,1,email,Jose Nazario Phishing Corpus,0.999987,1
+EXT-SCAM-00377,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00378,1,email,Jose Nazario Phishing Corpus,0.9999869,1
+EXT-SCAM-00379,1,email,Jose Nazario Phishing Corpus,0.99997973,1
+EXT-SCAM-00380,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00381,1,email,Jose Nazario Phishing Corpus,0.99999046,1
+EXT-SCAM-00382,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00383,1,email,Jose Nazario Phishing Corpus,0.9999634,1
+EXT-SCAM-00384,1,email,Jose Nazario Phishing Corpus,0.9999846,1
+EXT-SCAM-00385,1,email,Jose Nazario Phishing Corpus,8.281061e-05,0
+EXT-SCAM-00386,1,email,Jose Nazario Phishing Corpus,9.877732e-05,0
+EXT-SCAM-00387,1,email,Jose Nazario Phishing Corpus,0.9999865,1
+EXT-SCAM-00388,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00389,1,email,Jose Nazario Phishing Corpus,8.550503e-05,0
+EXT-SCAM-00390,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00391,1,email,Jose Nazario Phishing Corpus,0.9999846,1
+EXT-SCAM-00392,1,email,Jose Nazario Phishing Corpus,4.902548e-05,0
+EXT-SCAM-00393,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00394,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00395,1,email,Jose Nazario Phishing Corpus,0.9999906,1
+EXT-SCAM-00396,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00397,1,email,Jose Nazario Phishing Corpus,0.9999844,1
+EXT-SCAM-00398,1,email,Jose Nazario Phishing Corpus,0.99997973,1
+EXT-SCAM-00399,1,email,Jose Nazario Phishing Corpus,0.9999865,1
+EXT-SCAM-00400,1,email,Jose Nazario Phishing Corpus,0.9999863,1
+EXT-SCAM-00401,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00402,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00403,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00404,1,email,Jose Nazario Phishing Corpus,0.00012720571,0
+EXT-SCAM-00405,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00406,1,email,Jose Nazario Phishing Corpus,0.9999896,1
+EXT-SCAM-00407,1,email,Jose Nazario Phishing Corpus,0.002037788,0
+EXT-SCAM-00408,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00409,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00410,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00411,1,email,Jose Nazario Phishing Corpus,0.9999794,1
+EXT-SCAM-00412,1,email,Jose Nazario Phishing Corpus,0.99998116,1
+EXT-SCAM-00413,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00414,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00415,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00416,1,email,Jose Nazario Phishing Corpus,0.9642478,1
+EXT-SCAM-00417,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00418,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00419,1,email,Jose Nazario Phishing Corpus,5.8088062e-05,0
+EXT-SCAM-00420,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00421,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00422,1,email,Jose Nazario Phishing Corpus,0.99998677,1
+EXT-SCAM-00423,1,email,Jose Nazario Phishing Corpus,0.98583305,1
+EXT-SCAM-00424,1,email,Jose Nazario Phishing Corpus,0.999967,1
+EXT-SCAM-00425,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00426,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00427,1,email,Jose Nazario Phishing Corpus,0.999979,1
+EXT-SCAM-00428,1,email,Jose Nazario Phishing Corpus,0.99999034,1
+EXT-SCAM-00429,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00430,1,email,Jose Nazario Phishing Corpus,0.99998426,1
+EXT-SCAM-00431,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00432,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00433,1,email,Jose Nazario Phishing Corpus,0.9999826,1
+EXT-SCAM-00434,1,email,Jose Nazario Phishing Corpus,0.9998944,1
+EXT-SCAM-00435,1,email,Jose Nazario Phishing Corpus,0.9999893,1
+EXT-SCAM-00436,1,email,Jose Nazario Phishing Corpus,0.99998486,1
+EXT-SCAM-00437,1,email,Jose Nazario Phishing Corpus,9.162295e-05,0
+EXT-SCAM-00438,1,email,Jose Nazario Phishing Corpus,0.0030981414,0
+EXT-SCAM-00439,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00440,1,email,Jose Nazario Phishing Corpus,0.9999839,1
+EXT-SCAM-00441,1,email,Jose Nazario Phishing Corpus,0.99845386,1
+EXT-SCAM-00442,1,email,Jose Nazario Phishing Corpus,0.99588686,1
+EXT-SCAM-00443,1,email,Jose Nazario Phishing Corpus,0.99998975,1
+EXT-SCAM-00444,1,email,Jose Nazario Phishing Corpus,0.9999242,1
+EXT-SCAM-00445,1,email,Jose Nazario Phishing Corpus,0.99996805,1
+EXT-SCAM-00446,1,email,Jose Nazario Phishing Corpus,0.999845,1
+EXT-SCAM-00447,1,email,Jose Nazario Phishing Corpus,0.99894077,1
+EXT-SCAM-00448,1,email,Jose Nazario Phishing Corpus,0.9999764,1
+EXT-SCAM-00451,1,email,Jose Nazario Phishing Corpus,0.004364928,0
+EXT-SCAM-00452,1,email,Jose Nazario Phishing Corpus,0.99997485,1
+EXT-SCAM-00453,1,email,Jose Nazario Phishing Corpus,0.99998176,1
+EXT-SCAM-00454,1,email,Jose Nazario Phishing Corpus,0.99992275,1
+EXT-SCAM-00455,1,email,Jose Nazario Phishing Corpus,0.99998367,1
+EXT-SCAM-00456,1,email,Jose Nazario Phishing Corpus,0.99998045,1
+EXT-SCAM-00457,1,email,Jose Nazario Phishing Corpus,0.99999046,1
+EXT-SCAM-00458,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00459,1,email,Jose Nazario Phishing Corpus,4.412317e-06,0
+EXT-SCAM-00460,1,email,Jose Nazario Phishing Corpus,0.9999883,1
+EXT-SCAM-00461,1,email,Jose Nazario Phishing Corpus,0.9999784,1
+EXT-SCAM-00462,1,email,Jose Nazario Phishing Corpus,0.99998164,1
+EXT-SCAM-00463,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00464,1,email,Jose Nazario Phishing Corpus,0.9999801,1
+EXT-SCAM-00465,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00466,1,email,Jose Nazario Phishing Corpus,0.9999857,1
+EXT-SCAM-00467,1,email,Jose Nazario Phishing Corpus,0.9999902,1
+EXT-SCAM-00468,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00469,1,email,Jose Nazario Phishing Corpus,0.99997973,1
+EXT-SCAM-00470,1,email,Jose Nazario Phishing Corpus,0.99999046,1
+EXT-SCAM-00471,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00472,1,email,Jose Nazario Phishing Corpus,0.99997234,1
+EXT-SCAM-00473,1,email,Jose Nazario Phishing Corpus,0.99998605,1
+EXT-SCAM-00474,1,email,Jose Nazario Phishing Corpus,0.99997056,1
+EXT-SCAM-00475,1,email,Jose Nazario Phishing Corpus,0.99998987,1
+EXT-SCAM-00476,1,email,Jose Nazario Phishing Corpus,0.99989915,1
+EXT-SCAM-00477,1,email,Jose Nazario Phishing Corpus,0.9999894,1
+EXT-SCAM-00478,1,email,Jose Nazario Phishing Corpus,0.999984,1
+EXT-SCAM-00479,1,email,Jose Nazario Phishing Corpus,0.9999865,1
+EXT-SCAM-00480,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00481,1,email,Jose Nazario Phishing Corpus,0.99999,1
+EXT-SCAM-00482,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00483,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00484,1,email,Jose Nazario Phishing Corpus,0.99998164,1
+EXT-SCAM-00486,1,email,Jose Nazario Phishing Corpus,0.9999727,1
+EXT-SCAM-00487,1,email,Jose Nazario Phishing Corpus,0.999982,1
+EXT-SCAM-00488,1,email,Jose Nazario Phishing Corpus,0.9999827,1
+EXT-SCAM-00489,1,email,Jose Nazario Phishing Corpus,0.9999901,1
+EXT-SCAM-00490,1,email,Jose Nazario Phishing Corpus,0.9999651,1
+EXT-SCAM-00491,1,email,Jose Nazario Phishing Corpus,0.99998474,1
+EXT-SCAM-00492,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00493,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00494,1,email,Jose Nazario Phishing Corpus,0.99998546,1
+EXT-SCAM-00495,1,email,Jose Nazario Phishing Corpus,0.99998343,1
+EXT-SCAM-00496,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00497,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00498,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00499,1,email,Jose Nazario Phishing Corpus,0.9999857,1
+EXT-SCAM-00500,1,email,Jose Nazario Phishing Corpus,6.908722e-06,0
+EXT-SCAM-00501,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00502,1,email,Jose Nazario Phishing Corpus,0.03016732,0
+EXT-SCAM-00503,1,email,Jose Nazario Phishing Corpus,0.9999881,1
+EXT-SCAM-00504,1,email,Jose Nazario Phishing Corpus,0.9999864,1
+EXT-SCAM-00505,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00506,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00507,1,email,Jose Nazario Phishing Corpus,0.9999895,1
+EXT-SCAM-00508,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00509,1,email,Jose Nazario Phishing Corpus,0.9999863,1
+EXT-SCAM-00510,1,email,Jose Nazario Phishing Corpus,0.9999838,1
+EXT-SCAM-00511,1,email,Jose Nazario Phishing Corpus,0.99998784,1
+EXT-SCAM-00512,1,email,Jose Nazario Phishing Corpus,0.99998736,1
+EXT-SCAM-00513,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00514,1,email,Jose Nazario Phishing Corpus,0.9999887,1
+EXT-SCAM-00515,1,email,Jose Nazario Phishing Corpus,0.99998856,1
+EXT-SCAM-00516,1,email,Jose Nazario Phishing Corpus,0.99997544,1
+EXT-SCAM-00517,1,email,Jose Nazario Phishing Corpus,0.9999888,1
+EXT-SCAM-00518,1,email,Jose Nazario Phishing Corpus,0.9999876,1
+EXT-SCAM-00519,1,email,Jose Nazario Phishing Corpus,0.9999877,1
+EXT-SCAM-00520,1,email,Jose Nazario Phishing Corpus,0.9999852,1
+EXT-SCAM-00521,1,email,Jose Nazario Phishing Corpus,0.999987,1
+EXT-SCAM-00522,1,email,Jose Nazario Phishing Corpus,0.99998903,1
+EXT-SCAM-00523,1,email,Jose Nazario Phishing Corpus,0.9999875,1
+EXT-SCAM-00524,1,email,Jose Nazario Phishing Corpus,0.9999825,1
+EXT-SCAM-00525,1,email,Jose Nazario Phishing Corpus,0.99998796,1
+EXT-SCAM-00526,1,email,Jose Nazario Phishing Corpus,0.99998915,1
+EXT-SCAM-00527,1,email,Jose Nazario Phishing Corpus,0.9999889,1
+EXT-SCAM-00528,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998355,1
+EXT-SCAM-00529,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998796,1
+EXT-SCAM-00530,1,sms,Mishra & Soni SMS Phishing Dataset,0.99994385,1
+EXT-SCAM-00531,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999857,1
+EXT-SCAM-00532,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999864,1
+EXT-SCAM-00533,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998856,1
+EXT-SCAM-00534,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999833,1
+EXT-SCAM-00535,1,sms,Mishra & Soni SMS Phishing Dataset,0.999979,1
+EXT-SCAM-00536,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998915,1
+EXT-SCAM-00537,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999883,1
+EXT-SCAM-00538,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998474,1
+EXT-SCAM-00539,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998677,1
+EXT-SCAM-00540,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999839,1
+EXT-SCAM-00541,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999865,1
+EXT-SCAM-00542,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999871,1
+EXT-SCAM-00543,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00544,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999838,1
+EXT-SCAM-00545,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999784,1
+EXT-SCAM-00546,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999887,1
+EXT-SCAM-00547,1,sms,Mishra & Soni SMS Phishing Dataset,0.999984,1
+EXT-SCAM-00548,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999858,1
+EXT-SCAM-00549,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999752,1
+EXT-SCAM-00550,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998665,1
+EXT-SCAM-00551,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999765,1
+EXT-SCAM-00552,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998784,1
+EXT-SCAM-00553,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00554,1,sms,Mishra & Soni SMS Phishing Dataset,0.999979,1
+EXT-SCAM-00555,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999778,1
+EXT-SCAM-00556,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999883,1
+EXT-SCAM-00557,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00558,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999865,1
+EXT-SCAM-00559,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999869,1
+EXT-SCAM-00560,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999871,1
+EXT-SCAM-00561,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997807,1
+EXT-SCAM-00562,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999858,1
+EXT-SCAM-00563,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999862,1
+EXT-SCAM-00564,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998784,1
+EXT-SCAM-00565,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999857,1
+EXT-SCAM-00566,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999845,1
+EXT-SCAM-00567,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999877,1
+EXT-SCAM-00568,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999896,1
+EXT-SCAM-00569,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999869,1
+EXT-SCAM-00570,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999881,1
+EXT-SCAM-00571,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998057,1
+EXT-SCAM-00572,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999851,1
+EXT-SCAM-00573,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999857,1
+EXT-SCAM-00574,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999901,1
+EXT-SCAM-00575,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999865,1
+EXT-SCAM-00576,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999857,1
+EXT-SCAM-00577,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999896,1
+EXT-SCAM-00578,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999851,1
+EXT-SCAM-00579,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998116,1
+EXT-SCAM-00580,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999863,1
+EXT-SCAM-00581,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998593,1
+EXT-SCAM-00582,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999461,1
+EXT-SCAM-00583,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999721,1
+EXT-SCAM-00584,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998677,1
+EXT-SCAM-00585,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999877,1
+EXT-SCAM-00586,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999877,1
+EXT-SCAM-00587,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997985,1
+EXT-SCAM-00588,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999856,1
+EXT-SCAM-00589,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999877,1
+EXT-SCAM-00590,1,sms,Mishra & Soni SMS Phishing Dataset,0.9846015,1
+EXT-SCAM-00591,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999869,1
+EXT-SCAM-00592,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999831,1
+EXT-SCAM-00593,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999858,1
+EXT-SCAM-00594,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999858,1
+EXT-SCAM-00595,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997973,1
+EXT-SCAM-00596,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999881,1
+EXT-SCAM-00597,1,sms,Mishra & Soni SMS Phishing Dataset,0.9990877,1
+EXT-SCAM-00598,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999864,1
+EXT-SCAM-00599,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999877,1
+EXT-SCAM-00600,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998677,1
+EXT-SCAM-00601,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997866,1
+EXT-SCAM-00602,1,sms,Mishra & Soni SMS Phishing Dataset,0.999985,1
+EXT-SCAM-00603,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998796,1
+EXT-SCAM-00604,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999753,1
+EXT-SCAM-00605,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999887,1
+EXT-SCAM-00606,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999895,1
+EXT-SCAM-00607,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00608,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999783,1
+EXT-SCAM-00609,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999832,1
+EXT-SCAM-00610,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998605,1
+EXT-SCAM-00611,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999895,1
+EXT-SCAM-00612,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998367,1
+EXT-SCAM-00613,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998903,1
+EXT-SCAM-00614,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999815,1
+EXT-SCAM-00615,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999852,1
+EXT-SCAM-00616,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998987,1
+EXT-SCAM-00617,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999876,1
+EXT-SCAM-00618,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998784,1
+EXT-SCAM-00619,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999734,1
+EXT-SCAM-00620,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998844,1
+EXT-SCAM-00621,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00622,1,sms,Mishra & Soni SMS Phishing Dataset,0.999985,1
+EXT-SCAM-00623,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998665,1
+EXT-SCAM-00624,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999856,1
+EXT-SCAM-00625,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999865,1
+EXT-SCAM-00626,1,sms,Mishra & Soni SMS Phishing Dataset,0.999984,1
+EXT-SCAM-00627,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998355,1
+EXT-SCAM-00628,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999839,1
+EXT-SCAM-00629,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998736,1
+EXT-SCAM-00630,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998534,1
+EXT-SCAM-00631,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999862,1
+EXT-SCAM-00632,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999857,1
+EXT-SCAM-00633,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998367,1
+EXT-SCAM-00634,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999894,1
+EXT-SCAM-00635,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999813,1
+EXT-SCAM-00636,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999883,1
+EXT-SCAM-00637,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00638,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999858,1
+EXT-SCAM-00639,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999819,1
+EXT-SCAM-00640,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998546,1
+EXT-SCAM-00641,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999877,1
+EXT-SCAM-00642,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999795,1
+EXT-SCAM-00643,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999839,1
+EXT-SCAM-00644,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998903,1
+EXT-SCAM-00645,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998796,1
+EXT-SCAM-00646,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999733,1
+EXT-SCAM-00647,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998987,1
+EXT-SCAM-00648,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998605,1
+EXT-SCAM-00649,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999875,1
+EXT-SCAM-00650,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999647,1
+EXT-SCAM-00651,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999869,1
+EXT-SCAM-00652,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999875,1
+EXT-SCAM-00653,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998844,1
+EXT-SCAM-00654,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00655,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999677,1
+EXT-SCAM-00656,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999901,1
+EXT-SCAM-00657,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998736,1
+EXT-SCAM-00658,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998295,1
+EXT-SCAM-00659,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999827,1
+EXT-SCAM-00660,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999795,1
+EXT-SCAM-00661,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999895,1
+EXT-SCAM-00662,1,sms,Mishra & Soni SMS Phishing Dataset,0.999985,1
+EXT-SCAM-00663,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998546,1
+EXT-SCAM-00664,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998844,1
+EXT-SCAM-00665,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998426,1
+EXT-SCAM-00666,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999876,1
+EXT-SCAM-00667,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999869,1
+EXT-SCAM-00668,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999831,1
+EXT-SCAM-00669,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999814,1
+EXT-SCAM-00670,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999871,1
+EXT-SCAM-00671,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999869,1
+EXT-SCAM-00672,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999896,1
+EXT-SCAM-00673,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999858,1
+EXT-SCAM-00674,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997723,1
+EXT-SCAM-00675,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998784,1
+EXT-SCAM-00676,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998486,1
+EXT-SCAM-00677,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999852,1
+EXT-SCAM-00678,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999734,1
+EXT-SCAM-00679,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999862,1
+EXT-SCAM-00680,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998486,1
+EXT-SCAM-00681,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997854,1
+EXT-SCAM-00682,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999856,1
+EXT-SCAM-00683,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999738,1
+EXT-SCAM-00684,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998724,1
+EXT-SCAM-00685,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999726,1
+EXT-SCAM-00686,1,sms,Mishra & Soni SMS Phishing Dataset,0.999984,1
+EXT-SCAM-00687,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999901,1
+EXT-SCAM-00688,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998534,1
+EXT-SCAM-00689,1,sms,Mishra & Soni SMS Phishing Dataset,0.5293093,1
+EXT-SCAM-00690,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999887,1
+EXT-SCAM-00691,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999862,1
+EXT-SCAM-00692,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999871,1
+EXT-SCAM-00693,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999875,1
+EXT-SCAM-00694,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999857,1
+EXT-SCAM-00695,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999876,1
+EXT-SCAM-00696,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998474,1
+EXT-SCAM-00697,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998426,1
+EXT-SCAM-00698,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999846,1
+EXT-SCAM-00699,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999765,1
+EXT-SCAM-00700,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999329,1
+EXT-SCAM-00701,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00702,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998224,1
+EXT-SCAM-00703,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998033,1
+EXT-SCAM-00704,1,sms,Mishra & Soni SMS Phishing Dataset,0.999982,1
+EXT-SCAM-00705,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998677,1
+EXT-SCAM-00706,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999733,1
+EXT-SCAM-00707,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999846,1
+EXT-SCAM-00708,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999875,1
+EXT-SCAM-00709,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999857,1
+EXT-SCAM-00710,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998605,1
+EXT-SCAM-00711,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998784,1
+EXT-SCAM-00712,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998224,1
+EXT-SCAM-00713,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998474,1
+EXT-SCAM-00714,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998796,1
+EXT-SCAM-00715,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999844,1
+EXT-SCAM-00716,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999865,1
+EXT-SCAM-00717,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998534,1
+EXT-SCAM-00718,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999347,1
+EXT-SCAM-00719,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999889,1
+EXT-SCAM-00720,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998593,1
+EXT-SCAM-00721,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999882,1
+EXT-SCAM-00722,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999865,1
+EXT-SCAM-00723,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999833,1
+EXT-SCAM-00724,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997497,1
+EXT-SCAM-00725,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998796,1
+EXT-SCAM-00726,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999869,1
+EXT-SCAM-00727,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998474,1
+EXT-SCAM-00728,1,sms,Mishra & Soni SMS Phishing Dataset,0.99859136,1
+EXT-SCAM-00729,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997985,1
+EXT-SCAM-00730,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999876,1
+EXT-SCAM-00731,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998784,1
+EXT-SCAM-00732,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998724,1
+EXT-SCAM-00733,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999815,1
+EXT-SCAM-00734,1,sms,Mishra & Soni SMS Phishing Dataset,0.99996233,1
+EXT-SCAM-00735,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999516,1
+EXT-SCAM-00736,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999875,1
+EXT-SCAM-00737,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999877,1
+EXT-SCAM-00738,1,sms,Mishra & Soni SMS Phishing Dataset,0.999979,1
+EXT-SCAM-00739,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999604,1
+EXT-SCAM-00740,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998474,1
+EXT-SCAM-00741,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997556,1
+EXT-SCAM-00742,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999877,1
+EXT-SCAM-00743,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998367,1
+EXT-SCAM-00744,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998116,1
+EXT-SCAM-00745,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999391,1
+EXT-SCAM-00746,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999901,1
+EXT-SCAM-00747,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999881,1
+EXT-SCAM-00748,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998677,1
+EXT-SCAM-00749,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999869,1
+EXT-SCAM-00750,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997556,1
+EXT-SCAM-00751,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998677,1
+EXT-SCAM-00752,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998796,1
+EXT-SCAM-00753,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998975,1
+EXT-SCAM-00754,1,sms,Mishra & Soni SMS Phishing Dataset,0.999987,1
+EXT-SCAM-00755,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998593,1
+EXT-SCAM-00756,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999875,1
+EXT-SCAM-00757,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999871,1
+EXT-SCAM-00758,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999497,1
+EXT-SCAM-00759,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999895,1
+EXT-SCAM-00760,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999862,1
+EXT-SCAM-00761,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999839,1
+EXT-SCAM-00762,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998665,1
+EXT-SCAM-00763,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999906,1
+EXT-SCAM-00764,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998367,1
+EXT-SCAM-00765,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999852,1
+EXT-SCAM-00766,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998677,1
+EXT-SCAM-00767,1,sms,Mishra & Soni SMS Phishing Dataset,0.99997735,1
+EXT-SCAM-00768,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998415,1
+EXT-SCAM-00769,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998474,1
+EXT-SCAM-00770,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999862,1
+EXT-SCAM-00771,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999794,1
+EXT-SCAM-00772,1,sms,Mishra & Soni SMS Phishing Dataset,0.99999,1
+EXT-SCAM-00773,1,sms,Mishra & Soni SMS Phishing Dataset,0.99996686,1
+EXT-SCAM-00774,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999889,1
+EXT-SCAM-00775,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998605,1
+EXT-SCAM-00776,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999865,1
+EXT-SCAM-00777,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999832,1
+EXT-SCAM-00778,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998546,1
+EXT-SCAM-00779,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999746,1
+EXT-SCAM-00780,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998784,1
+EXT-SCAM-00781,1,sms,Mishra & Soni SMS Phishing Dataset,0.99994755,1
+EXT-SCAM-00782,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998736,1
+EXT-SCAM-00783,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999858,1
+EXT-SCAM-00784,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998593,1
+EXT-SCAM-00785,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999802,1
+EXT-SCAM-00786,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999616,1
+EXT-SCAM-00787,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999833,1
+EXT-SCAM-00788,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999858,1
+EXT-SCAM-00789,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998677,1
+EXT-SCAM-00790,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999844,1
+EXT-SCAM-00791,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999813,1
+EXT-SCAM-00792,1,sms,Mishra & Soni SMS Phishing Dataset,0.99998665,1
+EXT-SCAM-00793,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999709,1
+EXT-SCAM-00794,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999887,1
+EXT-SCAM-00795,1,sms,Mishra & Soni SMS Phishing Dataset,0.9999819,1
+EXT-SCAM-00796,1,sms,AbayomiAlli SMS Dataset,0.99998605,1
+EXT-SCAM-00797,1,sms,AbayomiAlli SMS Dataset,0.99998605,1

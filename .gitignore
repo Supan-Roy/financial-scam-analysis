@@ -95,6 +95,14 @@ tmp_candidate_audit/
 !reports/**/*.csv
 !reports/*.csv
 
+# Allow research finding outputs and predictions in output/ and outputs/
+!output/
+!output/**
+!output/**/*.csv
+!outputs/
+!outputs/**
+!outputs/**/*.csv
+
 # Allow lightweight split assignments mapping for reproducibility
 !data/splits/split_assignments.csv
 

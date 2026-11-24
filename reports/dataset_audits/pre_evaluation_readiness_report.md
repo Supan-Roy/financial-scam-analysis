@@ -210,9 +210,13 @@ model.eval()
 
 ---
 
-## 7. Readiness Conclusion
+## 7. Readiness Conclusion & Subsequent Evaluation Execution
 
-All evaluation datasets, deduplication filters, forensic decontaminations, balanced sampling artifacts, and Colab configuration parameters have been verified. No model training, fine-tuning, prediction generation, or metric evaluation was performed.
+All evaluation datasets, deduplication filters, forensic decontaminations, balanced sampling artifacts, and Colab configuration parameters were verified. 
 
-**Readiness Status:** **READY FOR GOOGLE COLAB EVALUATION**  
-*Awaiting user approval before proceeding.*
+**Subsequent Milestone Completed (Notebook 09):**  
+The external evaluation has been executed in Google Colab (`notebooks/09_external_source_generalization_evaluation.ipynb`) using the original, frozen DistilBERT binary classifier. The model achieved **96.72% external scam recall** (766 / 792 detected; 100.0% on SMS smishing, 95.02% on email phishing), **99.53% expanded accuracy**, and **98.30% balanced accuracy** ($N = 1,584$).
+
+*For the complete empirical analysis and qualitative error taxonomy, see:*  
+- Comprehensive Research Report: [`reports/dataset_audits/external_source_generalization_evaluation_report.md`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/reports/dataset_audits/external_source_generalization_evaluation_report.md)  
+- Prediction Outputs: [`output/external_evaluation/`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/output/external_evaluation/) (`primary_test_predictions.csv`, `balanced_test_predictions.csv`, `external_scam_predictions.csv`)
