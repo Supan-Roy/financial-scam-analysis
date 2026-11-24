@@ -5,7 +5,7 @@
 
 **Audit Date:** November 2026  
 **Auditor:** Antigravity Research Engineering  
-**Scope:** Pre-evaluation readiness verification of external evaluation datasets, deduplication integrity, model artifacts, and Google Colab execution configuration.  
+**Scope:** Pre-evaluation readiness verification of external evaluation datasets, deduplication integrity, forensic decontamination, model artifacts, and Google Colab execution configuration.  
 **Report Location:** `reports/dataset_audits/pre_evaluation_readiness_report.md`  
 
 ---
@@ -14,14 +14,15 @@
 
 | Audit Area | Check Item | Status | Verified Metric / Finding |
 | :--- | :--- | :---: | :--- |
-| **1. Primary Evaluation Dataset** | Record Count & Class Ratio | **PASS** | Exactly 7,030 rows (6,233 legitimate, 797 external scam). |
-| **1. Curated Scam Dataset** | Record Count & Labels | **PASS** | Exactly 797 rows; 100% `label = 1`; 100% `is_synthetic = False`. |
+| **1. Primary Evaluation Dataset** | Record Count & Class Ratio | **PASS** | Exactly 7,025 rows (6,233 legitimate, 792 external scam). |
+| **1. Curated Scam Dataset** | Record Count & Labels | **PASS** | Exactly 792 rows; 100% `label = 1`; 100% `is_synthetic = False`. |
 | **1. Legitimate Test Preservation** | Exact 1:1 Match with `test.csv` | **PASS** | 100% byte-for-byte match on IDs, `original_text`, `normalized_text`, and labels. |
-| **1. Dataset Hygiene** | Missing Values & ID Duplication | **PASS** | 0 duplicate IDs; 0 missing values in essential model fields. |
-| **2. Scam Source Distribution** | Source Breakdown | **PASS** | Nazario: 527; Mishra & Soni: 268; AbayomiAlli: 2 (Total = 797). |
+| **1. Dataset Hygiene** | Missing Values, ID Duplication & Outliers | **PASS** | 0 duplicate IDs; 0 missing values; max text length dropped from 1M to 16,078 chars. |
+| **2. Scam Source Distribution** | Source Breakdown | **PASS** | Nazario: 522; Mishra & Soni: 268; AbayomiAlli: 2 (Total = 792). |
 | **2. Benchmark Deduplication** | 12 IMC25 Template Exclusions | **PASS** | All 12 near-duplicate Mishra records excluded and logged in exclusion file. |
+| **2. Forensic Decontamination** | 5 Anomalous Records Excluded | **PASS** | 1 malformed loop (`EXT-SCAM-00224`), 3 foreign/mixed language, 1 generic IT quota alert. |
 | **2. Deduplication Methodology** | Configuration & Thresholds | **PASS** | MinHash LSH (64 perm / 16 bands), word 3-shingles, Jaccard $\ge 0.70$ / 0.85. |
-| **3. Balanced Dataset (50/50)** | Availability & Construction | **PASS** | Created `balanced_binary_external_test.csv` ($N = 1,594$; seed 42). Primary untouched. |
+| **3. Balanced Dataset (50/50)** | Availability & Construction | **PASS** | Rebuilt `balanced_binary_external_test.csv` ($N = 1,584$; seed 42). Primary untouched. |
 | **4. Original Model Availability** | Colab / Drive Model Artifact | **PASS** | Saved at `/content/drive/MyDrive/financial-scam-analysis/models/distilbert_binary/`. |
 | **4. Local Workspace Weights** | Local Git Repository Weights | **WARNING** | Intentionally excluded from local git via `.gitignore` lines 98–109. |
 | **4. Model Architecture Distinction** | Experiment Disambiguation | **PASS** | DistilBERT A (real-only) verified distinct from Experiments B and C. |
@@ -34,12 +35,12 @@
 ### 1. Evaluation Datasets Verification
 
 #### Primary Dataset: `data/external_evaluation/expanded_binary_external_test.csv`
-* **Total Records:** **7,030 rows** across 35 columns.
+* **Total Records:** **7,025 rows** across 35 columns.
 * **Class Split:**
-  - Legitimate (`label = 0`): **6,233 records (88.66%)**
-  - External Scam (`label = 1`): **797 records (11.34%)**
+  - Legitimate (`label = 0`): **6,233 records (88.73%)**
+  - External Scam (`label = 1`): **792 records (11.27%)**
 * **Channel Distribution:**
-  - Email: **6,293 records** (5,766 legitimate, 527 scam)
+  - Email: **6,288 records** (5,766 legitimate, 522 scam)
   - SMS: **737 records** (467 legitimate, 270 scam)
 * **Data Hygiene:**
   - Duplicate `record_id` occurrences: **0 (100% unique)**.
@@ -47,7 +48,7 @@
 * **Verdict:** **PASS**
 
 #### Curated Scam Dataset: `data/external_evaluation/external_fin_scam_curated.csv`
-* **Total Records:** **797 rows** across 35 columns.
+* **Total Records:** **792 rows** across 35 columns.
 * **Class Label:** 100% `label = 1`.
 * **Synthetic Status:** 100% `is_synthetic = False` (authentically collected real-world scams).
 * **Verdict:** **PASS**
@@ -64,36 +65,35 @@
 
 ---
 
-### 2. External Scam Data & Deduplication Verification
+### 2. Forensic Decontamination & Deduplication Verification
 
-#### Source Distribution of Curated Scams ($N = 797$)
-1. **Jose Nazario Phishing Corpus (`email`):** **527 records** (66.12%)
-   - Bank impersonation: 284
-   - Account security phishing: 91
-   - Payment service phishing (PayPal, eBay): 83
-   - Billing & invoice scams: 35
-   - Card verification fraud: 20
-   - Tax refund phishing: 17
-   - Money transfer fraud: 2
-2. **Mishra & Soni SMS Phishing Dataset (`sms`):** **268 records** (33.63%)
-   - Fake prize & cash compensation smishing: 204
-   - Bank smishing: 51
-   - Tax refund smishing (HMRC, COVID relief): 10
-   - Payment service smishing (Apple ID): 3
+#### Forensic Audit Decontaminations ($N = 5$)
+Following thorough investigation, 5 anomalous records were formally excluded:
+1. `EXT-SCAM-00224` (`nazario_row_533`): Malformed attacker mail-merge script defect containing 45,146 email addresses repeated twice (1,023,605 characters, ~46,580 words, ~463,696 tokens) with zero financial content. Reason: `excluded_malformed_script_defect`.
+2. `EXT-SCAM-00449` (`nazario_row_1230`): Corrupted payload concatenating an English Amex security lure with a duplicated French e-commerce order confirmation (`COMMANDE #11344 Votre commande est en route`). Reason: `excluded_foreign_language`.
+3. `EXT-SCAM-00450` (`nazario_row_1243`): German PayPal account phishing email (`Wir haben ungewöhnliche Aktivitäten festgestellt!`). Reason: `excluded_foreign_language`.
+4. `EXT-SCAM-00485` (`nazario_row_1414`): German Apple ID verification phish (`Liebes Apple-Mitglied IDENTITÄTSÜBERPRÜFUNG ERFORDERLICH`). Reason: `excluded_foreign_language`.
+5. `EXT-SCAM-00106` (`nazario_row_237`): Non-financial IT webmail mailbox quota exhaustion alert (`95.77% full, verify email ID to avoid suspension and get 1000MB free storage`). Reason: `excluded_it_helpdesk_non_financial`.
+
+#### Individual Review of 11 Webmail / Quarantine Digest Records
+- **Excluded (1):** `EXT-SCAM-00106` (mailbox storage alert, no financial fraud).
+- **Retained (10):** `EXT-SCAM-00385`, `00386`, `00389`, `00392`, `00404`, `00407`, `00419`, `00437`, `00472`, `00478`. All 10 represent genuine enterprise BEC/invoice scams where the quarantine notification digest acts as the social engineering delivery vehicle for explicit financial fraud lures (blocked HSBC incoming wire transfers, contract invoice copies, sales orders, payment vouchers, proforma invoice payments, and T/T wire transfer copies).
+
+#### Source Distribution of Curated Scams ($N = 792$)
+1. **Jose Nazario Phishing Corpus (`email`):** **522 records** (65.91%)
+2. **Mishra & Soni SMS Phishing Dataset (`sms`):** **268 records** (33.84%)
 3. **AbayomiAlli SMS Dataset (`sms`):** **2 records** (0.25%)
-   - Authentic 419 mobile lottery prize claim smishing: 2
 * **Verdict:** **PASS**
 
 #### Verification of 12 Near-Duplicate Mishra Exclusions
-During forensic audit, 12 smishing records in Mishra & Soni were discovered to share template wording with `Smishing Dataset IMC25 (public user reports)` in our benchmark training split.
 * **Inspection of Exclusion Log (`external_scam_exclusion_log.csv`):**
   - Rows 574, 587, 788, 1703, 2793, 4063, 4338, 4667, 4672, 5391, 5469, 5791: **12 / 12 present in exclusion log**.
 * **Inspection of Curated Scam Corpus (`external_fin_scam_curated.csv`):**
-  - Scams originating from `Mishra & Soni SMS Phishing Dataset` matching these rows: **0 records** (None slipped into curated set).
+  - Scams matching these rows: **0 records** (None slipped into curated set).
 * **Verdict:** **PASS**
 
 #### Duplicate-Audit Methodology Configuration
-The deduplication pipeline applied across the corpus follows the framework established in `src/data/duplicate_detector.py`:
+The deduplication pipeline applied across the corpus follows `src/data/duplicate_detector.py`:
 1. **Text Normalization:** `normalize_text_conservative()` applies case-folding and whitespace collapsing (`" ".join(text.lower().split())`).
 2. **Word Shingling:** `get_word_shingles(k=3)` extracts overlapping 3-word shingles.
 3. **Vectorized MinHash LSH Index:**
@@ -102,23 +102,22 @@ The deduplication pipeline applied across the corpus follows the framework estab
    - Prime Modulus: $p = 4,294,967,311$ (Mersenne-adjacent prime $> 2^{32}$)
    - Random Seed: `seed = 42`
 4. **Similarity Thresholds:**
-   - **Internal Deduplication:** $\text{Jaccard} \ge 0.85$ (eliminates near-identical message variations within candidates).
-   - **Cross-Corpus Overlap:** $\text{Jaccard} \ge 0.70$ combined with 40-character and 80-character normalized prefix matching (eliminates template leakage from the benchmark training/validation splits).
+   - **Internal Deduplication:** $\text{Jaccard} \ge 0.85$.
+   - **Cross-Corpus Overlap:** $\text{Jaccard} \ge 0.70$ combined with 40-character and 80-character normalized prefix matching.
 * **Verdict:** **PASS**
 
 ---
 
 ### 3. Balanced Evaluation Dataset Preparation
 
-* **Initial Status:** Did not exist prior to this check.
-* **Action Taken:** Executed `tmp_candidate_audit/create_balanced_dataset.py` to prepare a balanced evaluation slice:
-  - **Scam cohort:** All **797 external real scams** (`label = 1`).
-  - **Legitimate cohort:** Exactly **797 legitimate records** randomly sampled from the 6,233 held-out test partition using fixed seed `random_state = 42`.
+* **Action Taken:** Rebuilt `balanced_binary_external_test.csv` following decontamination:
+  - **Scam cohort:** All **792 external real scams** (`label = 1`).
+  - **Legitimate cohort:** Exactly **792 legitimate records** randomly sampled from the 6,233 held-out test partition using fixed seed `random_state = 42`.
 * **Output File:** [`data/external_evaluation/balanced_binary_external_test.csv`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/data/external_evaluation/balanced_binary_external_test.csv)
-  - Total records: **1,594 records** (797 legitimate, 797 scam).
+  - Total records: **1,584 records** (792 legitimate, 792 scam).
   - Exact 50 / 50 class balance.
-  - Channel balance: 1,253 Email (726 legit, 527 scam) and 341 SMS (71 legit, 270 scam).
-* **Primary Dataset Safety:** Confirmed that `expanded_binary_external_test.csv` was **not altered** (remains 7,030 records).
+  - Channel balance: 1,243 Email (721 legit, 522 scam) and 341 SMS (71 legit, 270 scam).
+* **Primary Dataset Safety:** Confirmed that `expanded_binary_external_test.csv` maintains all 6,233 legitimate test controls ($N = 7,025$).
 * **Verdict:** **PASS**
 
 ---
@@ -175,9 +174,9 @@ All settings were extracted directly from `notebooks/06_transformer_based_modeli
 │       └── special_tokens_map.json
 └── data/
     └── external_evaluation/
-        ├── expanded_binary_external_test.csv  <-- Primary evaluation set (7,030 rows)
-        ├── balanced_binary_external_test.csv  <-- Balanced evaluation set (1,594 rows)
-        └── external_fin_scam_curated.csv      <-- Curated external scams only (797 rows)
+        ├── expanded_binary_external_test.csv  <-- Primary evaluation set (7,025 rows)
+        ├── balanced_binary_external_test.csv  <-- Balanced evaluation set (1,584 rows)
+        └── external_fin_scam_curated.csv      <-- Curated external scams only (792 rows)
 ```
 
 ### Colab Loading Blueprint
@@ -213,7 +212,7 @@ model.eval()
 
 ## 7. Readiness Conclusion
 
-All evaluation datasets, deduplication filters, balanced sampling artifacts, and Colab configuration parameters have been verified. No model training, fine-tuning, prediction generation, or metric evaluation was performed.
+All evaluation datasets, deduplication filters, forensic decontaminations, balanced sampling artifacts, and Colab configuration parameters have been verified. No model training, fine-tuning, prediction generation, or metric evaluation was performed.
 
 **Readiness Status:** **READY FOR GOOGLE COLAB EVALUATION**  
 *Awaiting user approval before proceeding.*
