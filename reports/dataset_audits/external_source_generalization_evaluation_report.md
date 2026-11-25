@@ -48,6 +48,8 @@ To resolve this question conclusively, **Notebook 09 evaluates the original, fro
    - **Ultra-Short Messages (2 cases):** Messages under 50 characters with truncated content (e.g., subject line only).
    - **IT / Software Update Lures (7 cases):** Fake security alerts and Adobe/cloud drive updates masquerading as enterprise IT maintenance.
    - **Complex B2B Purchasing (9 cases):** Obscure purchase order notices and supplier reconciliation texts lacking urgent retail banking terminology.
+7. **Subsequent Traditional ML Baseline Comparison (Notebook 10):**  
+   In a follow-up comparative study ([Notebook 10](file:///d:/Programs%20and%20Codes/financial-scam-analysis/notebooks/10_external_generalization_traditional_ml.ipynb) / [`reports/dataset_audits/traditional_ml_external_generalization_report.md`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/reports/dataset_audits/traditional_ml_external_generalization_report.md)), DistilBERT was benchmarked against reconstructed Linear SVM, Logistic Regression, and Multinomial Naive Bayes models. DistilBERT demonstrated **statistically significant superiority** over Linear SVM ($p = 2.43 \times 10^{-6}$) and Logistic Regression ($p = 5.42 \times 10^{-9}$), driven specifically by a **"Smishing Generalization Gap"** where traditional n-gram models collapsed to ~88% recall on mobile SMS while DistilBERT achieved 100.0%.
 
 ---
 
@@ -297,3 +299,7 @@ All prediction outputs from the Notebook 09 experiment are preserved and tracked
    *Predictions on balanced 50/50 evaluation companion set.*
 3. **[`output/external_evaluation/external_scam_predictions.csv`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/output/external_evaluation/external_scam_predictions.csv)** (792 rows, ~0.05 MB)  
    *Dedicated predictions and confidence scores for the 792 curated external scams.*
+4. **Traditional ML Comparison Outputs & Report (Notebook 10):**  
+   - Comprehensive Comparative Report: [`reports/dataset_audits/traditional_ml_external_generalization_report.md`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/reports/dataset_audits/traditional_ml_external_generalization_report.md)  
+   - Results & Statistical Tables: [`outputs/external_evaluation_traditional_ml/results/`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/outputs/external_evaluation_traditional_ml/results/) (`final_model_comparison_summary.csv`, `mcnemar_overall.csv`, `source_level_recall.csv`, etc.)  
+   - Comparison Figures: [`outputs/external_evaluation_traditional_ml/results/figures/`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/outputs/external_evaluation_traditional_ml/results/figures/) (Figures 01–07 in PNG and PDF)

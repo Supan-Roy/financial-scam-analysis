@@ -238,3 +238,7 @@ All generated artifacts are preserved in: `data/external_evaluation/`
 7. **Experimental Evaluation Report & Prediction Outputs:**  
    - Comprehensive Research Report: [`reports/dataset_audits/external_source_generalization_evaluation_report.md`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/reports/dataset_audits/external_source_generalization_evaluation_report.md)  
    - Prediction Outputs: [`output/external_evaluation/`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/output/external_evaluation/) (`primary_test_predictions.csv`, `balanced_test_predictions.csv`, `external_scam_predictions.csv`)
+8. **Traditional ML Comparative Generalization Report & Results (Notebook 10):**  
+   - Comprehensive Comparative Report: [`reports/dataset_audits/traditional_ml_external_generalization_report.md`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/reports/dataset_audits/traditional_ml_external_generalization_report.md)  
+   - Results & Statistical Tables: [`outputs/external_evaluation_traditional_ml/results/`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/outputs/external_evaluation_traditional_ml/results/)  
+   - Comparative Figures: [`outputs/external_evaluation_traditional_ml/results/figures/`](file:///d:/Programs%20and%20Codes/financial-scam-analysis/outputs/external_evaluation_traditional_ml/results/figures/) (Figures 01–07)
