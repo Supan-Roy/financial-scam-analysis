@@ -1,0 +1,7 @@
+Class,Comparison,A_correct_B_wrong,A_wrong_B_correct,Discordant_pairs,Exact_p_value,Holm_adjusted_p,Significant
+Scam,DistilBERT vs Linear SVM,41,9,50,5.614100093254137e-06,2.8070500466270687e-05,True
+Scam,DistilBERT vs Logistic Regression,41,9,50,5.614100093254137e-06,2.8070500466270687e-05,True
+Scam,DistilBERT vs Naive Bayes,502,0,502,1.5274681817498023e-151,9.164809090498814e-151,True
+Legitimate,DistilBERT vs Linear SVM,9,3,12,0.14599609375,0.2919921875,False
+Legitimate,DistilBERT vs Logistic Regression,24,4,28,0.00017999112606048584,0.0005399733781814575,True
+Legitimate,DistilBERT vs Naive Bayes,3,5,8,0.7265625,0.7265625,False

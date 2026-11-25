@@ -1,0 +1,61 @@
+{
+    "experiment": "Traditional ML External Generalization Evaluation",
+    "random_state": 42,
+    "vectorizer": {
+        "analyzer": "word",
+        "ngram_range": [
+            1,
+            1
+        ],
+        "min_df": 1,
+        "max_df": 1.0,
+        "dtype": "float32",
+        "vocabulary_size": 115436
+    },
+    "training_samples": 60957,
+    "validation_samples": 7618,
+    "models": {
+        "logistic_regression": {
+            "class_weight": "balanced",
+            "max_iter": 1000,
+            "solver": "liblinear"
+        },
+        "multinomial_nb": {
+            "alpha": 1.0
+        },
+        "linear_svm": {
+            "C": 1.0,
+            "class_weight": "balanced",
+            "max_iter": 2000
+        }
+    },
+    "validation_metrics": [
+        {
+            "Model": "Logistic Regression",
+            "Accuracy": 0.9940929377789446,
+            "Precision": 0.9724964739069112,
+            "Recall": 0.9956678700361011,
+            "Scam F1": 0.9839457723867285,
+            "Macro F1": 0.9901631862014073,
+            "PR-AUC": 0.9991259480001455
+        },
+        {
+            "Model": "Multinomial Naive Bayes",
+            "Accuracy": 0.9692832764505119,
+            "Precision": 0.9991326973113617,
+            "Recall": 0.8317689530685921,
+            "Scam F1": 0.9078014184397163,
+            "Macro F1": 0.9446866597632508,
+            "PR-AUC": 0.9935796010456421
+        },
+        {
+            "Model": "Linear SVM",
+            "Accuracy": 0.9969808348647939,
+            "Precision": 0.9899280575539569,
+            "Recall": 0.9935018050541516,
+            "Scam F1": 0.9917117117117117,
+            "Macro F1": 0.9949329764721788,
+            "PR-AUC": 0.9996729150350603
+        }
+    ]
+}

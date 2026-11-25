@@ -1,0 +1,13 @@
+Source,Model,Total scams,Detected,Missed,Recall
+AbayomiAlli SMS Dataset,DistilBERT,2,2,0,1.0
+AbayomiAlli SMS Dataset,Linear SVM,2,2,0,1.0
+AbayomiAlli SMS Dataset,Logistic Regression,2,2,0,1.0
+AbayomiAlli SMS Dataset,Naive Bayes,2,2,0,1.0
+Jose Nazario Phishing Corpus,DistilBERT,522,496,26,0.9501915708812261
+Jose Nazario Phishing Corpus,Linear SVM,522,494,28,0.946360153256705
+Jose Nazario Phishing Corpus,Logistic Regression,522,496,26,0.9501915708812261
+Jose Nazario Phishing Corpus,Naive Bayes,522,163,359,0.31226053639846746
+Mishra & Soni SMS Phishing Dataset,DistilBERT,268,268,0,1.0
+Mishra & Soni SMS Phishing Dataset,Linear SVM,268,238,30,0.8880597014925373
+Mishra & Soni SMS Phishing Dataset,Logistic Regression,268,236,32,0.8805970149253731
+Mishra & Soni SMS Phishing Dataset,Naive Bayes,268,99,169,0.3694029850746269

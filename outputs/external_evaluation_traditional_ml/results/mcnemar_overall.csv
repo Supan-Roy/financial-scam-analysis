@@ -1,0 +1,5 @@
+Comparison,A_correct_B_wrong,A_wrong_B_correct,Discordant_pairs,Exact_p_value,Holm_adjusted_p,Significant_after_correction
+DistilBERT vs Linear SVM,50,12,62,1.2143807700186297e-06,2.4287615400372595e-06,True
+DistilBERT vs Logistic Regression,65,13,78,1.807703105408552e-09,5.423109316225656e-09,True
+DistilBERT vs Naive Bayes,505,5,510,1.6988898236057534e-142,6.795559294423013e-142,True
+Linear SVM vs Logistic Regression,29,15,44,0.048766765904474596,0.048766765904474596,True
